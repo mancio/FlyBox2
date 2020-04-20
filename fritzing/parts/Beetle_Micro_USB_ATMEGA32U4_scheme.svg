@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generator: Adobe Illustrator 17.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   id="Layer_1"
+   x="0px"
+   y="0px"
+   width="101.417px"
+   height="85.015px"
+   viewBox="0 0 101.417 85.015"
+   enable-background="new 0 0 101.417 85.015"
+   xml:space="preserve"
+   sodipodi:docname="Beetle_Micro_USB_ATMEGA32U4_scheme.svg"
+   inkscape:version="0.92.5 (2060ec1f9f, 2020-04-08)"><metadata
+   id="metadata61"><rdf:RDF><cc:Work
+       rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /></cc:Work></rdf:RDF></metadata><defs
+   id="defs59" /><sodipodi:namedview
+   pagecolor="#ffffff"
+   bordercolor="#666666"
+   borderopacity="1"
+   objecttolerance="10"
+   gridtolerance="10"
+   guidetolerance="10"
+   inkscape:pageopacity="0"
+   inkscape:pageshadow="2"
+   inkscape:window-width="1920"
+   inkscape:window-height="1051"
+   id="namedview57"
+   showgrid="false"
+   inkscape:zoom="7.309495"
+   inkscape:cx="64.775857"
+   inkscape:cy="42.5075"
+   inkscape:window-x="-9"
+   inkscape:window-y="-9"
+   inkscape:window-maximized="1"
+   inkscape:current-layer="schematic" />
+<g
+   id="schematic">
+	
+		<rect
+   id="part_symbol"
+   x="7.4911914"
+   y="7.3368082"
+   width="85.788002"
+   height="70.113998"
+   style="fill:#ffffff;stroke:#000000;stroke-width:0.90020001;stroke-linecap:round" />
+	<g
+   id="pins"
+   transform="rotate(-90,45.618763,39.712152)">
+		
+		
+			<line
+   x1="0.428"
+   y1="39.300423"
+   x2="7.6279998"
+   y2="39.300423"
+   id="line7"
+   style="fill:none;stroke:#555555;stroke-width:0.69999999;stroke-linecap:round;stroke-linejoin:round" />
+		
+			<line
+   x1="0.055700354"
+   y1="25.977867"
+   x2="7.2557001"
+   y2="25.977867"
+   id="line9"
+   style="fill:none;stroke:#555555;stroke-width:0.69999999;stroke-linecap:round;stroke-linejoin:round" />
+		
+			<line
+   x1="0.428"
+   y1="63.100426"
+   x2="7.6279998"
+   y2="63.100426"
+   id="line11"
+   style="fill:none;stroke:#555555;stroke-width:0.69999999;stroke-linecap:round;stroke-linejoin:round" />
+		
+			<line
+   x1="0.428"
+   y1="51.500423"
+   x2="7.6279998"
+   y2="51.500423"
+   id="line13"
+   style="fill:none;stroke:#555555;stroke-width:0.69999999;stroke-linecap:round;stroke-linejoin:round" />
+		
+			<line
+   x1="0.428"
+   y1="75.025505"
+   x2="7.6279998"
+   y2="75.025505"
+   id="line15"
+   style="fill:none;stroke:#555555;stroke-width:0.69999999;stroke-linecap:round;stroke-linejoin:round" />
+		
+			
+		
+	<line
+   style="fill:none;stroke:#555555;stroke-width:0.69999999;stroke-linecap:round;stroke-linejoin:round"
+   x1="0.1925087"
+   y1="14.558695"
+   x2="7.3925085"
+   y2="14.558695"
+   id="line9-4" /></g>
+	<g
+   id="pin_labels">
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	<g
+   id="g226"><text
+     style="font-size:4.5px;font-family:DroidSans;fill:#555555"
+     y="23.3507"
+     x="9.5726032"
+     id="text32"
+     font-size="4.5">GND</text>
+<text
+     y="30.433201"
+     x="9.5308552"
+     style="font-size:4.5px;font-family:DroidSans;fill:#555555"
+     id="text38"
+     font-size="4.5">SCL</text>
+<text
+     style="font-size:4.5px;font-family:DroidSans;fill:#555555"
+     id="text40"
+     font-size="4.5"
+     transform="translate(9.647,37.736)">SDA</text>
+<text
+     style="font-size:4.5px;font-family:DroidSans;fill:#555555"
+     id="text42"
+     font-size="4.5"
+     transform="translate(9.647,44.9839)">RX</text>
+<text
+     style="font-size:4.5px;font-family:DroidSans;fill:#555555"
+     id="text44"
+     font-size="4.5"
+     transform="translate(9.6875,52.0664)">DX</text>
+<text
+     id="text32-7"
+     font-size="4.5"
+     style="font-size:4.5px;font-family:DroidSans;fill:#555555"
+     x="9.5726032"
+     y="16.618225">3V3</text>
+</g><g
+   id="g300"
+   transform="translate(1.9895396,-2.89991)"><text
+     id="text46-1"
+     font-size="4.5"
+     style="font-size:4.5px;font-family:DroidSans;fill:#555555"
+     x="14.392273"
+     y="77.900909">D11</text>
+<text
+     id="text46-1-3"
+     font-size="4.5"
+     style="font-size:4.5px;font-family:DroidSans;fill:#555555"
+     x="25.97961"
+     y="77.832794">D10</text>
+<text
+     id="text46-1-3-1"
+     font-size="4.5"
+     style="font-size:4.5px;font-family:DroidSans;fill:#555555"
+     x="40.614555"
+     y="77.837189">D9</text>
+<text
+     id="text46-1-3-1-3"
+     font-size="4.5"
+     style="font-size:4.5px;font-family:DroidSans;fill:#555555"
+     x="52.779778"
+     y="77.832794">A0</text>
+<text
+     id="text46-1-3-1-3-8"
+     font-size="4.5"
+     style="font-size:4.5px;font-family:DroidSans;fill:#555555"
+     x="64.731857"
+     y="77.900909">A1</text>
+<text
+     id="text46-1-3-1-3-8-1"
+     font-size="4.5"
+     style="font-size:4.5px;font-family:DroidSans;fill:#555555"
+     x="76.314804"
+     y="77.900909">A2</text>
+</g><g
+   transform="translate(71.734394,0.08181644)"
+   id="g226-2"><text
+     style="font-size:4.5px;font-family:DroidSans;fill:#555555"
+     y="23.3507"
+     x="12.617703"
+     id="text32-4"
+     font-size="4.5">MO</text>
+<text
+     y="30.433201"
+     x="10.413846"
+     style="font-size:4.5px;font-family:DroidSans;fill:#555555"
+     id="text38-4"
+     font-size="4.5">SCK</text>
+<text
+     style="font-size:4.5px;font-family:DroidSans;fill:#555555"
+     id="text40-2"
+     font-size="4.5"
+     x="10.912625"
+     y="37.736">RES</text>
+<text
+     style="font-size:4.5px;font-family:DroidSans;fill:#555555"
+     id="text42-8"
+     font-size="4.5"
+     transform="translate(9.647,44.9839)">GND</text>
+<text
+     style="font-size:4.5px;font-family:DroidSans;fill:#555555"
+     id="text44-8"
+     font-size="4.5"
+     x="13.821805"
+     y="52.066399">5V</text>
+<text
+     id="text32-7-1"
+     font-size="4.5"
+     style="font-size:4.5px;font-family:DroidSans;fill:#555555"
+     x="14.31619"
+     y="16.618225">MI</text>
+</g></g>
+	
+	
+	
+<text
+   xml:space="preserve"
+   style="font-style:normal;font-weight:normal;font-size:7.27687025px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.54576528"
+   x="26.978754"
+   y="44.342716"
+   id="text65"><tspan
+     sodipodi:role="line"
+     id="tspan63"
+     x="26.978754"
+     y="44.342716"
+     style="stroke-width:0.54576528">atmega32U4</tspan></text>
+<g
+   transform="translate(93.634104,0.23546289)"
+   id="pins-9"><line
+     style="fill:none;stroke:#555555;stroke-width:0.69999999;stroke-linecap:round;stroke-linejoin:round"
+     x1="0.428"
+     y1="28.799999"
+     x2="7.6279998"
+     y2="28.799999"
+     id="line7-7" /><line
+     x1="0.19250871"
+     y1="21.6"
+     x2="7.3925085"
+     y2="21.6"
+     id="line9-48"
+     style="fill:none;stroke:#555555;stroke-width:0.69999999;stroke-linecap:round;stroke-linejoin:round" /><line
+     style="fill:none;stroke:#555555;stroke-width:0.69999999;stroke-linecap:round;stroke-linejoin:round"
+     x1="0.428"
+     y1="43.200001"
+     x2="7.6279998"
+     y2="43.200001"
+     id="line11-8" /><line
+     style="fill:none;stroke:#555555;stroke-width:0.69999999;stroke-linecap:round;stroke-linejoin:round"
+     x1="0.428"
+     y1="36"
+     x2="7.6279998"
+     y2="36"
+     id="line13-1" /><line
+     style="fill:none;stroke:#555555;stroke-width:0.69999999;stroke-linecap:round;stroke-linejoin:round"
+     x1="0.428"
+     y1="50.400002"
+     x2="7.6279998"
+     y2="50.400002"
+     id="line15-9" /><line
+     style="fill:none;stroke:#555555;stroke-width:0.69999999;stroke-linecap:round;stroke-linejoin:round"
+     x1="0.1925087"
+     y1="14.558695"
+     x2="7.3925085"
+     y2="14.558695"
+     id="line9-4-4" /></g><g
+   id="pins-7"
+   transform="translate(0.0571881,0.23546289)"><line
+     x1="0.428"
+     y1="28.799999"
+     x2="7.6279998"
+     y2="28.799999"
+     id="line7-79"
+     style="fill:none;stroke:#555555;stroke-width:0.69999999;stroke-linecap:round;stroke-linejoin:round" /><line
+     x1="0.19250871"
+     y1="21.6"
+     x2="7.3925085"
+     y2="21.6"
+     id="line9-44"
+     style="fill:none;stroke:#555555;stroke-width:0.69999999;stroke-linecap:round;stroke-linejoin:round" /><line
+     x1="0.428"
+     y1="43.200001"
+     x2="7.6279998"
+     y2="43.200001"
+     id="line11-3"
+     style="fill:none;stroke:#555555;stroke-width:0.69999999;stroke-linecap:round;stroke-linejoin:round" /><line
+     x1="0.428"
+     y1="36"
+     x2="7.6279998"
+     y2="36"
+     id="line13-8"
+     style="fill:none;stroke:#555555;stroke-width:0.69999999;stroke-linecap:round;stroke-linejoin:round" /><line
+     x1="0.428"
+     y1="50.400002"
+     x2="7.6279998"
+     y2="50.400002"
+     id="line15-0"
+     style="fill:none;stroke:#555555;stroke-width:0.69999999;stroke-linecap:round;stroke-linejoin:round" /><line
+     style="fill:none;stroke:#555555;stroke-width:0.69999999;stroke-linecap:round;stroke-linejoin:round"
+     x1="0.1925087"
+     y1="14.558695"
+     x2="7.3925085"
+     y2="14.558695"
+     id="line9-4-6" /></g></g>
+</svg>
