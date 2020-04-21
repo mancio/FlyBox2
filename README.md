@@ -6,7 +6,7 @@ An advanced flight control pad made with an atmega32u4 Beetle module
 ## Schematics
 
 <p align="center">
-<img src="https://github.com/mancio/FlyBox2/blob/master/fritzing/project/main_wiring.jpg" width="650" height="550" />
+<img src="https://github.com/mancio/FlyBox2/blob/master/fritzing/project/main_wiring.jpg" width="750" height="550" />
 </p>
 
 ## Still under construction 
