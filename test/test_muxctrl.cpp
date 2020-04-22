@@ -1,7 +1,7 @@
 #include <Arduino.h>
 #include <unity.h>
 
-int array
+int array;
 
 int conf[8][3] = {
 //  s0,s1,s2  
@@ -17,6 +17,6 @@ int conf[8][3] = {
 
 };
 
-void test_selectMuxPin(){
+/*void test_selectMuxPin(){
     selectMuxPin(0)
-}
+}*/
