@@ -22,7 +22,9 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 #include <setports.cpp>
 
 void setup() {
-  // put your setup code here, to run once:
+  setEncoders;
+  setMux;
+  setPot;
 }
 
 void loop() {
