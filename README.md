@@ -21,7 +21,8 @@ An advanced flight control pad made with an atmega32u4 Beetle module
 
 ## TODO
 
-* mux configuration
+* tests
+* button filler
 
 ## Still under construction 
 ## STAY TUNED!
