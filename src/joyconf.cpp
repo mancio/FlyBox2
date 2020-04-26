@@ -21,6 +21,8 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 #include <Arduino.h>
 #include <Joystick.h>
 
+
+// set joystick buttons and axis
 Joystick_ Joystick(
   JOYSTICK_DEFAULT_REPORT_ID, // joystick ID 
   JOYSTICK_TYPE_JOYSTICK, // device type
@@ -112,7 +114,7 @@ void btset(int pin, int button){
 
 
 /**
- * shift the potentiometer scale to reach positive/negative value of the axis
+ * map the potentiometer scale to the Arduino analog input scale
  * 
  * @param long input analog value from axis
  * @param bool invert axis if false 
@@ -124,6 +126,36 @@ long mapper(long m, bool rev){
   if(rev) return map(m, 0, 1023, -1023, 1023);
   else return map(m, 0, 1023, 1023, -1023);
       
+}
+
+/**
+ * check and set X-axis input value
+ * 
+ * @param int pin number
+ * @param bool if false reverse the axis
+ */
+void setX(int pin, bool rev){
+    Joystick.setXAxis(mapper(pin,rev));
+}
+
+/**
+ * check and set Y-axis input value
+ * 
+ * @param int pin number
+ * @param bool if false reverse the axis
+ */
+void setY(int pin, bool rev){
+    Joystick.setYAxis(mapper(pin,rev));
+}
+
+/**
+ * check and set Z-axis input value
+ * 
+ * @param int pin number
+ * @param bool if false reverse the axis
+ */
+void setZ(int pin, bool rev){
+    Joystick.setZAxis(mapper(pin,rev));
 }
 
 

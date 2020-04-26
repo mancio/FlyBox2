@@ -19,5 +19,9 @@ An advanced flight control pad made with an atmega32u4 Beetle module
 * 1x 10nf capacitor
 * 16X push buttons
 
+## TODO
+
+* mux coniguration
+
 ## Still under construction 
 ## STAY TUNED!

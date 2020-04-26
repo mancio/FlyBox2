@@ -20,7 +20,9 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 #include <Arduino.h>
 #include <ports.h>
+#include <CD74HC4067.h>
 
+CD74HC4067 my_mux(S0_MUX, S1_MUX, S2_MUX, S3_MUX);
 
 /**
  * active serial port on Arduino
@@ -68,3 +70,4 @@ void setMux(){
     pinMode(S2_MUX,OUTPUT);
     pinMode(SIG_MUX,INPUT);
 }
+
