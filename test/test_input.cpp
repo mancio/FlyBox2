@@ -7,11 +7,13 @@
 // array with the button state
 int bt_conf_array[bt_num];
 
+
+
 void bt_config(int selected){
     
     for (int i = 0; i < bt_num; i++){
         if(selected==i) bt_conf_array[i] = HIGH;
-        else
+        else bt_conf_array[i] = LOW;
                 
     }
     
