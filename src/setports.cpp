@@ -18,6 +18,8 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
+// set ports and manage multiplexing
+
 #include <Arduino.h>
 #include <ports.h>
 #include <CD74HC4067.h>
