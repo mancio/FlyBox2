@@ -20,8 +20,12 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 #include <Arduino.h>
 #include <setports.cpp>
+#include <setmicro.cpp>
+#include <joyconf.cpp>
+
 
 void setup() {
+  setLed;
   setEncoders;
   setMux;
   setPot;
