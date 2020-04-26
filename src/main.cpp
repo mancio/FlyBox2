@@ -32,5 +32,17 @@ void setup() {
 }
 
 void loop() {
-  
+
+  /* read input from axes not reversed
+   * down = min value
+   * up = max value
+   */ 
+  setX(SL_1, NO_REV);
+  setY(SL_2,NO_REV);
+  setZ(SL_3,NO_REV);
+
+  // order buttons from 1 to 16
+  btArrayFiller;
+  // read input form every mux port 
+  muxLooper;
 }

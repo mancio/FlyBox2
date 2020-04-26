@@ -21,6 +21,8 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 #include <Arduino.h>
 #include <Joystick.h>
 
+#define NO_REV true
+#define REV false
 
 // set joystick buttons and axis
 Joystick_ Joystick(
