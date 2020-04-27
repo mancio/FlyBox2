@@ -18,6 +18,9 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
+#ifndef TEST_CLICK // disable program main loop while unit testing in progress
+
+
 #include <Arduino.h>
 #include <ports.h>
 #include <setports.h>
@@ -47,3 +50,5 @@ void loop() {
   // read input form every mux port 
   muxLooper();
 }
+
+#endif
