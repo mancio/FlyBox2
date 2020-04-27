@@ -23,8 +23,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 #ifndef PORTS_h
 #define PORTS_h
 
-#define NO_REV true
-#define REV false
+
 
 /*
     9x pin rotary encoders

@@ -21,7 +21,8 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 #ifndef JOYCONF_h
 #define JOYCONF_h
 
-
+#define NO_REV true
+#define REV false
 
 
 /**
