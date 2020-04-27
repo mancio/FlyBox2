@@ -16,16 +16,27 @@ GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>.
-
 */
 
 // Joystic configurations definitions and functions
 
 #include <Arduino.h>
 #include <Joystick.h>
+#include <CD74HC4067.h>
+#include <ports.h>
 
-#define NO_REV true
-#define REV false
+
+#define totbt 16
+
+// configure input pin of the multiplexer logic table
+CD74HC4067 my_mux(S0_MUX, S1_MUX, S2_MUX, S3_MUX);
+
+
+// position of every joystick button from 1 to 16
+int joy_bt_array[totbt];
+
+
+
 
 // set joystick buttons and axis
 Joystick_ Joystick(
@@ -63,12 +74,7 @@ unsigned long lastDebounceTime = 0;
 unsigned long debounceDelay = 50;    
 
 
-/**
- * debounce the click button (used in addiction with hardware debounce)
- * 
- * @param int button to debounce
- * @return button state debounced
- */
+
 int debouncer(int button){
 
   // read the state of the switch into a local variable:
@@ -102,12 +108,7 @@ int debouncer(int button){
   
 }
 
-/**
- * set joystick button state according to pin input
- * 
- * @param int input pin
- * @param int button to be modified
- */
+
 void btset(int pin, int button){
     if(debouncer(pin) == HIGH){
         Joystick.setButton(button, HIGH);
@@ -118,14 +119,7 @@ void btset(int pin, int button){
 }
 
 
-/**
- * map the potentiometer scale to the Arduino analog input scale
- * 
- * @param long input analog value from axis
- * @param bool invert axis if false 
- * 
- * @return mapped value as long
- */
+
 long mapper(long m, bool rev){
 
   if(rev) return map(m, 0, 1023, -1023, 1023);
@@ -133,34 +127,33 @@ long mapper(long m, bool rev){
       
 }
 
-/**
- * check and set X-axis input value
- * 
- * @param int pin number
- * @param bool if false reverse the axis
- */
+
 void setX(int pin, bool rev){
     Joystick.setXAxis(mapper(pin,rev));
 }
 
-/**
- * check and set Y-axis input value
- * 
- * @param int pin number
- * @param bool if false reverse the axis
- */
+
 void setY(int pin, bool rev){
     Joystick.setYAxis(mapper(pin,rev));
 }
 
-/**
- * check and set Z-axis input value
- * 
- * @param int pin number
- * @param bool if false reverse the axis
- */
+
 void setZ(int pin, bool rev){
     Joystick.setZAxis(mapper(pin,rev));
 }
 
 
+void btArrayFiller(){
+    for(int i=0; i<totbt;i++){
+        joy_bt_array[i] = i+1;    
+    }
+}
+
+
+void muxLooper(){
+    for (int i = 0; i < 16; i++) {
+        my_mux.channel(i);
+        int bt_in = debouncer(SIG_MUX);
+        Joystick.setButton(joy_bt_array[i], bt_in);
+    }
+}

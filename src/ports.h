@@ -20,8 +20,11 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 // port definitions
 
-//#include <Arduino.h>
+#ifndef PORTS_h
+#define PORTS_h
 
+#define NO_REV true
+#define REV false
 
 /*
     9x pin rotary encoders
@@ -29,6 +32,8 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
     5x ports multiplexer
 */
 #define total_pins 17 
+
+//#define total_buttons 16
 
 // 9x pin rotary encoders
 #define SW_ENC_1 7 // click button encoder 1
@@ -56,3 +61,5 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 #define S1_MUX 16 // S1 port
 #define S2_MUX 14 // S2 port
 #define S3_MUX 15 // S3 port
+
+#endif

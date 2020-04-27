@@ -22,9 +22,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 #include <Arduino.h>
 
-/**
- * turn on and off Arduino build in leds
- */
+
 void setLed(){
     // disable TXLED and RXLED (TXLED is always on if the USB is tranmitting data)
     DDRD &= ~(1<<5);

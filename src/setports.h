@@ -18,32 +18,27 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
-#include <Arduino.h>
-#include <ports.h>
-#include <setports.h>
-#include <setmicro.h>
-#include <joyconf.h>
+#ifndef SETPORTS_h
+#define SETPORTS_h
 
+/**
+ * active serial port on Arduino
+ */
+void activeSerial();
 
-void setup() {
-  setLed();
-  setEncoders();
-  setMux();
-  setPot();
-}
+/**
+ * set encoder ports
+ */
+void setEncoders();
 
-void loop() {
+/**
+ * set slide potentiometers analog input ports
+ */
+void setPot();
 
-  /* read input from axes not reversed
-   * down = min value
-   * up = max value
-   */ 
-  setX(SL_1, NO_REV);
-  setY(SL_2, NO_REV);
-  setZ(SL_3, NO_REV);
+/**
+ * set multiplexer ports
+ */
+void setMux();
 
-  // order buttons from 1 to 16
-  btArrayFiller();
-  // read input form every mux port 
-  muxLooper();
-}
+#endif

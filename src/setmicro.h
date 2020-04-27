@@ -18,32 +18,12 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
-#include <Arduino.h>
-#include <ports.h>
-#include <setports.h>
-#include <setmicro.h>
-#include <joyconf.h>
+#ifndef SETMICRO_h
+#define SETMICRO_h
 
+/**
+ * turn on and off Arduino build in leds
+ */
+void setLed();
 
-void setup() {
-  setLed();
-  setEncoders();
-  setMux();
-  setPot();
-}
-
-void loop() {
-
-  /* read input from axes not reversed
-   * down = min value
-   * up = max value
-   */ 
-  setX(SL_1, NO_REV);
-  setY(SL_2, NO_REV);
-  setZ(SL_3, NO_REV);
-
-  // order buttons from 1 to 16
-  btArrayFiller();
-  // read input form every mux port 
-  muxLooper();
-}
+#endif
