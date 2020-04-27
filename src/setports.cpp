@@ -59,6 +59,6 @@ void setMux(){
     pinMode(S1_MUX,OUTPUT);
     pinMode(S2_MUX,OUTPUT);
     pinMode(S2_MUX,OUTPUT);
-    pinMode(SIG_MUX,INPUT);
+    pinMode(SIG_MUX,INPUT_PULLUP);
 }
 

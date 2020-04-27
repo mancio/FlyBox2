@@ -74,6 +74,18 @@ unsigned long lastDebounceTime = 0;
 unsigned long debounceDelay = 50;    
 
 
+void joy_conf(){
+
+  // Initialize Joystick Library
+  Joystick.begin();
+
+  Joystick.setXAxisRange(-1023, 1023);
+  Joystick.setYAxisRange(-1023, 1023);
+  Joystick.setZAxisRange(-1023, 1023);
+  
+ 
+   
+}
 
 int debouncer(int button){
 
@@ -129,23 +141,23 @@ long mapper(long m, bool rev){
 
 
 void setX(int pin, bool rev){
-    Joystick.setXAxis(mapper(pin,rev));
+    Joystick.setXAxis(mapper(analogRead(pin),rev));
 }
 
 
 void setY(int pin, bool rev){
-    Joystick.setYAxis(mapper(pin,rev));
+    Joystick.setYAxis(mapper(analogRead(pin),rev));
 }
 
 
 void setZ(int pin, bool rev){
-    Joystick.setZAxis(mapper(pin,rev));
+    Joystick.setZAxis(mapper(analogRead(pin),rev));
 }
 
 
 void btArrayFiller(){
     for(int i=0; i<totbt;i++){
-        joy_bt_array[i] = i+1;    
+        joy_bt_array[i] = i;    
     }
 }
 

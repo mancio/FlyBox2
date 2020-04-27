@@ -18,7 +18,6 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
-#ifndef TEST_CLICK // disable program main loop while unit testing in progress
 
 
 #include <Arduino.h>
@@ -30,6 +29,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 void setup() {
   setLed();
+  joy_conf();
   setEncoders();
   setMux();
   setPot();
@@ -51,4 +51,3 @@ void loop() {
   muxLooper();
 }
 
-#endif

@@ -25,6 +25,10 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 #define NO_REV true
 #define REV false
 
+/**
+ * Initialize joystick library
+ */
+void joy_conf();
 
 /**
  * debounce the click button (used in addiction with hardware debounce)
