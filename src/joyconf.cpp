@@ -20,7 +20,14 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 // Joystic configurations definitions and functions
 
+
+//time in ms (ex 3 sec = 3000)
+//#define exp (unsigned long)3000
+
+// total number of joy buttons
+#define totbt 16
 #include <Arduino.h>
+#include <../test/emulator.h>
 #include <joyconf.h>
 #include <Joystick.h>
 #include <CD74HC4067.h>
@@ -28,7 +35,11 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 #include <Timer.h>
 
 
-#define totbt 16
+
+// if true enter in test mode
+bool test = true;
+
+
 
 // configure input pin of the multiplexer logic table
 CD74HC4067 my_mux(S0_MUX, S1_MUX, S2_MUX, S3_MUX);
@@ -40,6 +51,7 @@ int joy_bt_array[totbt];
 // initialize Timer class to count the time
 Timer_ Timer;
 
+unsigned long exp = 3000;
 
 // set joystick buttons and axis
 Joystick_ Joystick(
@@ -91,9 +103,13 @@ void joy_conf(){
 
 int debouncer(int button){
 
-  // read the state of the switch into a local variable:
-  reading = digitalRead(button);
-
+  if(test){
+    reading = digitalRead_em(exp);  
+  }else{
+    // read the state of the switch into a local variable:
+    reading = digitalRead(button);
+  }
+  
   // check to see if you just pressed the button
   // (i.e. the input went from LOW to HIGH), and you've waited long enough
   // since the last press to ignore any noise:
@@ -101,7 +117,7 @@ int debouncer(int button){
   // If the switch changed, due to noise or pressing:
   if (reading != lastButtonState) {
     // update the debouncing timer
-    Timer.tUpdate();
+    Timer.update();
   }
 
   if (Timer.expired(debounceDelay)) {
@@ -143,17 +159,26 @@ long mapper(long m, bool rev){
 
 
 void setX(int pin, bool rev){
-    Joystick.setXAxis(mapper(analogRead(pin),rev));
+    int an_val;
+    if(test) an_val = analogRead_em(exp);
+    else an_val = analogRead(pin); 
+    Joystick.setXAxis(mapper(an_val,rev));
 }
 
 
 void setY(int pin, bool rev){
-    Joystick.setYAxis(mapper(analogRead(pin),rev));
+    int an_val;
+    if(test) an_val = analogRead_em(exp);
+    else an_val = analogRead(pin); 
+    Joystick.setYAxis(mapper(an_val,rev));
 }
 
 
 void setZ(int pin, bool rev){
-    Joystick.setZAxis(mapper(analogRead(pin),rev));
+    int an_val;
+    if(test) an_val = analogRead_em(exp);
+    else an_val = analogRead(pin); 
+    Joystick.setZAxis(mapper(an_val,rev));
 }
 
 

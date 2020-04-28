@@ -18,10 +18,12 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
-#include <Arduino.h>
+
 
 #ifndef SETPORTS_h
 #define SETPORTS_h
+
+#include <Arduino.h>
 
 /**
  * active serial port on Arduino

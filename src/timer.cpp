@@ -5,7 +5,7 @@ Timer_::Timer_(){
     
 }
 
-void Timer_::tUpdate(){
+void Timer_::update(){
     _last = millis()-_last;
 }
 

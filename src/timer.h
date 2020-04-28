@@ -1,7 +1,8 @@
-#include <Arduino.h>
-
 #ifndef TIMER_h
 #define TIMER_h
+
+
+#include <Arduino.h>
 
 class Timer_ {
     private:
@@ -13,7 +14,7 @@ class Timer_ {
          * update the time spent from Arduino boot
          * 
          */
-        void tUpdate();
+        void update();
 
         /**
          * reset the timer
