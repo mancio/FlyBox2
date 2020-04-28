@@ -21,6 +21,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 // set ports and manage multiplexing
 
 #include <Arduino.h>
+#include <setports.h>
 #include <ports.h>
 
 

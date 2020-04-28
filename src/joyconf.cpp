@@ -21,9 +21,11 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 // Joystic configurations definitions and functions
 
 #include <Arduino.h>
+#include <joyconf.h>
 #include <Joystick.h>
 #include <CD74HC4067.h>
 #include <ports.h>
+#include <Timer.h>
 
 
 #define totbt 16
@@ -35,7 +37,8 @@ CD74HC4067 my_mux(S0_MUX, S1_MUX, S2_MUX, S3_MUX);
 // position of every joystick button from 1 to 16
 int joy_bt_array[totbt];
 
-
+// initialize Timer class to count the time
+Timer_ Timer;
 
 
 // set joystick buttons and axis
@@ -68,8 +71,7 @@ int reading;
 // the following variables are unsigned longs because the time, measured in
 // milliseconds, will quickly become a bigger number than can be stored in an int.
 
-// the last time the output pin was toggled
-unsigned long lastDebounceTime = 0;  
+
 // the debounce time; increase if the output flickers
 unsigned long debounceDelay = 50;    
 
@@ -98,11 +100,11 @@ int debouncer(int button){
 
   // If the switch changed, due to noise or pressing:
   if (reading != lastButtonState) {
-    // reset the debouncing timer
-    lastDebounceTime = millis();
+    // update the debouncing timer
+    Timer.tUpdate();
   }
 
-  if ((millis() - lastDebounceTime) > debounceDelay) {
+  if (Timer.expired(debounceDelay)) {
     // whatever the reading is at, it's been there for longer than the debounce
     // delay, so take it as the actual current state:
 
