@@ -51,7 +51,7 @@ int joy_bt_array[totbt];
 // initialize Timer class to count the time
 Timer_ Timer;
 
-unsigned long exp_t = 1000;
+unsigned long exp_t = 3000;
 
 // set joystick buttons and axis
 Joystick_ Joystick(
