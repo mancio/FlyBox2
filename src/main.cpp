@@ -25,8 +25,8 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 #include <setports.h>
 #include <setmicro.h>
 #include <joyconf.h>
-
-
+//#include <../test/emulator.h>
+//#include <Timer.h>
 
 void setup() {
   setLed();

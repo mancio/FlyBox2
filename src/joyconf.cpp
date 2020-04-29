@@ -27,7 +27,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 // total number of joy buttons
 #define totbt 16
 #include <Arduino.h>
-#include <../test/emulator.h>
+#include <emulator.h>
 #include <joyconf.h>
 #include <Joystick.h>
 #include <CD74HC4067.h>
@@ -51,7 +51,7 @@ int joy_bt_array[totbt];
 // initialize Timer class to count the time
 Timer_ Timer;
 
-unsigned long exp = 3000;
+unsigned long exp_t = 1000;
 
 // set joystick buttons and axis
 Joystick_ Joystick(
@@ -104,7 +104,7 @@ void joy_conf(){
 int debouncer(int button){
 
   if(test){
-    reading = digitalRead_em(exp);  
+    reading = digitalRead_em(exp_t);  
   }else{
     // read the state of the switch into a local variable:
     reading = digitalRead(button);
@@ -160,7 +160,7 @@ long mapper(long m, bool rev){
 
 void setX(int pin, bool rev){
     int an_val;
-    if(test) an_val = analogRead_em(exp);
+    if(test) an_val = analogRead_em(exp_t);
     else an_val = analogRead(pin); 
     Joystick.setXAxis(mapper(an_val,rev));
 }
@@ -168,7 +168,7 @@ void setX(int pin, bool rev){
 
 void setY(int pin, bool rev){
     int an_val;
-    if(test) an_val = analogRead_em(exp);
+    if(test) an_val = analogRead_em(exp_t);
     else an_val = analogRead(pin); 
     Joystick.setYAxis(mapper(an_val,rev));
 }
@@ -176,7 +176,7 @@ void setY(int pin, bool rev){
 
 void setZ(int pin, bool rev){
     int an_val;
-    if(test) an_val = analogRead_em(exp);
+    if(test) an_val = analogRead_em(exp_t);
     else an_val = analogRead(pin); 
     Joystick.setZAxis(mapper(an_val,rev));
 }

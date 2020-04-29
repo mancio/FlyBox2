@@ -1,6 +1,6 @@
 #include <Arduino.h>
 #include <Timer.h>
-
+#include <emulator.h>
 
 
 // random button pressed
@@ -17,7 +17,9 @@ Timer_ Timer_em_ax;
 int digitalRead_em(unsigned long time){
     if(Timer_em_bt.expired(time)){
         Timer_em_bt.update();
-        rn_bt = random(0,1);
+        rn_bt = random(2);
+        Serial.print("bt_read ");
+        Serial.println(rn_bt);
         return rn_bt;
     }
     return rn_bt;
@@ -25,8 +27,10 @@ int digitalRead_em(unsigned long time){
 
 int analogRead_em(unsigned long time){
     if(Timer_em_ax.expired(time)){
-        Timer_em_bt.update();
-        rn_ax = random(0,1023); 
+        Timer_em_ax.update();
+        rn_ax = random(1024);
+        Serial.print("ax_read ");
+        Serial.println(rn_ax); 
         return rn_ax;   
     }
     return rn_ax;
