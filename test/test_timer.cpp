@@ -1,7 +1,7 @@
 #include <Arduino.h>
 #include <unity.h>
-//#include <Timer.h>
-#include <../src/Timer.h>
+#include <Timer.h>
+//#include <../src/Timer.h>
 
 // time loop operation
 unsigned long lp = 5000;
