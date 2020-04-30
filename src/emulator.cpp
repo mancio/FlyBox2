@@ -22,6 +22,7 @@ int digitalRead_em(unsigned long time){
         //Serial.println(rn_bt);
         return rn_bt;
     }
+    
     return rn_bt;
 }
 
@@ -34,6 +35,8 @@ int analogRead_em(unsigned long time){
         //Serial.println(rn_ax); 
         return rn_ax;   
     }
+    Serial.println("not expired");
+    
     return rn_ax;
 }
 

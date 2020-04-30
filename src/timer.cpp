@@ -7,7 +7,7 @@ Timer_::Timer_(){
 }
 
 void Timer_::update(){
-    _last = millis()-_last;
+    _last = millis();
     //Serial.print("tick");
     //Serial.println(_last);
     
