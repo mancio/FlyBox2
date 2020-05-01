@@ -32,8 +32,11 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 // set test mode
 bool t = true;
 
-// log activated
-bool l = true;
+/* log activated
+ * remember to stop log when using joytick
+ * continuos print can disturb joystick functionality
+ */
+bool l = false;
 
 Timer_ Timer_main;
 
