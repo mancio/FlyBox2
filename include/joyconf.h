@@ -26,6 +26,13 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 #define REV false
 
 /**
+ * set the execution in test mode
+ *
+ * @param bool if true test mode, if false normal mode
+ */
+void setTest(bool testin);
+
+/**
  * Initialize joystick library
  */
 void joy_conf();
@@ -61,24 +68,30 @@ long mapper(long m, bool rev);
  * 
  * @param int pin number
  * @param bool if false reverse the axis
+ * 
+ * @return long axis value
  */
-void setX(int pin, bool rev);
+long setX(int pin, bool rev);
 
 /**
  * check and set Y-axis input value
  * 
  * @param int pin number
  * @param bool if false reverse the axis
+ * 
+ * @return long axis value
  */
-void setY(int pin, bool rev);
+long setY(int pin, bool rev);
 
 /**
  * check and set Z-axis input value
  * 
  * @param int pin number
  * @param bool if false reverse the axis
+ * 
+ * @return long axis value
  */
-void setZ(int pin, bool rev);
+long setZ(int pin, bool rev);
 
 /**
  * build an array of buttons in normal order 

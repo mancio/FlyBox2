@@ -36,8 +36,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 
 
-// if true enter in test mode
-bool test = true;
+
 
 
 
@@ -87,6 +86,12 @@ int reading;
 // the debounce time; increase if the output flickers
 unsigned long debounceDelay = 50;    
 
+// store test state if true enter in test mode
+bool test = false;
+
+void setTest(bool testin){
+  test = testin;
+}
 
 void joy_conf(){
 
@@ -104,7 +109,7 @@ void joy_conf(){
 int debouncer(int button){
 
   if(test){
-    reading = digitalRead_em(exp_t);  
+    reading = digitalRead_em();  
   }else{
     // read the state of the switch into a local variable:
     reading = digitalRead(button);
@@ -158,27 +163,33 @@ long mapper(long m, bool rev){
 }
 
 
-void setX(int pin, bool rev){
+long setX(int pin, bool rev){
     int an_val;
-    if(test) an_val = analogRead_em_X(exp_t);
-    else an_val = analogRead(pin); 
-    Joystick.setXAxis(mapper(an_val,rev));
+    if(test) an_val = analogRead_em_X();
+    else an_val = analogRead(pin);
+    long mapped = mapper(an_val,rev);
+    Joystick.setXAxis(mapped);
+    return mapped;
 }
 
 
-void setY(int pin, bool rev){
+long setY(int pin, bool rev){
     int an_val;
-    if(test) an_val = analogRead_em_Y(exp_t);
+    if(test) an_val = analogRead_em_Y();
     else an_val = analogRead(pin); 
-    Joystick.setYAxis(mapper(an_val,rev));
+    long mapped = mapper(an_val,rev);
+    Joystick.setYAxis(mapped);
+    return mapped;
 }
 
 
-void setZ(int pin, bool rev){
+long setZ(int pin, bool rev){
     int an_val;
-    if(test) an_val = analogRead_em_Z(exp_t);
+    if(test) an_val = analogRead_em_Z();
     else an_val = analogRead(pin); 
-    Joystick.setZAxis(mapper(an_val,rev));
+    long mapped = mapper(an_val,rev);
+    Joystick.setZAxis(mapped);
+    return mapped;
 }
 
 

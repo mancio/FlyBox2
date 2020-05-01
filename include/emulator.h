@@ -30,6 +30,11 @@ void click_bt_em(int button);
 void move_joy_em(int X, int Y, int Z);
 
 /**
+ * move emulated axes up and down gradually
+ */
+void loop_joy_em();
+
+/**
  * emulate the multiplexer by reading from an array
  * of button states
  * 
