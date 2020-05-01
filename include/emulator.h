@@ -4,6 +4,11 @@
 #include <Arduino.h>
 
 /**
+ * reset the state of axes to center and buttons to not pressed
+ */
+void reset_joy_em();
+
+/**
  * simulate digital read by reading HIGH or LOW randomly
  * 
  * @param unsigned long maxtime one button is keep pressed
