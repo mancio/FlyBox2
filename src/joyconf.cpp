@@ -139,14 +139,14 @@ int debouncer(int button){
 }
 
 
-void btset(int pin, int button){
+/*void btset(int pin, int button){
     if(debouncer(pin) == HIGH){
         Joystick.setButton(button, HIGH);
     }else{
         Joystick.setButton(button,LOW);    
     }
     
-}
+}*/
 
 
 
@@ -191,7 +191,8 @@ void btArrayFiller(){
 
 void muxLooper(){
     for (int i = 0; i < 16; i++) {
-        my_mux.channel(i);
+        if(test) mux_channel_em(i);
+        else my_mux.channel(i);
         int bt_in = debouncer(SIG_MUX);
         Joystick.setButton(joy_bt_array[i], bt_in);
     }

@@ -9,6 +9,14 @@
 void reset_joy_em();
 
 /**
+ * emulate the multiplexer by reading from an array
+ * of button states
+ * 
+ * @param int array position
+ */
+void mux_channel_em(int ar_pos);
+
+/**
  * simulate digital read by reading HIGH or LOW randomly
  * 
  * @param unsigned long maxtime one button is keep pressed
