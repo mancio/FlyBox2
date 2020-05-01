@@ -16,7 +16,7 @@ An advanced flight control pad made with an atmega32u4 pro micro (leonardo archi
 * 3x rotary encoders 
 * 1x CD74HC4067 16-Channel Analog Digital Multiplexers
 * 1x MC14490P hardware debouncer
-* 1x 10nf capacitor
+* 1x 10nf capacitor(change capacitor change delay)
 * 16X push buttons
 
 ## TODO
