@@ -4,9 +4,30 @@
 #include <Arduino.h>
 
 /**
- * reset the state of axes to center and buttons to not pressed
+ * reset the state of the emulated axes to center and buttons to not pressed
  */
 void reset_joy_em();
+
+/**
+ * reset state of the emulated buttons to 0;
+ */
+void reset_bt_em();
+
+/**
+ * emulate click of button
+ * 
+ * @param int button to click (from 0 tp 15)
+ */
+void click_bt_em(int button);
+
+/**
+ * set joystick axes in the emulator array
+ * 
+ * @param int X
+ * @param int Y
+ * @param int Z
+ */
+void move_joy_em(int X, int Y, int Z);
 
 /**
  * emulate the multiplexer by reading from an array
@@ -17,22 +38,31 @@ void reset_joy_em();
 void mux_channel_em(int ar_pos);
 
 /**
- * simulate digital read by reading HIGH or LOW randomly
+ * read value from array previously set by mux emulator
  * 
- * @param unsigned long maxtime one button is keep pressed
- * 
- * @return int can be HIGH or LOW as 1 or 0;
+ * @return 1 or 0
  */
-int digitalRead_em(unsigned long time);
+int digitalRead_em();
 
 /**
- * simulate an analog read form the axis with a value between
- * 0 and 1023
+ * return the value from emulated X
  * 
- * @param time in ms button is pressed
- * 
- * @return a random int value between 0 and 1023
+ * @return emulated X value (0-1023)
  */
-int analogRead_em(unsigned long time);
+int analogRead_em_X();
+
+/**
+ * return the value from emulated Y
+ * 
+ * @return emulated Y value (0-1023)
+ */
+int analogRead_em_Y();
+
+/**
+ * return the value from emulated Z
+ * 
+ * @return emulated Z value (0-1023)
+ */
+int analogRead_em_Z();
 
 #endif

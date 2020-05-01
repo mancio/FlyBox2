@@ -160,7 +160,7 @@ long mapper(long m, bool rev){
 
 void setX(int pin, bool rev){
     int an_val;
-    if(test) an_val = analogRead_em(exp_t);
+    if(test) an_val = analogRead_em_X(exp_t);
     else an_val = analogRead(pin); 
     Joystick.setXAxis(mapper(an_val,rev));
 }
@@ -168,7 +168,7 @@ void setX(int pin, bool rev){
 
 void setY(int pin, bool rev){
     int an_val;
-    if(test) an_val = analogRead_em(exp_t);
+    if(test) an_val = analogRead_em_Y(exp_t);
     else an_val = analogRead(pin); 
     Joystick.setYAxis(mapper(an_val,rev));
 }
@@ -176,7 +176,7 @@ void setY(int pin, bool rev){
 
 void setZ(int pin, bool rev){
     int an_val;
-    if(test) an_val = analogRead_em(exp_t);
+    if(test) an_val = analogRead_em_Z(exp_t);
     else an_val = analogRead(pin); 
     Joystick.setZAxis(mapper(an_val,rev));
 }
