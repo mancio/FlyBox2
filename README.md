@@ -22,7 +22,6 @@ An advanced flight control pad made with an atmega32u4 pro micro (leonardo archi
 ## TODO
 
 * test not working due to python problem with vs IDE
-* array of axes and buttons to store the previous state
 * write encoders functions
 
 ## Still under construction 
