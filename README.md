@@ -22,7 +22,8 @@ An advanced flight control pad made with an atmega32u4 pro micro (leonardo archi
 ## TODO
 
 * test not working due to python problem with vs IDE
-* write encoders functions
+* test encoders
+* what debouncing is returning?
 
 ## Still under construction 
 ## STAY TUNED!

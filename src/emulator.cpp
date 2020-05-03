@@ -2,12 +2,38 @@
 #include <Timer.h>
 #include <emulator.h>
 
+
+
+
 // array of axes state
 int st_array[3] = {
     511, // X-axis
     511, // Y-axis
     511, // Z-axis
 };
+
+/* array of encoder state
+   -1 = left
+   0 = no movement
+   1 = right
+
+   for sw
+   0 = not pushed
+   1 = pushed
+*/
+int enc_array[6]={
+    0, // dir enc1
+    0, // dir enc2
+    0, // dir enc3
+    0, // sw 1
+    0, // sw 2
+    0, // sw 3
+};
+
+// encoders steps
+int steps = 0;
+// invert the direction (true = right)
+bool inv = true;
 
 // array with button states
 int st_bt_array[16] = {
@@ -73,6 +99,36 @@ void loop_joy_em(){
     st_array[1] = st_array[1]+sum_Y;
     st_array[2] = st_array[2]+sum_Z;
 
+}
+
+void click_enc_em(){
+
+    if(steps == 0 && inv){
+        for(int i = 0; i<3; i++){
+            enc_array[i] = 1;
+        }
+        steps++;
+    }
+    steps++
+
+
+    for(int i = 0; i<3; i++){
+        if(inv){
+            enc_array[i] = 1;
+            steps++;
+            if(steps == 360) inv = !inv;
+        }else{
+            enc_array[i] = -1;
+            steps--;
+            if(steps == 0) inv = !inv;
+        }
+    }
+}
+
+void stop_enc(){
+    for(int i = 0; i<3; i++){
+        enc_array[i] = 0;
+    }
 }
 
 void mux_channel_em(int ar_pos){

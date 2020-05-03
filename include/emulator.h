@@ -35,6 +35,16 @@ void move_joy_em(int X, int Y, int Z);
 void loop_joy_em();
 
 /**
+ * set encoders array right and after 360 steps to left
+ */
+void click_enc_em();
+
+/**
+ * set encoders to center
+ */
+void stop_enc();
+
+/**
  * emulate the multiplexer by reading from an array
  * of button states
  * 
