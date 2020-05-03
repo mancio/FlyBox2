@@ -24,8 +24,16 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 //time in ms (ex 3 sec = 3000)
 //#define exp (unsigned long)3000
 
-// total number of joy buttons
+// total number of joy buttons (from 1 escluded 6 buttons for encoders)
 #define totbt 16
+
+#define left_enc1 17
+#define right_enc1 18
+#define left_enc2 19
+#define right_enc2 20
+#define left_enc3 21
+#define right_enc3 22
+
 #include <Arduino.h>
 #include <emulator.h>
 #include <joyconf.h>
@@ -33,10 +41,11 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 #include <CD74HC4067.h>
 #include <ports.h>
 #include <Timer.h>
+#include <Encoder.h>
 
-
-
-
+Encoder_ Enc1(CLK_ENC_1, DT_ENC_1, SW_ENC_1);
+Encoder_ Enc2(CLK_ENC_2, DT_ENC_2, SW_ENC_2);
+Encoder_ Enc3(CLK_ENC_3, DT_ENC_3, SW_ENC_3);
 
 
 
@@ -50,13 +59,16 @@ int joy_bt_array[totbt];
 // initialize Timer class to count the time
 Timer_ Timer;
 
-unsigned long exp_t = 3000;
+//time pressed after encoder clicked in ms
+long t_enc_p = 100;
+
+//unsigned long exp_t = 3000;
 
 // set joystick buttons and axis
 Joystick_ Joystick(
   JOYSTICK_DEFAULT_REPORT_ID, // joystick ID 
   JOYSTICK_TYPE_JOYSTICK, // device type
-  16, // buttons number (up,right,left,down are 2 axis)
+  21, // buttons number (up,right,left,down are 2 axis)
   0, // hotswitch count
   true, // X axis
   true, // Y axis
@@ -139,7 +151,7 @@ int debouncer(int button){
   // save the reading. Next time through the loop, it'll be the lastButtonState:
   lastButtonState = reading;
 
-  return lastButtonState;
+  return buttonState;
   
 }
 
@@ -164,47 +176,82 @@ long mapper(long m, bool rev){
 
 
 long setX(int pin, bool rev){
-    int an_val;
-    if(test) an_val = analogRead_em_X();
-    else an_val = analogRead(pin);
-    long mapped = mapper(an_val,rev);
-    Joystick.setXAxis(mapped);
-    return mapped;
+  int an_val;
+  if(test) an_val = analogRead_em_X();
+  else an_val = analogRead(pin);
+  long mapped = mapper(an_val,rev);
+  Joystick.setXAxis(mapped);
+  return mapped;
 }
 
 
 long setY(int pin, bool rev){
-    int an_val;
-    if(test) an_val = analogRead_em_Y();
-    else an_val = analogRead(pin); 
-    long mapped = mapper(an_val,rev);
-    Joystick.setYAxis(mapped);
-    return mapped;
+  int an_val;
+  if(test) an_val = analogRead_em_Y();
+  else an_val = analogRead(pin); 
+  long mapped = mapper(an_val,rev);
+  Joystick.setYAxis(mapped);
+  return mapped;
 }
 
 
 long setZ(int pin, bool rev){
-    int an_val;
-    if(test) an_val = analogRead_em_Z();
-    else an_val = analogRead(pin); 
-    long mapped = mapper(an_val,rev);
-    Joystick.setZAxis(mapped);
-    return mapped;
+  int an_val;
+  if(test) an_val = analogRead_em_Z();
+  else an_val = analogRead(pin); 
+  long mapped = mapper(an_val,rev);
+  Joystick.setZAxis(mapped);
+  return mapped;
 }
 
 
 void btArrayFiller(){
-    for(int i=0; i<totbt;i++){
-        joy_bt_array[i] = i;    
-    }
+  for(int i=0; i<totbt;i++){
+      joy_bt_array[i] = i;    
+  }
 }
 
 
 void muxLooper(){
-    for (int i = 0; i < 16; i++) {
-        if(test) mux_channel_em(i);
-        else my_mux.channel(i);
-        int bt_in = debouncer(SIG_MUX);
-        Joystick.setButton(joy_bt_array[i], bt_in);
-    }
+  for (int i = 0; i < 16; i++) {
+      if(test) mux_channel_em(i);
+      else my_mux.channel(i);
+      int bt_in = debouncer(SIG_MUX);
+      Joystick.setButton(joy_bt_array[i], bt_in);
+  }
+}
+
+void setEncoders(){
+
+  // click buttons according to the encoder directions
+  if (Enc1.direction(t_enc_p) == -1) Joystick.setButton(left_enc1,HIGH);
+  else if (Enc1.direction(t_enc_p) == 1) Joystick.setButton(right_enc1,HIGH);
+  else {
+    Joystick.setButton(right_enc1,LOW);
+    Joystick.setButton(left_enc1,LOW);
+  } 
+
+  if (Enc2.direction(t_enc_p) == -1) Joystick.setButton(left_enc2,HIGH);
+  else if (Enc2.direction(t_enc_p) == 1) Joystick.setButton(right_enc2,HIGH);
+  else {
+    Joystick.setButton(right_enc2,LOW);
+    Joystick.setButton(left_enc2,LOW);
+  }     
+
+  if (Enc3.direction(t_enc_p) == -1) Joystick.setButton(left_enc3,HIGH);
+  else if (Enc3.direction(t_enc_p) == 1) Joystick.setButton(right_enc3,HIGH);
+  else {
+    Joystick.setButton(right_enc3,LOW);
+    Joystick.setButton(left_enc3,LOW);
+  }         
+
+  // check sw button states
+  if(Enc1.click(debounceDelay)) Joystick.setButton(SW_ENC_1,HIGH);
+  else Joystick.setButton(SW_ENC_1,LOW);
+
+  if(Enc2.click(debounceDelay)) Joystick.setButton(SW_ENC_2,HIGH);
+  else Joystick.setButton(SW_ENC_2,LOW);
+
+  if(Enc3.click(debounceDelay)) Joystick.setButton(SW_ENC_3,HIGH);
+  else Joystick.setButton(SW_ENC_3,LOW);
 }

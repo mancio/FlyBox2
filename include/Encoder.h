@@ -3,6 +3,7 @@
 
 #include <Arduino.h>
 #include <Timer.h>
+#include <joyconf.h>
 
 /**
  * The encoder class is used to control a classic multiturn rotary encoder
@@ -34,10 +35,20 @@ class Encoder_ {
         // click push button
         int _sw;
 
+        // read state of sw
+        int _sw_read;
+        // current sw state
+        int _sw_current; 
+        // last sw state
+        int _sw_last_state;
+
         // state encoder pin A
-        int _n;
+        int _current_clk;
         // last state pin A
-        int _encoder0PinALast;
+        int _last_clk;
+
+        //last saved direction result
+        int _res;
 
         // timer class for debouncing and direction time
         Timer_ _Timer;

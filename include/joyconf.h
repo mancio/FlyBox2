@@ -105,6 +105,11 @@ void btArrayFiller();
  */
 void muxLooper();
 
+/**
+ * push buttons depending by encoders direction and click buttons
+ */
+void setEncoders();
+
 
 
 #endif
