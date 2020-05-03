@@ -24,15 +24,19 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 //time in ms (ex 3 sec = 3000)
 //#define exp (unsigned long)3000
 
-// total number of joy buttons (from 1 escluded 6 buttons for encoders)
+// total number of joy buttons (from 1 escluded 9 buttons for encoders)
 #define totbt 16
 
-#define left_enc1 17
-#define right_enc1 18
-#define left_enc2 19
-#define right_enc2 20
-#define left_enc3 21
-#define right_enc3 22
+#define left_enc1_bt 17
+#define right_enc1_bt 18
+#define left_enc2_bt 19
+#define right_enc2_bt 20
+#define left_enc3_bt 21
+#define right_enc3_bt 22
+
+#define sw1_bt 23
+#define sw2_bt 24
+#define sw3_bt 25
 
 #include <Arduino.h>
 #include <emulator.h>
@@ -224,34 +228,34 @@ void muxLooper(){
 void setEncoders(){
 
   // click buttons according to the encoder directions
-  if (Enc1.direction(t_enc_p) == -1) Joystick.setButton(left_enc1,HIGH);
-  else if (Enc1.direction(t_enc_p) == 1) Joystick.setButton(right_enc1,HIGH);
+  if (Enc1.direction(t_enc_p) == -1) Joystick.setButton(left_enc1_bt,HIGH);
+  else if (Enc1.direction(t_enc_p) == 1) Joystick.setButton(right_enc1_bt,HIGH);
   else {
-    Joystick.setButton(right_enc1,LOW);
-    Joystick.setButton(left_enc1,LOW);
+    Joystick.setButton(right_enc1_bt,LOW);
+    Joystick.setButton(left_enc1_bt,LOW);
   } 
 
-  if (Enc2.direction(t_enc_p) == -1) Joystick.setButton(left_enc2,HIGH);
-  else if (Enc2.direction(t_enc_p) == 1) Joystick.setButton(right_enc2,HIGH);
+  if (Enc2.direction(t_enc_p) == -1) Joystick.setButton(left_enc2_bt,HIGH);
+  else if (Enc2.direction(t_enc_p) == 1) Joystick.setButton(right_enc2_bt,HIGH);
   else {
-    Joystick.setButton(right_enc2,LOW);
-    Joystick.setButton(left_enc2,LOW);
+    Joystick.setButton(right_enc2_bt,LOW);
+    Joystick.setButton(left_enc2_bt,LOW);
   }     
 
-  if (Enc3.direction(t_enc_p) == -1) Joystick.setButton(left_enc3,HIGH);
-  else if (Enc3.direction(t_enc_p) == 1) Joystick.setButton(right_enc3,HIGH);
+  if (Enc3.direction(t_enc_p) == -1) Joystick.setButton(left_enc3_bt,HIGH);
+  else if (Enc3.direction(t_enc_p) == 1) Joystick.setButton(right_enc3_bt,HIGH);
   else {
-    Joystick.setButton(right_enc3,LOW);
-    Joystick.setButton(left_enc3,LOW);
+    Joystick.setButton(right_enc3_bt,LOW);
+    Joystick.setButton(left_enc3_bt,LOW);
   }         
 
   // check sw button states
-  if(Enc1.click(debounceDelay)) Joystick.setButton(SW_ENC_1,HIGH);
-  else Joystick.setButton(SW_ENC_1,LOW);
+  if(Enc1.click(debounceDelay)) Joystick.setButton(sw1_bt,HIGH);
+  else Joystick.setButton(sw1_bt,LOW);
 
-  if(Enc2.click(debounceDelay)) Joystick.setButton(SW_ENC_2,HIGH);
-  else Joystick.setButton(SW_ENC_2,LOW);
+  if(Enc2.click(debounceDelay)) Joystick.setButton(sw2_bt,HIGH);
+  else Joystick.setButton(sw2_bt,LOW);
 
-  if(Enc3.click(debounceDelay)) Joystick.setButton(SW_ENC_3,HIGH);
-  else Joystick.setButton(SW_ENC_3,LOW);
+  if(Enc3.click(debounceDelay)) Joystick.setButton(sw3_bt,HIGH);
+  else Joystick.setButton(sw3_bt,LOW);
 }

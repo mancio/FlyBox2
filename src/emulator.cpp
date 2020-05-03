@@ -101,17 +101,8 @@ void loop_joy_em(){
 
 }
 
+
 void click_enc_em(){
-
-    if(steps == 0 && inv){
-        for(int i = 0; i<3; i++){
-            enc_array[i] = 1;
-        }
-        steps++;
-    }
-    steps++
-
-
     for(int i = 0; i<3; i++){
         if(inv){
             enc_array[i] = 1;
