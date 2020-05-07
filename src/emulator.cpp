@@ -116,6 +116,10 @@ void click_enc_em(){
     }
 }
 
+int read_enc(int enc){
+    return enc_array[enc];
+}
+
 void stop_enc(){
     for(int i = 0; i<3; i++){
         enc_array[i] = 0;

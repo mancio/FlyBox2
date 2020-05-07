@@ -64,6 +64,8 @@ void loop() {
   btArrayFiller();
   // read input form every mux port 
   muxLooper();
+  // click one button or another depending by the encoder movement
+  setEncoders();
 
   if(t){
     /* reset all buttons to zero and click one
