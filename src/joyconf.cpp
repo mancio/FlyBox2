@@ -27,16 +27,16 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 // total number of joy buttons (from 1 escluded 9 buttons for encoders)
 #define totbt 16
 
-#define left_enc1_bt 17
-#define right_enc1_bt 18
-#define left_enc2_bt 19
-#define right_enc2_bt 20
-#define left_enc3_bt 21
-#define right_enc3_bt 22
+#define left_enc1_bt 16
+#define right_enc1_bt 17
+#define left_enc2_bt 18
+#define right_enc2_bt 19
+#define left_enc3_bt 20
+#define right_enc3_bt 21
 
-#define sw1_bt 23
-#define sw2_bt 24
-#define sw3_bt 25
+#define sw1_bt 22
+#define sw2_bt 23
+#define sw3_bt 24
 
 #include <Arduino.h>
 #include <emulator.h>
@@ -72,7 +72,8 @@ long t_enc_p = 100;
 Joystick_ Joystick(
   JOYSTICK_DEFAULT_REPORT_ID, // joystick ID 
   JOYSTICK_TYPE_JOYSTICK, // device type
-  21, // buttons number (up,right,left,down are 2 axis)
+  // buttons counting start from 1
+  25, // buttons number (up,right,left,down are 2 axis)
   0, // hotswitch count
   true, // X axis
   true, // Y axis
@@ -155,7 +156,8 @@ int debouncer(int button){
   // save the reading. Next time through the loop, it'll be the lastButtonState:
   lastButtonState = reading;
 
-  return buttonState;
+  //return buttonState;
+  return lastButtonState;
   
 }
 
@@ -220,7 +222,10 @@ void muxLooper(){
   for (int i = 0; i < 16; i++) {
       if(test) mux_channel_em(i);
       else my_mux.channel(i);
+      // in test mode debouncer does not read SIG_MUX
       int bt_in = debouncer(SIG_MUX);
+      //Serial.print("bt_in is: ");
+      //Serial.println(bt_in);
       Joystick.setButton(joy_bt_array[i], bt_in);
   }
 }
@@ -250,13 +255,22 @@ void setEncoders_dir(){
     }         
 
     // check sw button states
-    if(read_enc(3) == HIGH) Joystick.setButton(sw1_bt,HIGH);
+    if(read_enc(3) == HIGH) {
+      Joystick.setButton(sw1_bt,HIGH);
+      //Serial.println("press 3");
+    }
     else Joystick.setButton(sw1_bt,LOW);
 
-    if(read_enc(4) == HIGH) Joystick.setButton(sw2_bt,HIGH);
+    if(read_enc(4) == HIGH) {
+      Joystick.setButton(sw2_bt,HIGH);
+      //Serial.println("press 4");
+    }
     else Joystick.setButton(sw2_bt,LOW);
 
-    if(read_enc(5) == HIGH) Joystick.setButton(sw3_bt,HIGH);
+    if(read_enc(5) == HIGH) {
+      Joystick.setButton(sw3_bt,HIGH);
+      //Serial.println("press 5");
+    }
     else Joystick.setButton(sw3_bt,LOW);
   
   } else {

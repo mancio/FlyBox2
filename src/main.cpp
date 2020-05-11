@@ -75,10 +75,11 @@ void loop() {
     if(Timer_main.expired(2000)){
       Timer_main.update();
       reset_bt_em();
-      click_bt_em(random(15));
-
       reset_enc_click_em();
+
+      click_bt_em(random(16));
       click_enc_em(random(3,6));
+      
     }     
     // move axis up and down; 
     loop_joy_em();
@@ -89,6 +90,7 @@ void loop() {
       click_enc_em();
     }
     stop_enc();
+    
   }
 
   if(l){
