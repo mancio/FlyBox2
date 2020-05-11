@@ -39,6 +39,7 @@ bool t = true;
 bool l = false;
 
 Timer_ Timer_main;
+Timer_ Enc_speed;
 
 void setup() {
 
@@ -65,7 +66,7 @@ void loop() {
   // read input form every mux port 
   muxLooper();
   // click one button or another depending by the encoder movement
-  setEncoders();
+  setEncoders_dir();
 
   if(t){
     /* reset all buttons to zero and click one
@@ -75,9 +76,19 @@ void loop() {
       Timer_main.update();
       reset_bt_em();
       click_bt_em(random(15));
+
+      reset_enc_click_em();
+      click_enc_em(random(3,6));
     }     
     // move axis up and down; 
     loop_joy_em();
+
+    //encoders
+    if(Enc_speed.expired(500)){
+      Enc_speed.update();
+      click_enc_em();
+    }
+    stop_enc();
   }
 
   if(l){

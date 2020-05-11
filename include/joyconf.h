@@ -108,7 +108,7 @@ void muxLooper();
 /**
  * push buttons depending by encoders direction and click buttons
  */
-void setEncoders();
+void setEncoders_dir();
 
 
 

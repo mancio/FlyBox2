@@ -225,37 +225,72 @@ void muxLooper(){
   }
 }
 
-void setEncoders(){
+void setEncoders_dir(){
+  if(test){
+      // click buttons according to the encoder directions
+    if (read_enc(0) == -1) Joystick.setButton(left_enc1_bt,HIGH);
+    else if (read_enc(0) == 1) Joystick.setButton(right_enc1_bt,HIGH);
+    else {
+      Joystick.setButton(right_enc1_bt,LOW);
+      Joystick.setButton(left_enc1_bt,LOW);
+    } 
 
-  // click buttons according to the encoder directions
-  if (Enc1.direction(t_enc_p) == -1) Joystick.setButton(left_enc1_bt,HIGH);
-  else if (Enc1.direction(t_enc_p) == 1) Joystick.setButton(right_enc1_bt,HIGH);
-  else {
-    Joystick.setButton(right_enc1_bt,LOW);
-    Joystick.setButton(left_enc1_bt,LOW);
-  } 
+    if (read_enc(1) == -1) Joystick.setButton(left_enc2_bt,HIGH);
+    else if (read_enc(1) == 1) Joystick.setButton(right_enc2_bt,HIGH);
+    else {
+      Joystick.setButton(right_enc2_bt,LOW);
+      Joystick.setButton(left_enc2_bt,LOW);
+    }     
 
-  if (Enc2.direction(t_enc_p) == -1) Joystick.setButton(left_enc2_bt,HIGH);
-  else if (Enc2.direction(t_enc_p) == 1) Joystick.setButton(right_enc2_bt,HIGH);
-  else {
-    Joystick.setButton(right_enc2_bt,LOW);
-    Joystick.setButton(left_enc2_bt,LOW);
-  }     
+    if (read_enc(2) == -1) Joystick.setButton(left_enc3_bt,HIGH);
+    else if (read_enc(2) == 1) Joystick.setButton(right_enc3_bt,HIGH);
+    else {
+      Joystick.setButton(right_enc3_bt,LOW);
+      Joystick.setButton(left_enc3_bt,LOW);
+    }         
 
-  if (Enc3.direction(t_enc_p) == -1) Joystick.setButton(left_enc3_bt,HIGH);
-  else if (Enc3.direction(t_enc_p) == 1) Joystick.setButton(right_enc3_bt,HIGH);
-  else {
-    Joystick.setButton(right_enc3_bt,LOW);
-    Joystick.setButton(left_enc3_bt,LOW);
-  }         
+    // check sw button states
+    if(read_enc(3) == HIGH) Joystick.setButton(sw1_bt,HIGH);
+    else Joystick.setButton(sw1_bt,LOW);
 
-  // check sw button states
-  if(Enc1.click(debounceDelay)) Joystick.setButton(sw1_bt,HIGH);
-  else Joystick.setButton(sw1_bt,LOW);
+    if(read_enc(4) == HIGH) Joystick.setButton(sw2_bt,HIGH);
+    else Joystick.setButton(sw2_bt,LOW);
 
-  if(Enc2.click(debounceDelay)) Joystick.setButton(sw2_bt,HIGH);
-  else Joystick.setButton(sw2_bt,LOW);
+    if(read_enc(5) == HIGH) Joystick.setButton(sw3_bt,HIGH);
+    else Joystick.setButton(sw3_bt,LOW);
+  
+  } else {
+ 
+    // click buttons according to the encoder directions
+    if (Enc1.direction(t_enc_p) == -1) Joystick.setButton(left_enc1_bt,HIGH);
+    else if (Enc1.direction(t_enc_p) == 1) Joystick.setButton(right_enc1_bt,HIGH);
+    else {
+      Joystick.setButton(right_enc1_bt,LOW);
+      Joystick.setButton(left_enc1_bt,LOW);
+    } 
 
-  if(Enc3.click(debounceDelay)) Joystick.setButton(sw3_bt,HIGH);
-  else Joystick.setButton(sw3_bt,LOW);
+    if (Enc2.direction(t_enc_p) == -1) Joystick.setButton(left_enc2_bt,HIGH);
+    else if (Enc2.direction(t_enc_p) == 1) Joystick.setButton(right_enc2_bt,HIGH);
+    else {
+      Joystick.setButton(right_enc2_bt,LOW);
+      Joystick.setButton(left_enc2_bt,LOW);
+    }     
+
+    if (Enc3.direction(t_enc_p) == -1) Joystick.setButton(left_enc3_bt,HIGH);
+    else if (Enc3.direction(t_enc_p) == 1) Joystick.setButton(right_enc3_bt,HIGH);
+    else {
+      Joystick.setButton(right_enc3_bt,LOW);
+      Joystick.setButton(left_enc3_bt,LOW);
+    }         
+
+    // check sw button states
+    if(Enc1.click(debounceDelay) == HIGH) Joystick.setButton(sw1_bt,HIGH);
+    else Joystick.setButton(sw1_bt,LOW);
+
+    if(Enc2.click(debounceDelay) == HIGH) Joystick.setButton(sw2_bt,HIGH);
+    else Joystick.setButton(sw2_bt,LOW);
+
+    if(Enc3.click(debounceDelay) == HIGH) Joystick.setButton(sw3_bt,HIGH);
+    else Joystick.setButton(sw3_bt,LOW);
+  }
 }

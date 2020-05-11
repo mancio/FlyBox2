@@ -120,6 +120,16 @@ int read_enc(int enc){
     return enc_array[enc];
 }
 
+void reset_enc_click_em(){
+    for(int i = 3; i<6; i++){
+        enc_array[i] = 0;
+    }
+}
+
+void click_enc_em(int bt_en){
+    enc_array[bt_en] = 1;
+}
+
 void stop_enc(){
     for(int i = 0; i<3; i++){
         enc_array[i] = 0;

@@ -40,6 +40,30 @@ void loop_joy_em();
 void click_enc_em();
 
 /**
+ * read the encoder emulated position from the array
+ * 0-2 = directions
+ * 3-5 = click buttons
+ * 
+ * @param int encoder number 
+ * 
+ * @return encoder position or click state as int
+ */
+int read_enc(int enc);
+
+/**
+ * reset all the encoder buttons to state zero released
+ * in the array
+ */
+void reset_enc_click_em();
+
+/**
+ * emulate a click of a button by changing state in the array
+ * 
+ * @param int encoder button number (between 3 and 5)
+ */
+void click_enc_em(int bt_en);
+
+/**
  * set encoders to center
  */
 void stop_enc();
