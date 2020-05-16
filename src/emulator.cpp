@@ -71,12 +71,12 @@ void reset_joy_em(){
 
 void reset_bt_em(){
     for (size_t i = 0; i < sizeof(st_bt_array)/sizeof(st_bt_array[0]); i++){
-        st_bt_array[i] = 0;    
+        st_bt_array[i] = LOW;    
     }
 }
 
 void click_bt_em(int button){
-    st_bt_array[button] = 1;
+    st_bt_array[button] = HIGH;
 }
 
 void move_joy_em(int X, int Y, int Z){
@@ -103,6 +103,7 @@ void loop_joy_em(){
 
 
 void click_enc_em(){
+    //Serial.println(steps);
     for(int i = 0; i<3; i++){
         if(inv){
             enc_array[i] = 1;

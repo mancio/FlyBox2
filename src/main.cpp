@@ -88,8 +88,13 @@ void loop() {
     if(Enc_speed.expired(500)){
       Enc_speed.update();
       click_enc_em();
+      //Serial.println("pr1");
+    } else {
+      stop_enc();  
     }
-    stop_enc();
+    
+    
+    //Serial.println("pr2");
     
   }
 

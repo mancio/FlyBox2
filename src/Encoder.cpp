@@ -21,6 +21,8 @@ int Encoder_::direction(long out_t){
 	
     if (_current_clk != _last_clk  && _current_clk == 1 && !_Timer.expired(out_t)){
 
+        
+
         // If the DT state is different than the CLK state then
         // the encoder is rotating CCW so decrement
         if (digitalRead(_dt) != _current_clk) {
@@ -31,8 +33,10 @@ int Encoder_::direction(long out_t){
             _res = 1;
         }
 
-    } else _res = 0;
-    
+    } else {
+      _Timer.update();
+      _res = 0;
+    }
 
 	// Remember last CLK state
 	_last_clk = _current_clk;

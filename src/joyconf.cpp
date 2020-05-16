@@ -89,9 +89,9 @@ Joystick_ Joystick(
 );
 
 // the current reading from the input pin
-int buttonState = HIGH; 
+int buttonState = LOW; 
 // the previous reading from the input pin
-int lastButtonState = HIGH; 
+int lastButtonState = LOW; 
 
 // read the state of the switch into a local variable
 int reading;
@@ -126,38 +126,29 @@ void joy_conf(){
 int debouncer(int button){
 
   if(test){
-    reading = digitalRead_em();  
+    reading = digitalRead_em();
+    //Serial.print("state: ");
+    //Serial.println(reading);
   }else{
     // read the state of the switch into a local variable:
     reading = digitalRead(button);
-  }
+  }  
+
+  /* debouncing function for multiple buttons is hard to implement.
+   * It requires an array where to store the last states to compare to the last
+   * input. By using a multiplexer the input of several buttons is provided
+   * on the same port. This hardware configuration make the software even more difficult.
+   * I should have a timer for every input. The esiest way is a hardware debouncing using 
+   * resistors and capacitor or the most advance MC14490P.
+   * 
+   * An alternative should be the usage of delay, but this function stop the execution
+   * and introduce lag in the joystick movements.
+   * 
+   * For this reason this function is not implemented yet and it return the input read
+   * directly from the port.
+   */
   
-  // check to see if you just pressed the button
-  // (i.e. the input went from LOW to HIGH), and you've waited long enough
-  // since the last press to ignore any noise:
-
-  // If the switch changed, due to noise or pressing:
-  if (reading != lastButtonState) {
-    // update the debouncing timer
-    Timer.update();
-  }
-
-  if (Timer.expired(debounceDelay)) {
-    // whatever the reading is at, it's been there for longer than the debounce
-    // delay, so take it as the actual current state:
-
-    // if the button state has changed:
-    if (reading != buttonState) {
-      buttonState = reading;
-    }
-  }
- 
-
-  // save the reading. Next time through the loop, it'll be the lastButtonState:
-  lastButtonState = reading;
-
-  //return buttonState;
-  return lastButtonState;
+  return reading;
   
 }
 
@@ -219,7 +210,7 @@ void btArrayFiller(){
 
 
 void muxLooper(){
-  for (int i = 0; i < 16; i++) {
+  for (int i = 0; i < totbt; i++) {
       if(test) mux_channel_em(i);
       else my_mux.channel(i);
       // in test mode debouncer does not read SIG_MUX
@@ -233,11 +224,19 @@ void muxLooper(){
 void setEncoders_dir(){
   if(test){
       // click buttons according to the encoder directions
-    if (read_enc(0) == -1) Joystick.setButton(left_enc1_bt,HIGH);
-    else if (read_enc(0) == 1) Joystick.setButton(right_enc1_bt,HIGH);
-    else {
+    if (read_enc(0) == -1) {
+      Joystick.setButton(left_enc1_bt,HIGH);
+      //Serial.println("here -1");
+
+      
+    } else if (read_enc(0) == 1) {
+      Joystick.setButton(right_enc1_bt,HIGH);
+      //Serial.println("here 1");
+
+    } else {
       Joystick.setButton(right_enc1_bt,LOW);
       Joystick.setButton(left_enc1_bt,LOW);
+      //Serial.println("here else");
     } 
 
     if (read_enc(1) == -1) Joystick.setButton(left_enc2_bt,HIGH);
