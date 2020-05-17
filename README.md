@@ -21,7 +21,7 @@ An advanced flight control pad made with an atmega32u4 pro micro (leonardo archi
 
 ## Documentation
 
-Here you can find the documentations written in Doxygen 
+[Here]{https://github.com/mancio/FlyBox2/blob/master/docs/doxygen/html/index.html} you can find the documentations written in Doxygen 
 
 ## TODO
 
