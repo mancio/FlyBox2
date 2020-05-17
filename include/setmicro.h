@@ -1,5 +1,5 @@
 /*
-FlyBox2 is a flight simulator game pad for games like X-plane used togheder 
+FlyBox2 is a flight simulator game pad for games like X-plane used together 
 with a joystick 
 
 Copyright (C) 2020  Andrea Mancini
