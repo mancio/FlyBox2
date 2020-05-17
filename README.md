@@ -19,11 +19,13 @@ An advanced flight control pad made with an atmega32u4 pro micro (leonardo archi
 * 1x 10nf capacitor(change capacitor change delay)
 * 16X push buttons
 
+## Documentation
+
+Here you can find the documentations written in Doxygen 
+
 ## TODO
 
 * test not working due to python problem with vs IDE
-* test encoders
-* what debouncing is returning?
 
 ## Still under construction 
 ## STAY TUNED!

@@ -1,0 +1,192 @@
+\hypertarget{emulator_8h}{}\doxysection{emulator.\+h File Reference}
+\label{emulator_8h}\index{emulator.h@{emulator.h}}
+{\ttfamily \#include $<$Arduino.\+h$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{emulator_8h_acb900d5f801949b0091609d85d37e25e}{reset\+\_\+joy\+\_\+em}} ()
+\item 
+void \mbox{\hyperlink{emulator_8h_a3c792e34150d7d58855cc4d245a5bfa1}{reset\+\_\+bt\+\_\+em}} ()
+\item 
+void \mbox{\hyperlink{emulator_8h_a2a9b9dc760ecfaf5c77a246b4083fad2}{click\+\_\+bt\+\_\+em}} (int button)
+\item 
+void \mbox{\hyperlink{emulator_8h_ab3b03e55b5cef709a1efb1f955827fb3}{move\+\_\+joy\+\_\+em}} (int X, int Y, int Z)
+\item 
+void \mbox{\hyperlink{emulator_8h_afea28a8b36027dda9b0ddca011a72970}{loop\+\_\+joy\+\_\+em}} ()
+\item 
+void \mbox{\hyperlink{emulator_8h_af5dd5ca52895451b2177f681c20e0773}{click\+\_\+enc\+\_\+em}} ()
+\item 
+int \mbox{\hyperlink{emulator_8h_a1a528ab1ed5a111cfd9a4b23158515c8}{read\+\_\+enc}} (int enc)
+\item 
+void \mbox{\hyperlink{emulator_8h_af8ec3988c3eaf3ce7e5cb1cb43457b1f}{reset\+\_\+enc\+\_\+click\+\_\+em}} ()
+\item 
+void \mbox{\hyperlink{emulator_8h_aacf2fb8fefb7f14690e10925c5e79ddc}{click\+\_\+enc\+\_\+em}} (int bt\+\_\+en)
+\item 
+void \mbox{\hyperlink{emulator_8h_a38c47c0ebfb0a617625f431de7fb2de5}{stop\+\_\+enc}} ()
+\item 
+void \mbox{\hyperlink{emulator_8h_a218aea3b253fc0d7a592f6a8196c7509}{mux\+\_\+channel\+\_\+em}} (int ar\+\_\+pos)
+\item 
+int \mbox{\hyperlink{emulator_8h_a13d0023e0965770b4221b0ac490c3c89}{digital\+Read\+\_\+em}} ()
+\item 
+int \mbox{\hyperlink{emulator_8h_aef7ce66ec5d0ab61b0ea673a95c3523a}{analog\+Read\+\_\+em\+\_\+X}} ()
+\item 
+int \mbox{\hyperlink{emulator_8h_a5089d44a1d58b555b48dada10767e5b9}{analog\+Read\+\_\+em\+\_\+Y}} ()
+\item 
+int \mbox{\hyperlink{emulator_8h_a32442d77e3cc41bf9c257a7c3e12d4a8}{analog\+Read\+\_\+em\+\_\+Z}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{emulator_8h_aef7ce66ec5d0ab61b0ea673a95c3523a}\label{emulator_8h_aef7ce66ec5d0ab61b0ea673a95c3523a}} 
+\index{emulator.h@{emulator.h}!analogRead\_em\_X@{analogRead\_em\_X}}
+\index{analogRead\_em\_X@{analogRead\_em\_X}!emulator.h@{emulator.h}}
+\doxysubsubsection{\texorpdfstring{analogRead\_em\_X()}{analogRead\_em\_X()}}
+{\footnotesize\ttfamily int analog\+Read\+\_\+em\+\_\+X (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+return the value from emulated X
+
+\begin{DoxyReturn}{Returns}
+emulated X value (0-\/1023) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{emulator_8h_a5089d44a1d58b555b48dada10767e5b9}\label{emulator_8h_a5089d44a1d58b555b48dada10767e5b9}} 
+\index{emulator.h@{emulator.h}!analogRead\_em\_Y@{analogRead\_em\_Y}}
+\index{analogRead\_em\_Y@{analogRead\_em\_Y}!emulator.h@{emulator.h}}
+\doxysubsubsection{\texorpdfstring{analogRead\_em\_Y()}{analogRead\_em\_Y()}}
+{\footnotesize\ttfamily int analog\+Read\+\_\+em\+\_\+Y (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+return the value from emulated Y
+
+\begin{DoxyReturn}{Returns}
+emulated Y value (0-\/1023) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{emulator_8h_a32442d77e3cc41bf9c257a7c3e12d4a8}\label{emulator_8h_a32442d77e3cc41bf9c257a7c3e12d4a8}} 
+\index{emulator.h@{emulator.h}!analogRead\_em\_Z@{analogRead\_em\_Z}}
+\index{analogRead\_em\_Z@{analogRead\_em\_Z}!emulator.h@{emulator.h}}
+\doxysubsubsection{\texorpdfstring{analogRead\_em\_Z()}{analogRead\_em\_Z()}}
+{\footnotesize\ttfamily int analog\+Read\+\_\+em\+\_\+Z (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+return the value from emulated Z
+
+\begin{DoxyReturn}{Returns}
+emulated Z value (0-\/1023) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{emulator_8h_a2a9b9dc760ecfaf5c77a246b4083fad2}\label{emulator_8h_a2a9b9dc760ecfaf5c77a246b4083fad2}} 
+\index{emulator.h@{emulator.h}!click\_bt\_em@{click\_bt\_em}}
+\index{click\_bt\_em@{click\_bt\_em}!emulator.h@{emulator.h}}
+\doxysubsubsection{\texorpdfstring{click\_bt\_em()}{click\_bt\_em()}}
+{\footnotesize\ttfamily void click\+\_\+bt\+\_\+em (\begin{DoxyParamCaption}\item[{int}]{button }\end{DoxyParamCaption})}
+
+emulate click of button
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & button to click (from 0 tp 15) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{emulator_8h_af5dd5ca52895451b2177f681c20e0773}\label{emulator_8h_af5dd5ca52895451b2177f681c20e0773}} 
+\index{emulator.h@{emulator.h}!click\_enc\_em@{click\_enc\_em}}
+\index{click\_enc\_em@{click\_enc\_em}!emulator.h@{emulator.h}}
+\doxysubsubsection{\texorpdfstring{click\_enc\_em()}{click\_enc\_em()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void click\+\_\+enc\+\_\+em (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+set encoders array right and after 360 steps to left \mbox{\Hypertarget{emulator_8h_aacf2fb8fefb7f14690e10925c5e79ddc}\label{emulator_8h_aacf2fb8fefb7f14690e10925c5e79ddc}} 
+\index{emulator.h@{emulator.h}!click\_enc\_em@{click\_enc\_em}}
+\index{click\_enc\_em@{click\_enc\_em}!emulator.h@{emulator.h}}
+\doxysubsubsection{\texorpdfstring{click\_enc\_em()}{click\_enc\_em()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void click\+\_\+enc\+\_\+em (\begin{DoxyParamCaption}\item[{int}]{bt\+\_\+en }\end{DoxyParamCaption})}
+
+emulate a click of a button by changing state in the array
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & encoder button number (between 3 and 5) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{emulator_8h_a13d0023e0965770b4221b0ac490c3c89}\label{emulator_8h_a13d0023e0965770b4221b0ac490c3c89}} 
+\index{emulator.h@{emulator.h}!digitalRead\_em@{digitalRead\_em}}
+\index{digitalRead\_em@{digitalRead\_em}!emulator.h@{emulator.h}}
+\doxysubsubsection{\texorpdfstring{digitalRead\_em()}{digitalRead\_em()}}
+{\footnotesize\ttfamily int digital\+Read\+\_\+em (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+read value from array previously set by mux emulator
+
+\begin{DoxyReturn}{Returns}
+1 or 0 
+\end{DoxyReturn}
+\mbox{\Hypertarget{emulator_8h_afea28a8b36027dda9b0ddca011a72970}\label{emulator_8h_afea28a8b36027dda9b0ddca011a72970}} 
+\index{emulator.h@{emulator.h}!loop\_joy\_em@{loop\_joy\_em}}
+\index{loop\_joy\_em@{loop\_joy\_em}!emulator.h@{emulator.h}}
+\doxysubsubsection{\texorpdfstring{loop\_joy\_em()}{loop\_joy\_em()}}
+{\footnotesize\ttfamily void loop\+\_\+joy\+\_\+em (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+move emulated axes up and down gradually \mbox{\Hypertarget{emulator_8h_ab3b03e55b5cef709a1efb1f955827fb3}\label{emulator_8h_ab3b03e55b5cef709a1efb1f955827fb3}} 
+\index{emulator.h@{emulator.h}!move\_joy\_em@{move\_joy\_em}}
+\index{move\_joy\_em@{move\_joy\_em}!emulator.h@{emulator.h}}
+\doxysubsubsection{\texorpdfstring{move\_joy\_em()}{move\_joy\_em()}}
+{\footnotesize\ttfamily void move\+\_\+joy\+\_\+em (\begin{DoxyParamCaption}\item[{int}]{X,  }\item[{int}]{Y,  }\item[{int}]{Z }\end{DoxyParamCaption})}
+
+set joystick axes in the emulator array
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & X \\
+\hline
+{\em int} & Y \\
+\hline
+{\em int} & Z \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{emulator_8h_a218aea3b253fc0d7a592f6a8196c7509}\label{emulator_8h_a218aea3b253fc0d7a592f6a8196c7509}} 
+\index{emulator.h@{emulator.h}!mux\_channel\_em@{mux\_channel\_em}}
+\index{mux\_channel\_em@{mux\_channel\_em}!emulator.h@{emulator.h}}
+\doxysubsubsection{\texorpdfstring{mux\_channel\_em()}{mux\_channel\_em()}}
+{\footnotesize\ttfamily void mux\+\_\+channel\+\_\+em (\begin{DoxyParamCaption}\item[{int}]{ar\+\_\+pos }\end{DoxyParamCaption})}
+
+emulate the multiplexer by reading from an array of button states
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & array position \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{emulator_8h_a1a528ab1ed5a111cfd9a4b23158515c8}\label{emulator_8h_a1a528ab1ed5a111cfd9a4b23158515c8}} 
+\index{emulator.h@{emulator.h}!read\_enc@{read\_enc}}
+\index{read\_enc@{read\_enc}!emulator.h@{emulator.h}}
+\doxysubsubsection{\texorpdfstring{read\_enc()}{read\_enc()}}
+{\footnotesize\ttfamily int read\+\_\+enc (\begin{DoxyParamCaption}\item[{int}]{enc }\end{DoxyParamCaption})}
+
+read the encoder emulated position from the array 0-\/2 = directions 3-\/5 = click buttons
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & encoder number\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+encoder position or click state as int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{emulator_8h_a3c792e34150d7d58855cc4d245a5bfa1}\label{emulator_8h_a3c792e34150d7d58855cc4d245a5bfa1}} 
+\index{emulator.h@{emulator.h}!reset\_bt\_em@{reset\_bt\_em}}
+\index{reset\_bt\_em@{reset\_bt\_em}!emulator.h@{emulator.h}}
+\doxysubsubsection{\texorpdfstring{reset\_bt\_em()}{reset\_bt\_em()}}
+{\footnotesize\ttfamily void reset\+\_\+bt\+\_\+em (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+reset state of the emulated buttons to 0; \mbox{\Hypertarget{emulator_8h_af8ec3988c3eaf3ce7e5cb1cb43457b1f}\label{emulator_8h_af8ec3988c3eaf3ce7e5cb1cb43457b1f}} 
+\index{emulator.h@{emulator.h}!reset\_enc\_click\_em@{reset\_enc\_click\_em}}
+\index{reset\_enc\_click\_em@{reset\_enc\_click\_em}!emulator.h@{emulator.h}}
+\doxysubsubsection{\texorpdfstring{reset\_enc\_click\_em()}{reset\_enc\_click\_em()}}
+{\footnotesize\ttfamily void reset\+\_\+enc\+\_\+click\+\_\+em (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+reset all the encoder buttons to state zero released in the array \mbox{\Hypertarget{emulator_8h_acb900d5f801949b0091609d85d37e25e}\label{emulator_8h_acb900d5f801949b0091609d85d37e25e}} 
+\index{emulator.h@{emulator.h}!reset\_joy\_em@{reset\_joy\_em}}
+\index{reset\_joy\_em@{reset\_joy\_em}!emulator.h@{emulator.h}}
+\doxysubsubsection{\texorpdfstring{reset\_joy\_em()}{reset\_joy\_em()}}
+{\footnotesize\ttfamily void reset\+\_\+joy\+\_\+em (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+reset the state of the emulated axes to center and buttons to not pressed \mbox{\Hypertarget{emulator_8h_a38c47c0ebfb0a617625f431de7fb2de5}\label{emulator_8h_a38c47c0ebfb0a617625f431de7fb2de5}} 
+\index{emulator.h@{emulator.h}!stop\_enc@{stop\_enc}}
+\index{stop\_enc@{stop\_enc}!emulator.h@{emulator.h}}
+\doxysubsubsection{\texorpdfstring{stop\_enc()}{stop\_enc()}}
+{\footnotesize\ttfamily void stop\+\_\+enc (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+set encoders to center 
