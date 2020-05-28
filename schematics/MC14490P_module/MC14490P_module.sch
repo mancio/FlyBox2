@@ -35,4 +35,29 @@ F 3 "~" H 3420 2850 50  0001 C CNN
 	1    3420 2850
 	-1   0    0    -1  
 $EndComp
+$Comp
+L Connector:Conn_01x08_Female J?
+U 1 1 5ECD2EFF
+P 7710 2820
+F 0 "J?" H 7602 3305 50  0000 C CNN
+F 1 "Conn_01x08_Female" H 7602 3214 50  0000 C CNN
+F 2 "" H 7710 2820 50  0001 C CNN
+F 3 "~" H 7710 2820 50  0001 C CNN
+	1    7710 2820
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3620 2550 5300 2550
+Wire Wire Line
+	3620 2650 5300 2650
+Wire Wire Line
+	3620 2750 5300 2750
+Wire Wire Line
+	5300 2850 3620 2850
+Wire Wire Line
+	3620 2950 5300 2950
+Wire Wire Line
+	5300 3050 3620 3050
+Wire Wire Line
+	3620 3150 5300 3150
 $EndSCHEMATC
