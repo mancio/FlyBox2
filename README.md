@@ -10,6 +10,13 @@ VS Studio Visual Studio Code
 <img src="https://github.com/mancio/FlyBox2/blob/master/fritzing/project/main_wiring.jpg" width="850" height="550" />
 </p>
 
+## MC14490P Signal Debounce Module
+
+I build a small module to fit the [MC14490P](https://www.onsemi.com/pub/Collateral/MC14490-D.PDF) a debouncer signal chip. The delay can be changed by changing the cap impedance. Bigger value = bigger delay.
+The hardware approach give the possibility to save some code avoiding a complex function for the pin status. Pin status are read by the same pin using the multiplexer. This would make the pin status storage more difficult.
+
+You can find the board ready to print on [OSHPark](https://oshpark.com/shared_projects/8fIAeRlI)
+
 ## Component list
 
 * 1x Arduino pro micro atmega32u4 (native USB port not like Arduino nano)
