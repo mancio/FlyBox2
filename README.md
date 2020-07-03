@@ -1,6 +1,8 @@
 # FlyBox2
 An advanced flight control pad made with an atmega32u4 pro micro (leonardo architecture)
 
+This idea is the evolution of the First [FlyBox](https://github.com/mancio/FlyBox) that unfortunately never took flight but is still very good to take an inspiration.
+
 ## IDE
 VS Studio Visual Studio Code 
 
