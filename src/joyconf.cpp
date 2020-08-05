@@ -64,7 +64,7 @@ int joy_bt_array[totbt];
 Timer_ Timer;
 
 //time pressed after encoder clicked in ms
-long t_enc_p = 100;
+long t_enc_p = 500;
 
 //unsigned long exp_t = 3000;
 
@@ -73,7 +73,7 @@ Joystick_ Joystick(
   JOYSTICK_DEFAULT_REPORT_ID, // joystick ID 
   JOYSTICK_TYPE_JOYSTICK, // device type
   // buttons counting start from 1
-  25, // buttons number (up,right,left,down are 2 axis)
+  24, // buttons number (up,right,left,down are 2 axis)
   0, // hotswitch count
   true, // X axis
   true, // Y axis
@@ -101,7 +101,7 @@ int reading;
 
 
 // the debounce time; increase if the output flickers
-unsigned long debounceDelay = 50;    
+unsigned long debounceDelay = 200;    
 
 // store test state if true enter in test mode
 bool test = false;
@@ -297,13 +297,13 @@ void setEncoders_dir(){
     }         
 
     // check sw button states
-    if(Enc1.click(debounceDelay) == HIGH) Joystick.setButton(sw1_bt,HIGH);
+    if(Enc1.click(debounceDelay) == LOW) Joystick.setButton(sw1_bt,HIGH);
     else Joystick.setButton(sw1_bt,LOW);
 
-    if(Enc2.click(debounceDelay) == HIGH) Joystick.setButton(sw2_bt,HIGH);
+    if(Enc2.click(debounceDelay) == LOW) Joystick.setButton(sw2_bt,HIGH);
     else Joystick.setButton(sw2_bt,LOW);
 
-    if(Enc3.click(debounceDelay) == HIGH) Joystick.setButton(sw3_bt,HIGH);
+    if(Enc3.click(debounceDelay) == LOW) Joystick.setButton(sw3_bt,HIGH);
     else Joystick.setButton(sw3_bt,LOW);
   }
 }

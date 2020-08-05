@@ -28,6 +28,9 @@ Encoder_::Encoder_(int clk, int dt, int sw){
     _last_clk = LOW;
     _current_clk = LOW;
 
+    _sw_current = HIGH;
+    _sw_last_state = HIGH;
+
     
 }
 
@@ -39,7 +42,7 @@ int Encoder_::direction(long out_t){
 	// If last and current state of CLK are different, then pulse occurred
 	// React to only 1 state change to avoid double count
 	
-    if (_current_clk != _last_clk  && _current_clk == 1 && !_Timer.expired(out_t)){
+    if (_current_clk != _last_clk  && _current_clk == HIGH && !_Timer.expired(out_t)){
 
         
 
@@ -61,7 +64,7 @@ int Encoder_::direction(long out_t){
 	// Remember last CLK state
 	_last_clk = _current_clk;
 
-    return _res;
+  return _res;
 }
 
 int Encoder_::click(long deb_time){
@@ -69,7 +72,11 @@ int Encoder_::click(long deb_time){
     
     // read the state of the switch into a local variable:
     _sw_read = digitalRead(_sw);
-  
+
+    /*if(_sw_read) Serial.println("HIGH");
+    else Serial.println("LOW");*/
+    
+    
   
   // check to see if you just pressed the button
   // (i.e. the input went from LOW to HIGH), and you've waited long enough
@@ -94,6 +101,8 @@ int Encoder_::click(long deb_time){
 
   // save the reading. Next time through the loop, it'll be the lastButtonState:
   _sw_last_state = _sw_current;
+
+  Serial.println(_sw_current);
 
   return _sw_current;
 

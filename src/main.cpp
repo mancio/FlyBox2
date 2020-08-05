@@ -58,7 +58,7 @@ void loop() {
    * up = max value
    */ 
   long x_pos = setX(SL_1, NO_REV);
-  long y_pos = setY(SL_2, NO_REV);
+  long y_pos = setY(SL_2, REV);
   long z_pos = setZ(SL_3, NO_REV);
 
   // order buttons from 1 to 16
