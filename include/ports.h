@@ -35,17 +35,17 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 //#define total_buttons 16
 
 // 9x pin rotary encoders
-#define SW_ENC_1 7 // click button encoder 1
-#define SW_ENC_2 4 // click button encoder 2
-#define SW_ENC_3 0 // rx1 click button encoder 3
+#define SW_ENC_1 9 // click button encoder 1
+#define SW_ENC_2 6 // click button encoder 2
+#define SW_ENC_3 3 // rx1 click button encoder 3
 
-#define CLK_ENC_1 9 // clock encoder 1
-#define CLK_ENC_2 6 // clock encoder 2
-#define CLK_ENC_3 3 // clock encoder 3
+#define CLK_ENC_1 8 // clock encoder 1
+#define CLK_ENC_2 5 // clock encoder 2
+#define CLK_ENC_3 2 // clock encoder 3
 
-#define DT_ENC_1 8 // data encoder 1
-#define DT_ENC_2 5 // data encoder 2
-#define DT_ENC_3 2 // data encoder 3
+#define DT_ENC_1 7 // data encoder 1
+#define DT_ENC_2 4 // data encoder 2
+#define DT_ENC_3 0 // data encoder 3
 
 
 // 3x slide potentiometers

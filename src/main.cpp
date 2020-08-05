@@ -30,7 +30,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 #include <Timer.h>
 
 // set test mode
-bool t = true;
+bool t = false;
 
 /* log activated
  * remember to stop log when using joytick
