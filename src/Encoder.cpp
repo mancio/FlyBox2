@@ -72,16 +72,16 @@ int Encoder_::click(long deb_time){
   // read the state of the switch into a local variable:
   _sw_read = digitalRead(_sw);
 
-  /*if(_sw_read) Serial.println("HIGH");
-  else Serial.println("LOW");*/
+  if(_sw_read) Serial.println("HIGH");
+  else Serial.println("LOW");
   
-  if(_Timer.expired(deb_time)){
+  if(_sw_read!=_sw_last_state && _Timer.expired(deb_time)){
     _sw_last_state = _sw_read;
     Serial.println("PRESSED");
     return _sw_read;
   } else _Timer.update();
 
-  Serial.println("NOT PRESSED");
+  //Serial.println("NOT PRESSED");
     
   return _sw_last_state;
 }
