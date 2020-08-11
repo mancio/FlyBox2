@@ -28,7 +28,6 @@ Encoder_::Encoder_(int clk, int dt, int sw){
     _last_clk = LOW;
     _current_clk = LOW;
 
-    _sw_current = HIGH;
     _sw_last_state = HIGH;
 
     
@@ -70,40 +69,19 @@ int Encoder_::direction(long out_t){
 int Encoder_::click(long deb_time){
 
     
-    // read the state of the switch into a local variable:
-    _sw_read = digitalRead(_sw);
+  // read the state of the switch into a local variable:
+  _sw_read = digitalRead(_sw);
 
-    /*if(_sw_read) Serial.println("HIGH");
-    else Serial.println("LOW");*/
-    
-    
+  /*if(_sw_read) Serial.println("HIGH");
+  else Serial.println("LOW");*/
   
-  // check to see if you just pressed the button
-  // (i.e. the input went from LOW to HIGH), and you've waited long enough
-  // since the last press to ignore any noise:
+  if(_Timer.expired(deb_time)){
+    _sw_last_state = _sw_read;
+    Serial.println("PRESSED");
+    return _sw_read;
+  } else _Timer.update();
 
-  // If the switch changed, due to noise or pressing:
-  if (_sw_read != _sw_last_state) {
-    // update the debouncing timer
-    _Timer.update();
-  }
-
-  if (_Timer.expired(deb_time)) {
-    // whatever the reading is at, it's been there for longer than the debounce
-    // delay, so take it as the actual current state:
-
-    // if the button state has changed:
-    if (_sw_read != _sw_last_state) {
-      _sw_current = _sw_read;
-    }
-  }
- 
-
-  // save the reading. Next time through the loop, it'll be the lastButtonState:
-  _sw_last_state = _sw_current;
-
-  Serial.println(_sw_current);
-
-  return _sw_current;
-
+  Serial.println("NOT PRESSED");
+    
+  return _sw_last_state;
 }

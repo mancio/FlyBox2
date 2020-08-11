@@ -57,8 +57,7 @@ class Encoder_ {
 
         // read state of sw
         int _sw_read;
-        // current sw state
-        int _sw_current; 
+        
         // last sw state
         int _sw_last_state;
 
