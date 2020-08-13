@@ -72,8 +72,8 @@ long t_enc_p = 500;
 Joystick_ Joystick(
   JOYSTICK_DEFAULT_REPORT_ID, // joystick ID 
   JOYSTICK_TYPE_JOYSTICK, // device type
-  // buttons counting start from 1
-  24, // buttons number (up,right,left,down are 2 axis)
+  // buttons counting start from 0
+  25, // buttons number (up,right,left,down are 2 axis)
   0, // hotswitch count
   true, // X axis
   true, // Y axis
@@ -101,7 +101,7 @@ int reading;
 
 
 // the debounce time; increase if the output flickers
-unsigned long debounceDelay = 100;    
+unsigned long debounceDelay = 300;    
 
 // store test state if true enter in test mode
 bool test = false;
@@ -223,16 +223,13 @@ void muxLooper(){
 
 void setEncoders_dir(){
   if(test){
-      // click buttons according to the encoder directions
+     // click buttons according to the encoder directions
     if (read_enc(0) == -1) {
       Joystick.setButton(left_enc1_bt,HIGH);
       //Serial.println("here -1");
-
-      
     } else if (read_enc(0) == 1) {
       Joystick.setButton(right_enc1_bt,HIGH);
       //Serial.println("here 1");
-
     } else {
       Joystick.setButton(right_enc1_bt,LOW);
       Joystick.setButton(left_enc1_bt,LOW);
@@ -297,8 +294,13 @@ void setEncoders_dir(){
     }         
 
     // check sw button states
-    if(Enc1.click(debounceDelay) == LOW) Joystick.setButton(sw1_bt,HIGH);
-    else Joystick.setButton(sw1_bt,LOW);
+    if(Enc1.click(debounceDelay) == LOW){
+      Serial.println("click enc1");
+      Joystick.setButton(sw1_bt,HIGH);
+    } else {
+      //Serial.println("release enc1");
+      Joystick.setButton(sw1_bt,LOW);
+    }
 
     if(Enc2.click(debounceDelay) == LOW) Joystick.setButton(sw2_bt,HIGH);
     else Joystick.setButton(sw2_bt,LOW);

@@ -34,10 +34,19 @@ void Timer_::update(){
 }
 
 void Timer_::reset(){
-    _last = 0;    
+    _last = 0;   
+    //Serial.println("reset"); 
 }
 
 bool Timer_::expired(unsigned long t){
-    if(millis()-_last>t) return true;
-    return false;
+    //Serial.println("I'm here!");
+    //Serial.println(millis());
+    //Serial.println(_last);
+    if(millis()-_last>t){
+        //Serial.println("expired");
+        return true;
+    }else {
+        //Serial.println("Not expired");
+        return false;
+    }
 }
