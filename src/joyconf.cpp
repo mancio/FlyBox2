@@ -101,7 +101,7 @@ int reading;
 
 
 // the debounce time; increase if the output flickers
-unsigned long debounceDelay = 300;    
+unsigned long debounceDelay = 400;    
 
 // store test state if true enter in test mode
 bool test = false;
@@ -295,7 +295,7 @@ void setEncoders_dir(){
 
     // check sw button states
     if(Enc1.click(debounceDelay) == LOW){
-      Serial.println("click enc1");
+      //Serial.println("click enc1");
       Joystick.setButton(sw1_bt,HIGH);
     } else {
       //Serial.println("release enc1");

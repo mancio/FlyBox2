@@ -91,10 +91,12 @@ class Encoder_ {
 
         /**
          * return the SW push button state. It is debounced to avoid false clicks.
+         * Please check the mechanical condition of every encoder.
+         * Some encoder can need longer delay.
          * 
          * @param long deboucing time
          * 
-         * @return int 0 LOW or 1 HIGH clicked.
+         * @return int 0 LOW (clicked) or 1 HIGH (released).
          */ 
         int click(long deb_time);
 };

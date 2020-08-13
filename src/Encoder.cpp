@@ -76,16 +76,14 @@ int Encoder_::click(long deb_time){
   /*if(_sw_read) Serial.println("HIGH");
   else Serial.println("LOW");*/
   
+  /*save the state before timer check to not stuck on a
+  specific state*/
   _sw_last_state = _sw_read;
 
   //Serial.println(_sw_last_state);
 
   if(_Timer.expired(deb_time)){
-    
     _Timer.update();
-    
-    
-
     if (!_sw_read){
       return 0;
     } else {
