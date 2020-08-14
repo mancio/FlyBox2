@@ -101,7 +101,7 @@ int reading;
 
 
 // the debounce time; increase if the output flickers
-unsigned long debounceDelay = 400;    
+unsigned long debounceDelay = 100;    
 
 // store test state if true enter in test mode
 bool test = false;
