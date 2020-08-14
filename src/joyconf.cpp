@@ -64,7 +64,10 @@ int joy_bt_array[totbt];
 Timer_ Timer;
 
 //time delay to avoid double side direction encoding
-long t_enc_p = 200;
+long t_enc_p = 300;
+
+// delay before reset joystick dir encoder buttons
+long t_enc_j = 300;
 
 //unsigned long exp_t = 3000;
 
@@ -271,18 +274,16 @@ void setEncoders_dir(){
   
   } else {
 
-    
+    int dir = Enc1.direction(t_enc_p);
  
     // click buttons according to the encoder directions
-    if (Enc1.direction(t_enc_p) == -1){
-      //Serial.println("Enc1: left");
+    if (dir == -1){
+      Serial.println("Enc1: left");
       Joystick.setButton(left_enc1_bt,HIGH);
-    }
-    else if (Enc1.direction(t_enc_p) == 1){
-      //Serial.println("Enc1: right");
+    } else if (dir == 1){
+      Serial.println("Enc1: right");
       Joystick.setButton(right_enc1_bt,HIGH);
-    }
-    else if (Timer.expired(300)) {
+    } else if (Timer.expired(t_enc_j)) {
       Joystick.setButton(right_enc1_bt,LOW);
       Joystick.setButton(left_enc1_bt,LOW);
       Timer.update();

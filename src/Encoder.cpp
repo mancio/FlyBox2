@@ -65,21 +65,16 @@ int Encoder_::direction(long out_t){
   if(_ready && _Timer2.expired(out_t)){
     if(!_current_clk && _current_dt && _res != 1){
       //Serial.println("fw");
-      _res = 1;
+      return _res = 1;
     }else if(_current_clk && !_current_dt && _res != -1){
       //Serial.println("bw");
-      _res = -1;
+      return _res = -1;
     }
     _Timer2.update();
   } else {
-    
-    _res = 0;
+    return _res = 0;
   }
-
-  Serial.print("_res is: ");
-  Serial.println(_res);
-
-  return _res;
+  
 }
 
 int Encoder_::click(long deb_time){
