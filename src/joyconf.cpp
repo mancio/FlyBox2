@@ -63,8 +63,8 @@ int joy_bt_array[totbt];
 // initialize Timer class to count the time
 Timer_ Timer;
 
-//time pressed after encoder clicked in ms
-long t_enc_p = 500;
+//time delay to avoid double side direction encoding
+long t_enc_p = 200;
 
 //unsigned long exp_t = 3000;
 
@@ -270,16 +270,25 @@ void setEncoders_dir(){
     else Joystick.setButton(sw3_bt,LOW);
   
   } else {
+
+    
  
     // click buttons according to the encoder directions
-    if (Enc1.direction(t_enc_p) == -1) Joystick.setButton(left_enc1_bt,HIGH);
-    else if (Enc1.direction(t_enc_p) == 1) Joystick.setButton(right_enc1_bt,HIGH);
-    else {
+    if (Enc1.direction(t_enc_p) == -1){
+      //Serial.println("Enc1: left");
+      Joystick.setButton(left_enc1_bt,HIGH);
+    }
+    else if (Enc1.direction(t_enc_p) == 1){
+      //Serial.println("Enc1: right");
+      Joystick.setButton(right_enc1_bt,HIGH);
+    }
+    else if (Timer.expired(300)) {
       Joystick.setButton(right_enc1_bt,LOW);
       Joystick.setButton(left_enc1_bt,LOW);
+      Timer.update();
     } 
 
-    if (Enc2.direction(t_enc_p) == -1) Joystick.setButton(left_enc2_bt,HIGH);
+    /*if (Enc2.direction(t_enc_p) == -1) Joystick.setButton(left_enc2_bt,HIGH);
     else if (Enc2.direction(t_enc_p) == 1) Joystick.setButton(right_enc2_bt,HIGH);
     else {
       Joystick.setButton(right_enc2_bt,LOW);
@@ -291,7 +300,7 @@ void setEncoders_dir(){
     else {
       Joystick.setButton(right_enc3_bt,LOW);
       Joystick.setButton(left_enc3_bt,LOW);
-    }         
+    }*/         
 
     // check sw button states
     if(Enc1.click(debounceDelay) == LOW){

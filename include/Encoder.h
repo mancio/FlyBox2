@@ -61,16 +61,31 @@ class Encoder_ {
         // last sw state
         int _sw_last_state;
 
-        // state encoder pin A
+        // current state encoder pin A
         int _current_clk;
+
+        // current state encoder pin B
+        int _current_dt;
+
         // last state pin A
         int _last_clk;
+
+        // last state pin B
+        int _last_dt;
+
+        // last direction state
+        int _last_res;
 
         //last saved direction result
         int _res;
 
-        // timer class for debouncing and direction time
-        Timer_ _Timer;
+        //ready to encode?
+        int _ready;
+
+        // timer class to debounce clicks
+        Timer_ _Timer1;
+        // timer class to debounce directions
+        Timer_ _Timer2;
 
     public:
         
@@ -99,6 +114,13 @@ class Encoder_ {
          * @return int 0 LOW (clicked) or 1 HIGH (released).
          */ 
         int click(long deb_time);
+
+        /**
+         * return the last direction state of the encoder
+         * 
+         * @return int 1 (right), -1 (left).
+         */ 
+        int lastState();
 };
 
 #endif
