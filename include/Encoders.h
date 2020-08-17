@@ -24,6 +24,8 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 #include <Arduino.h>
 #include <Timer.h>
 #include <joyconf.h>
+#include <Encoder.h>
+
 
 /**
  * The encoder class is used to control a classic multiturn rotary encoder
@@ -46,7 +48,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
  *    A 1 1 0 0 1                    A 1 1 1 0 1
  *    B 1 0 0 1 1                    B 0 1 0 0 0
  */
-class Encoder_ {
+class Encoders_ {
     private:
         // one encoder input 
         int _clk;
@@ -55,45 +57,38 @@ class Encoder_ {
         // click push button
         int _sw;
 
-        // read state of sw
-        int _sw_read;
+        //last encoder position
+        long _last_enc_pos;
         
         // last sw state
         int _sw_last_state;
 
-        // current state encoder pin A
-        int _current_clk;
+        int _sw_read;
 
-        // current state encoder pin B
-        int _current_dt;
-
-        // last state pin A
-        int _last_clk;
-
-        // last state pin B
-        int _last_dt;
-
-        // last direction state
-        int _last_res;
-
-        //last saved direction result
         int _res;
 
-        //ready to encode?
-        int _ready;
+        // encoder direction -1 left, 0 no move, 1 right
+        int _dir;
 
         // timer class to debounce clicks
         Timer_ _Timer1;
         // timer class to debounce directions
         Timer_ _Timer2;
 
+        //Encoder _MyEnc(uint8_t pina, uint8_t pinb);
+        Encoder* _MyEnc;
+        
     public:
+
+        
         
         /**
          * to initialize the encoder with input pins and click pin.
          * All af them are digital inputs.
          */
-        Encoder_(int clk, int dt, int sw);
+        Encoders_(int clk, int dt, int sw);
+
+       
 
         /**
          * give the direction (one step change)
@@ -121,6 +116,8 @@ class Encoder_ {
          * @return int 1 (right), -1 (left).
          */ 
         int lastState();
+
+        
 };
 
 #endif

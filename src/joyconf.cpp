@@ -45,12 +45,15 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 #include <CD74HC4067.h>
 #include <ports.h>
 #include <Timer.h>
+#include <Encoders.h>
 #include <Encoder.h>
 
-Encoder_ Enc1(CLK_ENC_1, DT_ENC_1, SW_ENC_1);
-Encoder_ Enc2(CLK_ENC_2, DT_ENC_2, SW_ENC_2);
-Encoder_ Enc3(CLK_ENC_3, DT_ENC_3, SW_ENC_3);
 
+
+//
+Encoders_ Enc1(CLK_ENC_1, DT_ENC_1, SW_ENC_1);
+Encoders_ Enc2(CLK_ENC_2, DT_ENC_2, SW_ENC_2);
+Encoders_ Enc3(CLK_ENC_3, DT_ENC_3, SW_ENC_3);
 
 
 // configure input pin of the multiplexer logic table
@@ -64,10 +67,10 @@ int joy_bt_array[totbt];
 Timer_ Timer;
 
 //time delay to avoid double side direction encoding
-long t_enc_p = 300;
+long t_enc_p = 30;
 
 // delay before reset joystick dir encoder buttons
-long t_enc_j = 300;
+long t_enc_j = 10;
 
 //unsigned long exp_t = 3000;
 
@@ -122,8 +125,7 @@ void joy_conf(){
   Joystick.setYAxisRange(-1023, 1023);
   Joystick.setZAxisRange(-1023, 1023);
   
- 
-   
+  
 }
 
 int debouncer(int button){
@@ -276,18 +278,20 @@ void setEncoders_dir(){
 
     int dir = Enc1.direction(t_enc_p);
  
-    // click buttons according to the encoder directions
-    if (dir == -1){
-      Serial.println("Enc1: left");
-      Joystick.setButton(left_enc1_bt,HIGH);
-    } else if (dir == 1){
-      Serial.println("Enc1: right");
-      Joystick.setButton(right_enc1_bt,HIGH);
-    } else if (Timer.expired(t_enc_j)) {
-      Joystick.setButton(right_enc1_bt,LOW);
-      Joystick.setButton(left_enc1_bt,LOW);
+    if(Timer.expired(t_enc_j)){
+      // click buttons according to the encoder directions
+      if (dir == -1){
+        //Serial.println("Enc1: left");
+        Joystick.setButton(left_enc1_bt,HIGH);
+      } else if (dir == 1){
+        //Serial.println("Enc1: right");
+        Joystick.setButton(right_enc1_bt,HIGH);
+      } else {
+        Joystick.setButton(right_enc1_bt,LOW);
+        Joystick.setButton(left_enc1_bt,LOW);
+      } 
       Timer.update();
-    } 
+    }
 
     /*if (Enc2.direction(t_enc_p) == -1) Joystick.setButton(left_enc2_bt,HIGH);
     else if (Enc2.direction(t_enc_p) == 1) Joystick.setButton(right_enc2_bt,HIGH);

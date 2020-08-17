@@ -18,66 +18,55 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
-#include <Encoder.h>
+//my lib
+#include <Encoders.h>
+//#include<Encoder.h>
 
-Encoder_::Encoder_(int clk, int dt, int sw){
-    _clk = clk;
-    _dt = dt;
-    _sw = sw;
 
-    _last_clk = HIGH;
-    _last_dt = HIGH;
 
-    _current_clk = HIGH;
-    _current_dt = HIGH;
+Encoders_::Encoders_(int clk, int dt, int sw){
 
-    _sw_last_state = HIGH;
+  _MyEnc = new Encoder(clk, dt);
+  
+  _clk = clk;
+  _dt = dt;
+  _sw = sw;
 
-    _last_res = 0;
+  _last_enc_pos = -99999;
 
-    _ready = 0;
+  _dir = 0;
+
+  _sw_last_state = HIGH;
+
+  _sw_read = HIGH;
+
+  _res = HIGH;
+  
 }
 
-int Encoder_::direction(long out_t){
 
+
+int Encoders_::direction(long out_t){
   
-    
-    // Read the current state of CLK
-	_current_clk = digitalRead(_clk);
+  long newpos = _MyEnc->read();
 
-  _current_dt = digitalRead(_dt);
+  //Serial.println(newpos);
 
-  /*Serial.print("clk: ");
-  Serial.print(_current_clk);
-  Serial.print(" dt: ");
-  Serial.println(digitalRead(_dt));*/
-
-	// If last and current state of CLK are different, then pulse occurred
-	// React to only 1 state change to avoid double count
-
-
-  if((!_current_clk && _current_dt) ||(_current_clk && !_current_dt)){
-    _ready = 1;
-  }else if((!_current_clk && !_current_dt) || (_current_clk && _current_dt)){
-    _ready = 0;
-  }
-  
-  if(_ready && _Timer2.expired(out_t)){
-    if(!_current_clk && _current_dt && _res != 1){
-      //Serial.println("fw");
-      return _res = 1;
-    }else if(_current_clk && !_current_dt && _res != -1){
-      //Serial.println("bw");
-      return _res = -1;
-    }
+  if(_Timer2.expired(out_t)){
+    if(newpos ==_last_enc_pos) _dir = 0;
+    else if(newpos < _last_enc_pos) _dir = -1;
+    else _dir = 1; 
     _Timer2.update();
-  } else {
-    return _res = 0;
   }
+
+  _last_enc_pos = newpos;
   
+  Serial.println(_dir);
+
+  return _dir;
 }
 
-int Encoder_::click(long deb_time){
+int Encoders_::click(long deb_time){
 
     
   // read the state of the switch into a local variable:
@@ -106,6 +95,9 @@ int Encoder_::click(long deb_time){
   return _sw_last_state;
 }
 
-int Encoder_::lastState(){
+int Encoders_::lastState(){
   return _res;
 }
+
+
+
