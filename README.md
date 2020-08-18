@@ -6,6 +6,10 @@ This idea is the evolution of the First [FlyBox](https://github.com/mancio/FlyBo
 ## The Arduino Pro Micro
 [Full Pinout](https://cdn.sparkfun.com/datasheets/Dev/Arduino/Boards/ProMicro16MHzv1.pdf)
 
+For better performance remember to use interrupt pins for encoder. 
+
+Interrupt pins are 0,1,2,3,7.
+
 ## IDE
 VS Studio Visual Studio Code 
 
