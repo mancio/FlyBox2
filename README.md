@@ -42,6 +42,9 @@ You can find the board ready to print on [OSHPark](https://oshpark.com/shared_pr
 
 ## TODO
 
+* rewire board to match interrupts with encoder pins
+* connect button pad
+* test multiplexer
 * test not working due to python problem with vs IDE
 
 ## Still under construction 
