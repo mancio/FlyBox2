@@ -44,6 +44,7 @@ You can find the board ready to print on [OSHPark](https://oshpark.com/shared_pr
 
 * rewire board to match interrupts with encoder pins
 * connect button pad
+* check if is possible button debounce making an array of button objects
 * test multiplexer
 * test not working due to python problem with vs IDE
 
