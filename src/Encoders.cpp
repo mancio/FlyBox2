@@ -35,6 +35,7 @@ Encoders_::Encoders_(int clk, int dt, int sw){
   _last_enc_pos = -99999;
 
   _dir = 0;
+ 
 
   _sw_last_state = HIGH;
 
@@ -53,14 +54,20 @@ int Encoders_::direction(long out_t){
   //Serial.println(newpos);
 
   if(_Timer2.expired(out_t)){
+    
     if(newpos ==_last_enc_pos) _dir = 0;
     else if(newpos < _last_enc_pos) _dir = -1;
     else _dir = 1; 
     _Timer2.update();
   }
 
-  _last_enc_pos = newpos;
   
+
+  _last_enc_pos = newpos;
+
+  
+
+    
   Serial.println(_dir);
 
   return _dir;

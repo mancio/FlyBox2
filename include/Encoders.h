@@ -70,6 +70,8 @@ class Encoders_ {
         // encoder direction -1 left, 0 no move, 1 right
         int _dir;
 
+       
+
         // timer class to debounce clicks
         Timer_ _Timer1;
         // timer class to debounce directions
