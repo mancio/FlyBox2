@@ -3,7 +3,7 @@ An advanced flight control pad made with an atmega32u4 pro micro (leonardo archi
 
 This idea is the evolution of the First [FlyBox](https://github.com/mancio/FlyBox) that unfortunately never took flight but is still very good to take an inspiration.
 
-# The Arduino Pro Micro
+## The Arduino Pro Micro
 [Full Pinout](https://cdn.sparkfun.com/datasheets/Dev/Arduino/Boards/ProMicro16MHzv1.pdf)
 
 ## IDE
