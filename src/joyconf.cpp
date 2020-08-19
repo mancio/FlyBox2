@@ -42,6 +42,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 #include <emulator.h>
 #include <joyconf.h>
 #include <Joystick.h>
+#include <Pushbutton.h>
 #include <CD74HC4067.h>
 #include <ports.h>
 #include <Timer.h>
@@ -94,6 +95,8 @@ Joystick_ Joystick(
   false // steering
 );
 
+Button_ bt[totbt];
+
 // the current reading from the input pin
 int buttonState = LOW; 
 // the previous reading from the input pin
@@ -125,6 +128,10 @@ void joy_conf(){
   Joystick.setYAxisRange(-1023, 1023);
   Joystick.setZAxisRange(-1023, 1023);
   
+  for(int i=0; i<totbt;i++){
+    bt[i].setPin(SIG_MUX);
+    bt[i].setName(String(i));
+  }
   
 }
 
@@ -214,15 +221,21 @@ void btArrayFiller(){
 }
 
 
+
+
 void muxLooper(){
   for (int i = 0; i < totbt; i++) {
+
       if(test) mux_channel_em(i);
       else my_mux.channel(i);
+      
       // in test mode debouncer does not read SIG_MUX
-      int bt_in = debouncer(SIG_MUX);
+      int bt_in = bt[i].debounce(debounceDelay);
+      //Serial.println(bt[i].getName());
+      //int bt_in = digitalRead(SIG_MUX);
       //Serial.print("bt_in is: ");
       //Serial.println(bt_in);
-      Joystick.setButton(joy_bt_array[i], bt_in);
+      Joystick.setButton(joy_bt_array[i], !bt_in);
   }
 }
 

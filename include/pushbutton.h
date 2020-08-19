@@ -29,20 +29,43 @@ class Button_ {
     private:
         // pin to debounce
         int _pin;
+        // previous reading state
+        int _last_state;
+
+        int _state;
+
+        Timer_ _Timer;
+
+        String _name;
     public:
 
-        /*
+        /**
          * to initialize the button. 
          * Is suggested to build an array of Buttons to debonce multiple 
          * buttons.
          */
-        Button_(int pin);
+        Button_();
 
-        /*
+        /**
          * debounce the pin 
+         *  
+         * @param long delay time in milliseconds
+         * 
+         * @return int 1 pressed and 0 released (using pullup configuration)
          */
         int debounce(long delay);
-}
+
+        /**
+         * set the pin to be debounced
+         * 
+         * @param int pin number
+         */
+        void setPin(int pin);
+
+        void setName(String name);
+
+        String getName();
+};
 
 
 

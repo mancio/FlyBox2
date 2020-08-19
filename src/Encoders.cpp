@@ -68,7 +68,7 @@ int Encoders_::direction(long out_t){
   
 
     
-  Serial.println(_dir);
+  //Serial.println(_dir);
 
   return _dir;
 }
