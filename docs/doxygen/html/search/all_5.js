@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['inv_32',['inv',['../emulator_8cpp.html#a129546315e7dc7fb5b85a971fd0ec42c',1,'emulator.cpp']]]
+  ['getname_35',['getName',['../class_button__.html#ac44536c5206561dff1cfeddb9f781e49',1,'Button_']]]
 ];

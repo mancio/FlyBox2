@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['read_5fenc_154',['read_enc',['../emulator_8h.html#a1a528ab1ed5a111cfd9a4b23158515c8',1,'read_enc(int enc):&#160;emulator.cpp'],['../emulator_8cpp.html#a1a528ab1ed5a111cfd9a4b23158515c8',1,'read_enc(int enc):&#160;emulator.cpp']]],
-  ['reset_155',['reset',['../class_timer__.html#ac9a82100192b463434569efdf9518582',1,'Timer_']]],
-  ['reset_5fbt_5fem_156',['reset_bt_em',['../emulator_8h.html#a3c792e34150d7d58855cc4d245a5bfa1',1,'reset_bt_em():&#160;emulator.cpp'],['../emulator_8cpp.html#a3c792e34150d7d58855cc4d245a5bfa1',1,'reset_bt_em():&#160;emulator.cpp']]],
-  ['reset_5fenc_5fclick_5fem_157',['reset_enc_click_em',['../emulator_8h.html#af8ec3988c3eaf3ce7e5cb1cb43457b1f',1,'reset_enc_click_em():&#160;emulator.cpp'],['../emulator_8cpp.html#af8ec3988c3eaf3ce7e5cb1cb43457b1f',1,'reset_enc_click_em():&#160;emulator.cpp']]],
-  ['reset_5fjoy_5fem_158',['reset_joy_em',['../emulator_8h.html#acb900d5f801949b0091609d85d37e25e',1,'reset_joy_em():&#160;emulator.cpp'],['../emulator_8cpp.html#acb900d5f801949b0091609d85d37e25e',1,'reset_joy_em():&#160;emulator.cpp']]]
+  ['mapper_166',['mapper',['../joyconf_8h.html#a49cc520c407e8c57083155e620ed15d6',1,'mapper(long m, bool rev):&#160;joyconf.cpp'],['../joyconf_8cpp.html#a49cc520c407e8c57083155e620ed15d6',1,'mapper(long m, bool rev):&#160;joyconf.cpp']]],
+  ['move_5fjoy_5fem_167',['move_joy_em',['../emulator_8h.html#ab3b03e55b5cef709a1efb1f955827fb3',1,'move_joy_em(int X, int Y, int Z):&#160;emulator.cpp'],['../emulator_8cpp.html#ab3b03e55b5cef709a1efb1f955827fb3',1,'move_joy_em(int X, int Y, int Z):&#160;emulator.cpp']]],
+  ['mux_5fchannel_5fem_168',['mux_channel_em',['../emulator_8h.html#a218aea3b253fc0d7a592f6a8196c7509',1,'mux_channel_em(int ar_pos):&#160;emulator.cpp'],['../emulator_8cpp.html#a218aea3b253fc0d7a592f6a8196c7509',1,'mux_channel_em(int ar_pos):&#160;emulator.cpp']]],
+  ['muxlooper_169',['muxLooper',['../joyconf_8h.html#a7fd8c17ec4e20e74986b3c51041f4026',1,'muxLooper():&#160;joyconf.cpp'],['../joyconf_8cpp.html#a7fd8c17ec4e20e74986b3c51041f4026',1,'muxLooper():&#160;joyconf.cpp']]],
+  ['my_5fmux_170',['my_mux',['../joyconf_8cpp.html#aff8cd1d42ca99f12b35e1cc2a1a2baae',1,'joyconf.cpp']]]
 ];

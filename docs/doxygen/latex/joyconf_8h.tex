@@ -1,5 +1,5 @@
-\hypertarget{joyconf_8h}{}\doxysection{joyconf.\+h File Reference}
-\label{joyconf_8h}\index{joyconf.h@{joyconf.h}}
+\hypertarget{joyconf_8h}{}\doxysection{C\+:/\+Users/mancio/\+Documents/\+V\+S\+Code/\+Fly\+Box2/include/joyconf.h File Reference}
+\label{joyconf_8h}\index{C:/Users/mancio/Documents/VSCode/FlyBox2/include/joyconf.h@{C:/Users/mancio/Documents/VSCode/FlyBox2/include/joyconf.h}}
 \doxysubsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
@@ -41,11 +41,19 @@ void \mbox{\hyperlink{joyconf_8h_a2b3557d5e92d039ce5744f99efe4efa2}{set\+Encoder
 \doxysubsubsection{\texorpdfstring{NO\_REV}{NO\_REV}}
 {\footnotesize\ttfamily \#define N\+O\+\_\+\+R\+EV~true}
 
+
+
+Definition at line 26 of file joyconf.\+h.
+
 \mbox{\Hypertarget{joyconf_8h_a33a42d6bfefe54ae2384f5c28dd87340}\label{joyconf_8h_a33a42d6bfefe54ae2384f5c28dd87340}} 
 \index{joyconf.h@{joyconf.h}!REV@{REV}}
 \index{REV@{REV}!joyconf.h@{joyconf.h}}
 \doxysubsubsection{\texorpdfstring{REV}{REV}}
 {\footnotesize\ttfamily \#define R\+EV~false}
+
+
+
+Definition at line 27 of file joyconf.\+h.
 
 
 
@@ -56,7 +64,11 @@ void \mbox{\hyperlink{joyconf_8h_a2b3557d5e92d039ce5744f99efe4efa2}{set\+Encoder
 \doxysubsubsection{\texorpdfstring{btArrayFiller()}{btArrayFiller()}}
 {\footnotesize\ttfamily void bt\+Array\+Filler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-build an array of buttons in normal order from 1 to 16 \mbox{\Hypertarget{joyconf_8h_a8cb8e263f5b6ea299e26646c0c08ce44}\label{joyconf_8h_a8cb8e263f5b6ea299e26646c0c08ce44}} 
+build an array of buttons in normal order from 1 to 16 
+
+Definition at line 217 of file joyconf.\+cpp.
+
+\mbox{\Hypertarget{joyconf_8h_a8cb8e263f5b6ea299e26646c0c08ce44}\label{joyconf_8h_a8cb8e263f5b6ea299e26646c0c08ce44}} 
 \index{joyconf.h@{joyconf.h}!btset@{btset}}
 \index{btset@{btset}!joyconf.h@{joyconf.h}}
 \doxysubsubsection{\texorpdfstring{btset()}{btset()}}
@@ -87,13 +99,21 @@ debounce the click button (used in addiction with hardware debounce)
 \begin{DoxyReturn}{Returns}
 button state debounced 
 \end{DoxyReturn}
+
+
+Definition at line 138 of file joyconf.\+cpp.
+
 \mbox{\Hypertarget{joyconf_8h_aba818122d70d2c4ac723a578e75f7a3e}\label{joyconf_8h_aba818122d70d2c4ac723a578e75f7a3e}} 
 \index{joyconf.h@{joyconf.h}!joy\_conf@{joy\_conf}}
 \index{joy\_conf@{joy\_conf}!joyconf.h@{joyconf.h}}
 \doxysubsubsection{\texorpdfstring{joy\_conf()}{joy\_conf()}}
 {\footnotesize\ttfamily void joy\+\_\+conf (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Initialize joystick library \mbox{\Hypertarget{joyconf_8h_a49cc520c407e8c57083155e620ed15d6}\label{joyconf_8h_a49cc520c407e8c57083155e620ed15d6}} 
+Initialize joystick library 
+
+Definition at line 122 of file joyconf.\+cpp.
+
+\mbox{\Hypertarget{joyconf_8h_a49cc520c407e8c57083155e620ed15d6}\label{joyconf_8h_a49cc520c407e8c57083155e620ed15d6}} 
 \index{joyconf.h@{joyconf.h}!mapper@{mapper}}
 \index{mapper@{mapper}!joyconf.h@{joyconf.h}}
 \doxysubsubsection{\texorpdfstring{mapper()}{mapper()}}
@@ -111,19 +131,31 @@ map the potentiometer scale to the Arduino analog input scale
 \begin{DoxyReturn}{Returns}
 mapped value as long 
 \end{DoxyReturn}
+
+
+Definition at line 179 of file joyconf.\+cpp.
+
 \mbox{\Hypertarget{joyconf_8h_a7fd8c17ec4e20e74986b3c51041f4026}\label{joyconf_8h_a7fd8c17ec4e20e74986b3c51041f4026}} 
 \index{joyconf.h@{joyconf.h}!muxLooper@{muxLooper}}
 \index{muxLooper@{muxLooper}!joyconf.h@{joyconf.h}}
 \doxysubsubsection{\texorpdfstring{muxLooper()}{muxLooper()}}
 {\footnotesize\ttfamily void mux\+Looper (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-loop the the multiplexer 16 pin connecting each of them to the S\+IG pin and write the input on the right joystick button. \mbox{\Hypertarget{joyconf_8h_a2b3557d5e92d039ce5744f99efe4efa2}\label{joyconf_8h_a2b3557d5e92d039ce5744f99efe4efa2}} 
+loop the the multiplexer 16 pin connecting each of them to the S\+IG pin and write the input on the right joystick button. 
+
+Definition at line 226 of file joyconf.\+cpp.
+
+\mbox{\Hypertarget{joyconf_8h_a2b3557d5e92d039ce5744f99efe4efa2}\label{joyconf_8h_a2b3557d5e92d039ce5744f99efe4efa2}} 
 \index{joyconf.h@{joyconf.h}!setEncoders\_dir@{setEncoders\_dir}}
 \index{setEncoders\_dir@{setEncoders\_dir}!joyconf.h@{joyconf.h}}
 \doxysubsubsection{\texorpdfstring{setEncoders\_dir()}{setEncoders\_dir()}}
 {\footnotesize\ttfamily void set\+Encoders\+\_\+dir (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-push buttons depending by encoders direction and click buttons \mbox{\Hypertarget{joyconf_8h_afab08082007163b964f41ba8334b865a}\label{joyconf_8h_afab08082007163b964f41ba8334b865a}} 
+push buttons depending by encoders direction and click buttons 
+
+Definition at line 242 of file joyconf.\+cpp.
+
+\mbox{\Hypertarget{joyconf_8h_afab08082007163b964f41ba8334b865a}\label{joyconf_8h_afab08082007163b964f41ba8334b865a}} 
 \index{joyconf.h@{joyconf.h}!setTest@{setTest}}
 \index{setTest@{setTest}!joyconf.h@{joyconf.h}}
 \doxysubsubsection{\texorpdfstring{setTest()}{setTest()}}
@@ -136,6 +168,10 @@ set the execution in test mode
 {\em bool} & if true test mode, if false normal mode \\
 \hline
 \end{DoxyParams}
+
+
+Definition at line 118 of file joyconf.\+cpp.
+
 \mbox{\Hypertarget{joyconf_8h_aca616a67e14e1af19f4c36eedb9ae19d}\label{joyconf_8h_aca616a67e14e1af19f4c36eedb9ae19d}} 
 \index{joyconf.h@{joyconf.h}!setX@{setX}}
 \index{setX@{setX}!joyconf.h@{joyconf.h}}
@@ -154,6 +190,10 @@ check and set X-\/axis input value
 \begin{DoxyReturn}{Returns}
 long axis value 
 \end{DoxyReturn}
+
+
+Definition at line 187 of file joyconf.\+cpp.
+
 \mbox{\Hypertarget{joyconf_8h_a68d0ce74156f4fb9ca09c7e738bcbf5b}\label{joyconf_8h_a68d0ce74156f4fb9ca09c7e738bcbf5b}} 
 \index{joyconf.h@{joyconf.h}!setY@{setY}}
 \index{setY@{setY}!joyconf.h@{joyconf.h}}
@@ -172,6 +212,10 @@ check and set Y-\/axis input value
 \begin{DoxyReturn}{Returns}
 long axis value 
 \end{DoxyReturn}
+
+
+Definition at line 197 of file joyconf.\+cpp.
+
 \mbox{\Hypertarget{joyconf_8h_a4251eb0b20a921657f56758a51659964}\label{joyconf_8h_a4251eb0b20a921657f56758a51659964}} 
 \index{joyconf.h@{joyconf.h}!setZ@{setZ}}
 \index{setZ@{setZ}!joyconf.h@{joyconf.h}}
@@ -190,3 +234,7 @@ check and set Z-\/axis input value
 \begin{DoxyReturn}{Returns}
 long axis value 
 \end{DoxyReturn}
+
+
+Definition at line 207 of file joyconf.\+cpp.
+

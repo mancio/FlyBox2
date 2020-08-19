@@ -1,8 +1,7 @@
 var searchData=
 [
-  ['mapper_149',['mapper',['../joyconf_8h.html#a49cc520c407e8c57083155e620ed15d6',1,'mapper(long m, bool rev):&#160;joyconf.cpp'],['../joyconf_8cpp.html#a49cc520c407e8c57083155e620ed15d6',1,'mapper(long m, bool rev):&#160;joyconf.cpp']]],
-  ['move_5fjoy_5fem_150',['move_joy_em',['../emulator_8h.html#ab3b03e55b5cef709a1efb1f955827fb3',1,'move_joy_em(int X, int Y, int Z):&#160;emulator.cpp'],['../emulator_8cpp.html#ab3b03e55b5cef709a1efb1f955827fb3',1,'move_joy_em(int X, int Y, int Z):&#160;emulator.cpp']]],
-  ['mux_5fchannel_5fem_151',['mux_channel_em',['../emulator_8h.html#a218aea3b253fc0d7a592f6a8196c7509',1,'mux_channel_em(int ar_pos):&#160;emulator.cpp'],['../emulator_8cpp.html#a218aea3b253fc0d7a592f6a8196c7509',1,'mux_channel_em(int ar_pos):&#160;emulator.cpp']]],
-  ['muxlooper_152',['muxLooper',['../joyconf_8h.html#a7fd8c17ec4e20e74986b3c51041f4026',1,'muxLooper():&#160;joyconf.cpp'],['../joyconf_8cpp.html#a7fd8c17ec4e20e74986b3c51041f4026',1,'muxLooper():&#160;joyconf.cpp']]],
-  ['my_5fmux_153',['my_mux',['../joyconf_8cpp.html#aff8cd1d42ca99f12b35e1cc2a1a2baae',1,'joyconf.cpp']]]
+  ['laststate_162',['lastState',['../class_encoders__.html#afd175bd498e452b96d77a8aa0fc72b36',1,'Encoders_']]],
+  ['log_5fax_163',['log_ax',['../logger_8h.html#a77225f99a5023842a36dae1953e32e1e',1,'log_ax(long x_p, long y_p, long z_p):&#160;logger.cpp'],['../logger_8cpp.html#a77225f99a5023842a36dae1953e32e1e',1,'log_ax(long x_p, long y_p, long z_p):&#160;logger.cpp']]],
+  ['loop_164',['loop',['../main_8cpp.html#afe461d27b9c48d5921c00d521181f12f',1,'main.cpp']]],
+  ['loop_5fjoy_5fem_165',['loop_joy_em',['../emulator_8h.html#afea28a8b36027dda9b0ddca011a72970',1,'loop_joy_em():&#160;emulator.cpp'],['../emulator_8cpp.html#afea28a8b36027dda9b0ddca011a72970',1,'loop_joy_em():&#160;emulator.cpp']]]
 ];

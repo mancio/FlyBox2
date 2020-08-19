@@ -5,14 +5,10 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.18"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>FlyBox2: joyconf.cpp File Reference</title>
+<title>FlyBox2: C:/Users/mancio/Documents/VSCode/FlyBox2/src/joyconf.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
-<link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="resize.js"></script>
-<script type="text/javascript" src="navtreedata.js"></script>
-<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -24,6 +20,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="avatar2.jpg"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">FlyBox2
    &#160;<span id="projectnumber">1.0</span>
@@ -50,23 +47,6 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
-</div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div id="nav-sync" class="sync"></div>
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
-</div>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(document).ready(function(){initNavTree('joyconf_8cpp.html',''); initResizable(); });
-/* @license-end */
-</script>
-<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -81,6 +61,11 @@ $(document).ready(function(){initNavTree('joyconf_8cpp.html',''); initResizable(
 </iframe>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d522931ffa1371640980b621734a4381.html">Users</a></li><li class="navelem"><a class="el" href="dir_b568b1b09bacba527b84d1418f076740.html">mancio</a></li><li class="navelem"><a class="el" href="dir_086fa5dbabfe4c8091ebd0a18ecd61be.html">Documents</a></li><li class="navelem"><a class="el" href="dir_15158e090d989f3fbe1b43109e948bb5.html">VSCode</a></li><li class="navelem"><a class="el" href="dir_23d9c0688f71ee4b22ab536d12fa8f4f.html">FlyBox2</a></li><li class="navelem"><a class="el" href="dir_63be54d2dd55e50f3755acd89c11388e.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#define-members">Macros</a> &#124;
@@ -94,11 +79,15 @@ $(document).ready(function(){initNavTree('joyconf_8cpp.html',''); initResizable(
 <code>#include &lt;<a class="el" href="emulator_8h_source.html">emulator.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="joyconf_8h_source.html">joyconf.h</a>&gt;</code><br />
 <code>#include &lt;Joystick.h&gt;</code><br />
+<code>#include &lt;<a class="el" href="_pushbutton_8h_source.html">Pushbutton.h</a>&gt;</code><br />
 <code>#include &lt;CD74HC4067.h&gt;</code><br />
 <code>#include &lt;<a class="el" href="ports_8h_source.html">ports.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="_timer_8h_source.html">Timer.h</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="_encoder_8h_source.html">Encoder.h</a>&gt;</code><br />
-</div><table class="memberdecls">
+<code>#include &lt;<a class="el" href="_encoders_8h_source.html">Encoders.h</a>&gt;</code><br />
+<code>#include &lt;Encoder.h&gt;</code><br />
+</div>
+<p><a href="joyconf_8cpp_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
 <tr class="memitem:ac4708902f993b1914c265ec454377cb4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="joyconf_8cpp.html#ac4708902f993b1914c265ec454377cb4">totbt</a>&#160;&#160;&#160;16</td></tr>
@@ -151,25 +140,29 @@ Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a8d16ea0ec4522624087d07bdb8c06f51"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_encoder__.html">Encoder_</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="joyconf_8cpp.html#a8d16ea0ec4522624087d07bdb8c06f51">Enc1</a> (<a class="el" href="ports_8h.html#a2e4cc8cf6cec68902fb8a8829f338525">CLK_ENC_1</a>, <a class="el" href="ports_8h.html#a2907e00dc0a618e7b4789c8f6f81cf1a">DT_ENC_1</a>, <a class="el" href="ports_8h.html#acd9bd489eabbb4d0730686ca176fd024">SW_ENC_1</a>)</td></tr>
-<tr class="separator:a8d16ea0ec4522624087d07bdb8c06f51"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a527a860658cd9dd447a8f88590fe5838"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_encoder__.html">Encoder_</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="joyconf_8cpp.html#a527a860658cd9dd447a8f88590fe5838">Enc2</a> (<a class="el" href="ports_8h.html#a6f67ffda52609be2b3a3950ea4b90525">CLK_ENC_2</a>, <a class="el" href="ports_8h.html#a90afd87f60a80e474659116675a51e1b">DT_ENC_2</a>, <a class="el" href="ports_8h.html#a6314e51358773be5a548e8bf3cda2be5">SW_ENC_2</a>)</td></tr>
-<tr class="separator:a527a860658cd9dd447a8f88590fe5838"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afb03df151d1af358273b323fdc644ef0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_encoder__.html">Encoder_</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="joyconf_8cpp.html#afb03df151d1af358273b323fdc644ef0">Enc3</a> (<a class="el" href="ports_8h.html#abcddf50d66b91578ea092b61aa5b62ed">CLK_ENC_3</a>, <a class="el" href="ports_8h.html#a9a7d42fb916af7769b27e3cda7ec7863">DT_ENC_3</a>, <a class="el" href="ports_8h.html#aa9e570d5e2870b06b44d0b1859221e7f">SW_ENC_3</a>)</td></tr>
-<tr class="separator:afb03df151d1af358273b323fdc644ef0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5d47d96437b0b65e80414f4787530ae"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_encoders__.html">Encoders_</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="joyconf_8cpp.html#af5d47d96437b0b65e80414f4787530ae">Enc1</a> (<a class="el" href="ports_8h.html#a2e4cc8cf6cec68902fb8a8829f338525">CLK_ENC_1</a>, <a class="el" href="ports_8h.html#a2907e00dc0a618e7b4789c8f6f81cf1a">DT_ENC_1</a>, <a class="el" href="ports_8h.html#acd9bd489eabbb4d0730686ca176fd024">SW_ENC_1</a>)</td></tr>
+<tr class="separator:af5d47d96437b0b65e80414f4787530ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a286f751c79038360c2679d1c318a2a9a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_encoders__.html">Encoders_</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="joyconf_8cpp.html#a286f751c79038360c2679d1c318a2a9a">Enc2</a> (<a class="el" href="ports_8h.html#a6f67ffda52609be2b3a3950ea4b90525">CLK_ENC_2</a>, <a class="el" href="ports_8h.html#a90afd87f60a80e474659116675a51e1b">DT_ENC_2</a>, <a class="el" href="ports_8h.html#a6314e51358773be5a548e8bf3cda2be5">SW_ENC_2</a>)</td></tr>
+<tr class="separator:a286f751c79038360c2679d1c318a2a9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb707c96ab1bcc981fd379f564d9477f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_encoders__.html">Encoders_</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="joyconf_8cpp.html#aeb707c96ab1bcc981fd379f564d9477f">Enc3</a> (<a class="el" href="ports_8h.html#abcddf50d66b91578ea092b61aa5b62ed">CLK_ENC_3</a>, <a class="el" href="ports_8h.html#a9a7d42fb916af7769b27e3cda7ec7863">DT_ENC_3</a>, <a class="el" href="ports_8h.html#aa9e570d5e2870b06b44d0b1859221e7f">SW_ENC_3</a>)</td></tr>
+<tr class="separator:aeb707c96ab1bcc981fd379f564d9477f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9ce5bac15c5d149761370c579dded8ec"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="joyconf_8cpp.html#a9ce5bac15c5d149761370c579dded8ec">joy_bt_array</a> [<a class="el" href="joyconf_8cpp.html#ac4708902f993b1914c265ec454377cb4">totbt</a>]</td></tr>
 <tr class="separator:a9ce5bac15c5d149761370c579dded8ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab386652564364fa6d88d7ab3a6c2289f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_timer__.html">Timer_</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="joyconf_8cpp.html#ab386652564364fa6d88d7ab3a6c2289f">Timer</a></td></tr>
 <tr class="separator:ab386652564364fa6d88d7ab3a6c2289f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2269c304870a359fe0ebcb1999580e9e"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="joyconf_8cpp.html#a2269c304870a359fe0ebcb1999580e9e">t_enc_p</a> = 100</td></tr>
+<tr class="memitem:a2269c304870a359fe0ebcb1999580e9e"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="joyconf_8cpp.html#a2269c304870a359fe0ebcb1999580e9e">t_enc_p</a> = 10</td></tr>
 <tr class="separator:a2269c304870a359fe0ebcb1999580e9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4663849f4916930f3480059e92b86c7b"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="joyconf_8cpp.html#a4663849f4916930f3480059e92b86c7b">t_enc_j</a> = 10</td></tr>
+<tr class="separator:a4663849f4916930f3480059e92b86c7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72323ac3c2ff74417b720a86f36f016d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_button__.html">Button_</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="joyconf_8cpp.html#a72323ac3c2ff74417b720a86f36f016d">bt</a> [<a class="el" href="joyconf_8cpp.html#ac4708902f993b1914c265ec454377cb4">totbt</a>]</td></tr>
+<tr class="separator:a72323ac3c2ff74417b720a86f36f016d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5002611f83f5a861df12917dd5651db8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="joyconf_8cpp.html#a5002611f83f5a861df12917dd5651db8">buttonState</a> = LOW</td></tr>
 <tr class="separator:a5002611f83f5a861df12917dd5651db8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a66f761d0471e843051f3c49af5a1cb82"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="joyconf_8cpp.html#a66f761d0471e843051f3c49af5a1cb82">lastButtonState</a> = LOW</td></tr>
 <tr class="separator:a66f761d0471e843051f3c49af5a1cb82"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5fa8d7fdcda2ed9555ad800a40a1a810"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="joyconf_8cpp.html#a5fa8d7fdcda2ed9555ad800a40a1a810">reading</a></td></tr>
 <tr class="separator:a5fa8d7fdcda2ed9555ad800a40a1a810"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a77d7d18f51343feebbe6d0eea7b4ac57"><td class="memItemLeft" align="right" valign="top">unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="joyconf_8cpp.html#a77d7d18f51343feebbe6d0eea7b4ac57">debounceDelay</a> = 50</td></tr>
+<tr class="memitem:a77d7d18f51343feebbe6d0eea7b4ac57"><td class="memItemLeft" align="right" valign="top">unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="joyconf_8cpp.html#a77d7d18f51343feebbe6d0eea7b4ac57">debounceDelay</a> = 100</td></tr>
 <tr class="separator:a77d7d18f51343feebbe6d0eea7b4ac57"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a69f942d7289d5ed2ffe3a00b12235d04"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="joyconf_8cpp.html#a69f942d7289d5ed2ffe3a00b12235d04">test</a> = false</td></tr>
 <tr class="separator:a69f942d7289d5ed2ffe3a00b12235d04"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -187,6 +180,8 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="joyconf_8cpp_source.html#l00031">31</a> of file <a class="el" href="joyconf_8cpp_source.html">joyconf.cpp</a>.</p>
+
 </div>
 </div>
 <a id="a3a322d3d152d2f8696c1b150c5e59f5a"></a>
@@ -200,6 +195,8 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="joyconf_8cpp_source.html#l00033">33</a> of file <a class="el" href="joyconf_8cpp_source.html">joyconf.cpp</a>.</p>
 
 </div>
 </div>
@@ -215,6 +212,8 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="joyconf_8cpp_source.html#l00035">35</a> of file <a class="el" href="joyconf_8cpp_source.html">joyconf.cpp</a>.</p>
+
 </div>
 </div>
 <a id="ac357ad6d9c98ad04b83db7db2d165908"></a>
@@ -228,6 +227,8 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="joyconf_8cpp_source.html#l00032">32</a> of file <a class="el" href="joyconf_8cpp_source.html">joyconf.cpp</a>.</p>
 
 </div>
 </div>
@@ -243,6 +244,8 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="joyconf_8cpp_source.html#l00034">34</a> of file <a class="el" href="joyconf_8cpp_source.html">joyconf.cpp</a>.</p>
+
 </div>
 </div>
 <a id="aeff3e2daf3a25b146fe0653a9e2d2c17"></a>
@@ -256,6 +259,8 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="joyconf_8cpp_source.html#l00036">36</a> of file <a class="el" href="joyconf_8cpp_source.html">joyconf.cpp</a>.</p>
 
 </div>
 </div>
@@ -271,6 +276,8 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="joyconf_8cpp_source.html#l00038">38</a> of file <a class="el" href="joyconf_8cpp_source.html">joyconf.cpp</a>.</p>
+
 </div>
 </div>
 <a id="ab50730ae357751c4341007c9a05a50cb"></a>
@@ -284,6 +291,8 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="joyconf_8cpp_source.html#l00039">39</a> of file <a class="el" href="joyconf_8cpp_source.html">joyconf.cpp</a>.</p>
 
 </div>
 </div>
@@ -299,6 +308,8 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="joyconf_8cpp_source.html#l00040">40</a> of file <a class="el" href="joyconf_8cpp_source.html">joyconf.cpp</a>.</p>
+
 </div>
 </div>
 <a id="ac4708902f993b1914c265ec454377cb4"></a>
@@ -312,6 +323,8 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="joyconf_8cpp_source.html#l00029">29</a> of file <a class="el" href="joyconf_8cpp_source.html">joyconf.cpp</a>.</p>
 
 </div>
 </div>
@@ -331,6 +344,8 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>build an array of buttons in normal order from 1 to 16 </p>
+
+<p class="definition">Definition at line <a class="el" href="joyconf_8cpp_source.html#l00217">217</a> of file <a class="el" href="joyconf_8cpp_source.html">joyconf.cpp</a>.</p>
 
 </div>
 </div>
@@ -358,6 +373,8 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>button state debounced </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="joyconf_8cpp_source.html#l00138">138</a> of file <a class="el" href="joyconf_8cpp_source.html">joyconf.cpp</a>.</p>
+
 </div>
 </div>
 <a id="aba818122d70d2c4ac723a578e75f7a3e"></a>
@@ -375,6 +392,8 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Initialize joystick library </p>
+
+<p class="definition">Definition at line <a class="el" href="joyconf_8cpp_source.html#l00122">122</a> of file <a class="el" href="joyconf_8cpp_source.html">joyconf.cpp</a>.</p>
 
 </div>
 </div>
@@ -519,6 +538,8 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>mapped value as long </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="joyconf_8cpp_source.html#l00179">179</a> of file <a class="el" href="joyconf_8cpp_source.html">joyconf.cpp</a>.</p>
+
 </div>
 </div>
 <a id="a7fd8c17ec4e20e74986b3c51041f4026"></a>
@@ -536,6 +557,8 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>loop the the multiplexer 16 pin connecting each of them to the SIG pin and write the input on the right joystick button. </p>
+
+<p class="definition">Definition at line <a class="el" href="joyconf_8cpp_source.html#l00226">226</a> of file <a class="el" href="joyconf_8cpp_source.html">joyconf.cpp</a>.</p>
 
 </div>
 </div>
@@ -595,6 +618,8 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <p>push buttons depending by encoders direction and click buttons </p>
 
+<p class="definition">Definition at line <a class="el" href="joyconf_8cpp_source.html#l00242">242</a> of file <a class="el" href="joyconf_8cpp_source.html">joyconf.cpp</a>.</p>
+
 </div>
 </div>
 <a id="afab08082007163b964f41ba8334b865a"></a>
@@ -619,6 +644,8 @@ Variables</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+<p class="definition">Definition at line <a class="el" href="joyconf_8cpp_source.html#l00118">118</a> of file <a class="el" href="joyconf_8cpp_source.html">joyconf.cpp</a>.</p>
 
 </div>
 </div>
@@ -657,6 +684,8 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>long axis value </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="joyconf_8cpp_source.html#l00187">187</a> of file <a class="el" href="joyconf_8cpp_source.html">joyconf.cpp</a>.</p>
+
 </div>
 </div>
 <a id="a68d0ce74156f4fb9ca09c7e738bcbf5b"></a>
@@ -693,6 +722,8 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>long axis value </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="joyconf_8cpp_source.html#l00197">197</a> of file <a class="el" href="joyconf_8cpp_source.html">joyconf.cpp</a>.</p>
 
 </div>
 </div>
@@ -731,9 +762,27 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>long axis value </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="joyconf_8cpp_source.html#l00207">207</a> of file <a class="el" href="joyconf_8cpp_source.html">joyconf.cpp</a>.</p>
+
 </div>
 </div>
 <h2 class="groupheader">Variable Documentation</h2>
+<a id="a72323ac3c2ff74417b720a86f36f016d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72323ac3c2ff74417b720a86f36f016d">&#9670;&nbsp;</a></span>bt</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_button__.html">Button_</a> bt[<a class="el" href="joyconf_8cpp.html#ac4708902f993b1914c265ec454377cb4">totbt</a>]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="joyconf_8cpp_source.html#l00098">98</a> of file <a class="el" href="joyconf_8cpp_source.html">joyconf.cpp</a>.</p>
+
+</div>
+</div>
 <a id="a5002611f83f5a861df12917dd5651db8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5002611f83f5a861df12917dd5651db8">&#9670;&nbsp;</a></span>buttonState</h2>
 
@@ -746,6 +795,8 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="joyconf_8cpp_source.html#l00101">101</a> of file <a class="el" href="joyconf_8cpp_source.html">joyconf.cpp</a>.</p>
+
 </div>
 </div>
 <a id="a77d7d18f51343feebbe6d0eea7b4ac57"></a>
@@ -755,49 +806,51 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">unsigned long debounceDelay = 50</td>
+          <td class="memname">unsigned long debounceDelay = 100</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="joyconf_8cpp_source.html#l00113">113</a> of file <a class="el" href="joyconf_8cpp_source.html">joyconf.cpp</a>.</p>
+
+</div>
+</div>
+<a id="af5d47d96437b0b65e80414f4787530ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af5d47d96437b0b65e80414f4787530ae">&#9670;&nbsp;</a></span>Enc1</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_encoders__.html">Encoders_</a> Enc1(<a class="el" href="ports_8h.html#a2e4cc8cf6cec68902fb8a8829f338525">CLK_ENC_1</a>, <a class="el" href="ports_8h.html#a2907e00dc0a618e7b4789c8f6f81cf1a">DT_ENC_1</a>, <a class="el" href="ports_8h.html#acd9bd489eabbb4d0730686ca176fd024">SW_ENC_1</a>)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a8d16ea0ec4522624087d07bdb8c06f51"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8d16ea0ec4522624087d07bdb8c06f51">&#9670;&nbsp;</a></span>Enc1</h2>
+<a id="a286f751c79038360c2679d1c318a2a9a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a286f751c79038360c2679d1c318a2a9a">&#9670;&nbsp;</a></span>Enc2</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_encoder__.html">Encoder_</a> Enc1(<a class="el" href="ports_8h.html#a2e4cc8cf6cec68902fb8a8829f338525">CLK_ENC_1</a>, <a class="el" href="ports_8h.html#a2907e00dc0a618e7b4789c8f6f81cf1a">DT_ENC_1</a>, <a class="el" href="ports_8h.html#acd9bd489eabbb4d0730686ca176fd024">SW_ENC_1</a>)</td>
+          <td class="memname"><a class="el" href="class_encoders__.html">Encoders_</a> Enc2(<a class="el" href="ports_8h.html#a6f67ffda52609be2b3a3950ea4b90525">CLK_ENC_2</a>, <a class="el" href="ports_8h.html#a90afd87f60a80e474659116675a51e1b">DT_ENC_2</a>, <a class="el" href="ports_8h.html#a6314e51358773be5a548e8bf3cda2be5">SW_ENC_2</a>)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a527a860658cd9dd447a8f88590fe5838"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a527a860658cd9dd447a8f88590fe5838">&#9670;&nbsp;</a></span>Enc2</h2>
+<a id="aeb707c96ab1bcc981fd379f564d9477f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb707c96ab1bcc981fd379f564d9477f">&#9670;&nbsp;</a></span>Enc3</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_encoder__.html">Encoder_</a> Enc2(<a class="el" href="ports_8h.html#a6f67ffda52609be2b3a3950ea4b90525">CLK_ENC_2</a>, <a class="el" href="ports_8h.html#a90afd87f60a80e474659116675a51e1b">DT_ENC_2</a>, <a class="el" href="ports_8h.html#a6314e51358773be5a548e8bf3cda2be5">SW_ENC_2</a>)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="afb03df151d1af358273b323fdc644ef0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afb03df151d1af358273b323fdc644ef0">&#9670;&nbsp;</a></span>Enc3</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="class_encoder__.html">Encoder_</a> Enc3(<a class="el" href="ports_8h.html#abcddf50d66b91578ea092b61aa5b62ed">CLK_ENC_3</a>, <a class="el" href="ports_8h.html#a9a7d42fb916af7769b27e3cda7ec7863">DT_ENC_3</a>, <a class="el" href="ports_8h.html#aa9e570d5e2870b06b44d0b1859221e7f">SW_ENC_3</a>)</td>
+          <td class="memname"><a class="el" href="class_encoders__.html">Encoders_</a> Enc3(<a class="el" href="ports_8h.html#abcddf50d66b91578ea092b61aa5b62ed">CLK_ENC_3</a>, <a class="el" href="ports_8h.html#a9a7d42fb916af7769b27e3cda7ec7863">DT_ENC_3</a>, <a class="el" href="ports_8h.html#aa9e570d5e2870b06b44d0b1859221e7f">SW_ENC_3</a>)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -816,6 +869,8 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="joyconf_8cpp_source.html#l00065">65</a> of file <a class="el" href="joyconf_8cpp_source.html">joyconf.cpp</a>.</p>
+
 </div>
 </div>
 <a id="a66f761d0471e843051f3c49af5a1cb82"></a>
@@ -829,6 +884,8 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="joyconf_8cpp_source.html#l00103">103</a> of file <a class="el" href="joyconf_8cpp_source.html">joyconf.cpp</a>.</p>
 
 </div>
 </div>
@@ -844,6 +901,24 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="joyconf_8cpp_source.html#l00106">106</a> of file <a class="el" href="joyconf_8cpp_source.html">joyconf.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a4663849f4916930f3480059e92b86c7b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4663849f4916930f3480059e92b86c7b">&#9670;&nbsp;</a></span>t_enc_j</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">long t_enc_j = 10</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="joyconf_8cpp_source.html#l00074">74</a> of file <a class="el" href="joyconf_8cpp_source.html">joyconf.cpp</a>.</p>
+
 </div>
 </div>
 <a id="a2269c304870a359fe0ebcb1999580e9e"></a>
@@ -853,10 +928,12 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">long t_enc_p = 100</td>
+          <td class="memname">long t_enc_p = 10</td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="joyconf_8cpp_source.html#l00071">71</a> of file <a class="el" href="joyconf_8cpp_source.html">joyconf.cpp</a>.</p>
 
 </div>
 </div>
@@ -872,6 +949,8 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="joyconf_8cpp_source.html#l00116">116</a> of file <a class="el" href="joyconf_8cpp_source.html">joyconf.cpp</a>.</p>
+
 </div>
 </div>
 <a id="ab386652564364fa6d88d7ab3a6c2289f"></a>
@@ -886,18 +965,16 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="joyconf_8cpp_source.html#l00068">68</a> of file <a class="el" href="joyconf_8cpp_source.html">joyconf.cpp</a>.</p>
+
 </div>
 </div>
 </div><!-- contents -->
-</div><!-- doc-content -->
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="navelem"><a class="el" href="dir_d522931ffa1371640980b621734a4381.html">Users</a></li><li class="navelem"><a class="el" href="dir_b568b1b09bacba527b84d1418f076740.html">mancio</a></li><li class="navelem"><a class="el" href="dir_086fa5dbabfe4c8091ebd0a18ecd61be.html">Documents</a></li><li class="navelem"><a class="el" href="dir_15158e090d989f3fbe1b43109e948bb5.html">VSCode</a></li><li class="navelem"><a class="el" href="dir_23d9c0688f71ee4b22ab536d12fa8f4f.html">FlyBox2</a></li><li class="navelem"><a class="el" href="dir_63be54d2dd55e50f3755acd89c11388e.html">src</a></li><li class="navelem"><a class="el" href="joyconf_8cpp.html">joyconf.cpp</a></li>
-    <li class="footer">Generated by
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.18 </li>
-  </ul>
-</div>
+<hr class="footer"/><address class="footer"><small>
+Generated by &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
 </body>
 </html>

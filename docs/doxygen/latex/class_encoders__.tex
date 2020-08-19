@@ -1,0 +1,118 @@
+\hypertarget{class_encoders__}{}\doxysection{Encoders\+\_\+ Class Reference}
+\label{class_encoders__}\index{Encoders\_@{Encoders\_}}
+
+
+{\ttfamily \#include $<$Encoders.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_encoders___a3c3b78fc93d4468de6a2be314c2bcfdb}{Encoders\+\_\+}} (int clk, int dt, int sw)
+\item 
+int \mbox{\hyperlink{class_encoders___ae9f364afa53d3a627c5d24dec17de74a}{direction}} (long out\+\_\+t)
+\item 
+int \mbox{\hyperlink{class_encoders___a5d0b89c8d8f8d45df12f0adc76f88873}{click}} (long deb\+\_\+time)
+\item 
+int \mbox{\hyperlink{class_encoders___afd175bd498e452b96d77a8aa0fc72b36}{last\+State}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The encoder class is used to control a classic multiturn rotary encoder with click button
+
+The encoder is able to sense a left or right turn thanks to two pins connected to on different part of the wheel. The wheel turning pull-\/up or down the pins in different order.
+
+The alternate L\+OW and H\+I\+GH state of the pins describes two squared waves 90 degrees out of phase.
+
+\DoxyHorRuler{0}
+ $\vert$ $\vert$ $\vert$ $\vert$ $\vert$ $\vert$ A $\vert$ $\vert$ $\vert$ $\vert$ $\vert$ $\vert$ ~\newline
+
+
+\DoxyHorRuler{0}
+
+
+\DoxyHorRuler{0}
+ $\vert$ $\vert$ $\vert$ $\vert$ $\vert$ B $\vert$ $\vert$ $\vert$ $\vert$ $\vert$ $\vert$
+
+\DoxyHorRuler{0}
+ Turn Left Turn right A 1 1 0 0 1 A 1 1 1 0 1 B 1 0 0 1 1 B 0 1 0 0 0 
+
+Definition at line 51 of file Encoders.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_encoders___a3c3b78fc93d4468de6a2be314c2bcfdb}\label{class_encoders___a3c3b78fc93d4468de6a2be314c2bcfdb}} 
+\index{Encoders\_@{Encoders\_}!Encoders\_@{Encoders\_}}
+\index{Encoders\_@{Encoders\_}!Encoders\_@{Encoders\_}}
+\doxysubsubsection{\texorpdfstring{Encoders\_()}{Encoders\_()}}
+{\footnotesize\ttfamily Encoders\+\_\+\+::\+Encoders\+\_\+ (\begin{DoxyParamCaption}\item[{int}]{clk,  }\item[{int}]{dt,  }\item[{int}]{sw }\end{DoxyParamCaption})}
+
+to initialize the encoder with input pins and click pin. All af them are digital inputs. 
+
+Definition at line 27 of file Encoders.\+cpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_encoders___a5d0b89c8d8f8d45df12f0adc76f88873}\label{class_encoders___a5d0b89c8d8f8d45df12f0adc76f88873}} 
+\index{Encoders\_@{Encoders\_}!click@{click}}
+\index{click@{click}!Encoders\_@{Encoders\_}}
+\doxysubsubsection{\texorpdfstring{click()}{click()}}
+{\footnotesize\ttfamily int Encoders\+\_\+\+::click (\begin{DoxyParamCaption}\item[{long}]{deb\+\_\+time }\end{DoxyParamCaption})}
+
+return the SW push button state. It is debounced to avoid false clicks. Please check the mechanical condition of every encoder. Some encoder can need longer delay.
+
+
+\begin{DoxyParams}{Parameters}
+{\em long} & deboucing time\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 0 L\+OW (clicked) or 1 H\+I\+GH (released). 
+\end{DoxyReturn}
+
+
+Definition at line 76 of file Encoders.\+cpp.
+
+\mbox{\Hypertarget{class_encoders___ae9f364afa53d3a627c5d24dec17de74a}\label{class_encoders___ae9f364afa53d3a627c5d24dec17de74a}} 
+\index{Encoders\_@{Encoders\_}!direction@{direction}}
+\index{direction@{direction}!Encoders\_@{Encoders\_}}
+\doxysubsubsection{\texorpdfstring{direction()}{direction()}}
+{\footnotesize\ttfamily int Encoders\+\_\+\+::direction (\begin{DoxyParamCaption}\item[{long}]{out\+\_\+t }\end{DoxyParamCaption})}
+
+give the direction (one step change)
+
+
+\begin{DoxyParams}{Parameters}
+{\em how} & long time give the same output before reset to 0 output\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 if clockwise (right) or 0 if no changes or -\/1 if anticlock-\/wise (left) 
+\end{DoxyReturn}
+
+
+Definition at line 50 of file Encoders.\+cpp.
+
+\mbox{\Hypertarget{class_encoders___afd175bd498e452b96d77a8aa0fc72b36}\label{class_encoders___afd175bd498e452b96d77a8aa0fc72b36}} 
+\index{Encoders\_@{Encoders\_}!lastState@{lastState}}
+\index{lastState@{lastState}!Encoders\_@{Encoders\_}}
+\doxysubsubsection{\texorpdfstring{lastState()}{lastState()}}
+{\footnotesize\ttfamily int Encoders\+\_\+\+::last\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+return the last direction state of the encoder
+
+\begin{DoxyReturn}{Returns}
+int 1 (right), -\/1 (left). 
+\end{DoxyReturn}
+
+
+Definition at line 105 of file Encoders.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/mancio/\+Documents/\+V\+S\+Code/\+Fly\+Box2/include/\mbox{\hyperlink{_encoders_8h}{Encoders.\+h}}\item 
+C\+:/\+Users/mancio/\+Documents/\+V\+S\+Code/\+Fly\+Box2/src/\mbox{\hyperlink{_encoders_8cpp}{Encoders.\+cpp}}\end{DoxyCompactItemize}

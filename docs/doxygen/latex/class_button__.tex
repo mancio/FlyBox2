@@ -1,0 +1,105 @@
+\hypertarget{class_button__}{}\doxysection{Button\+\_\+ Class Reference}
+\label{class_button__}\index{Button\_@{Button\_}}
+
+
+{\ttfamily \#include $<$Pushbutton.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_button___a8425cbbd51f1f1784e0fb15db2516023}{Button\+\_\+}} ()
+\item 
+int \mbox{\hyperlink{class_button___af524f627793b1b57ac23955b0da061dc}{debounce}} (long delay)
+\item 
+void \mbox{\hyperlink{class_button___aece4f27ce3b261dce1f1dab7f4e225be}{set\+Pin}} (int pin)
+\item 
+void \mbox{\hyperlink{class_button___a85eccd80e2a9a8ac2261cc7e6d005d2c}{set\+Name}} (String name)
+\item 
+String \mbox{\hyperlink{class_button___ac44536c5206561dff1cfeddb9f781e49}{get\+Name}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 28 of file Pushbutton.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_button___a8425cbbd51f1f1784e0fb15db2516023}\label{class_button___a8425cbbd51f1f1784e0fb15db2516023}} 
+\index{Button\_@{Button\_}!Button\_@{Button\_}}
+\index{Button\_@{Button\_}!Button\_@{Button\_}}
+\doxysubsubsection{\texorpdfstring{Button\_()}{Button\_()}}
+{\footnotesize\ttfamily Button\+\_\+\+::\+Button\+\_\+ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+to initialize the button. Is suggested to build an array of Buttons to debonce multiple buttons. 
+
+Definition at line 3 of file Pushbutton.\+cpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_button___af524f627793b1b57ac23955b0da061dc}\label{class_button___af524f627793b1b57ac23955b0da061dc}} 
+\index{Button\_@{Button\_}!debounce@{debounce}}
+\index{debounce@{debounce}!Button\_@{Button\_}}
+\doxysubsubsection{\texorpdfstring{debounce()}{debounce()}}
+{\footnotesize\ttfamily int Button\+\_\+\+::debounce (\begin{DoxyParamCaption}\item[{long}]{delay }\end{DoxyParamCaption})}
+
+debounce the pin
+
+
+\begin{DoxyParams}{Parameters}
+{\em long} & delay time in milliseconds\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 1 pressed and 0 released (using pullup configuration) 
+\end{DoxyReturn}
+
+
+Definition at line 14 of file Pushbutton.\+cpp.
+
+\mbox{\Hypertarget{class_button___ac44536c5206561dff1cfeddb9f781e49}\label{class_button___ac44536c5206561dff1cfeddb9f781e49}} 
+\index{Button\_@{Button\_}!getName@{getName}}
+\index{getName@{getName}!Button\_@{Button\_}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily String Button\+\_\+\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 48 of file Pushbutton.\+cpp.
+
+\mbox{\Hypertarget{class_button___a85eccd80e2a9a8ac2261cc7e6d005d2c}\label{class_button___a85eccd80e2a9a8ac2261cc7e6d005d2c}} 
+\index{Button\_@{Button\_}!setName@{setName}}
+\index{setName@{setName}!Button\_@{Button\_}}
+\doxysubsubsection{\texorpdfstring{setName()}{setName()}}
+{\footnotesize\ttfamily void Button\+\_\+\+::set\+Name (\begin{DoxyParamCaption}\item[{String}]{name }\end{DoxyParamCaption})}
+
+
+
+Definition at line 44 of file Pushbutton.\+cpp.
+
+\mbox{\Hypertarget{class_button___aece4f27ce3b261dce1f1dab7f4e225be}\label{class_button___aece4f27ce3b261dce1f1dab7f4e225be}} 
+\index{Button\_@{Button\_}!setPin@{setPin}}
+\index{setPin@{setPin}!Button\_@{Button\_}}
+\doxysubsubsection{\texorpdfstring{setPin()}{setPin()}}
+{\footnotesize\ttfamily void Button\+\_\+\+::set\+Pin (\begin{DoxyParamCaption}\item[{int}]{pin }\end{DoxyParamCaption})}
+
+set the pin to be debounced
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & pin number \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 40 of file Pushbutton.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/mancio/\+Documents/\+V\+S\+Code/\+Fly\+Box2/include/\mbox{\hyperlink{_pushbutton_8h}{Pushbutton.\+h}}\item 
+C\+:/\+Users/mancio/\+Documents/\+V\+S\+Code/\+Fly\+Box2/src/\mbox{\hyperlink{_pushbutton_8cpp}{Pushbutton.\+cpp}}\end{DoxyCompactItemize}

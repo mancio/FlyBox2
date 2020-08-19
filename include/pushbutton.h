@@ -31,11 +31,11 @@ class Button_ {
         int _pin;
         // previous reading state
         int _last_state;
-
+        // current reading state
         int _state;
-
+        // timer for button debounce 
         Timer_ _Timer;
-
+        // String for button naming
         String _name;
     public:
 

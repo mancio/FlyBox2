@@ -1,5 +1,5 @@
-\hypertarget{emulator_8cpp}{}\doxysection{emulator.\+cpp File Reference}
-\label{emulator_8cpp}\index{emulator.cpp@{emulator.cpp}}
+\hypertarget{emulator_8cpp}{}\doxysection{C\+:/\+Users/mancio/\+Documents/\+V\+S\+Code/\+Fly\+Box2/src/emulator.cpp File Reference}
+\label{emulator_8cpp}\index{C:/Users/mancio/Documents/VSCode/FlyBox2/src/emulator.cpp@{C:/Users/mancio/Documents/VSCode/FlyBox2/src/emulator.cpp}}
 {\ttfamily \#include $<$Arduino.\+h$>$}\newline
 {\ttfamily \#include $<$Timer.\+h$>$}\newline
 {\ttfamily \#include $<$emulator.\+h$>$}\newline
@@ -71,6 +71,10 @@ return the value from emulated X
 \begin{DoxyReturn}{Returns}
 emulated X value (0-\/1023) 
 \end{DoxyReturn}
+
+
+Definition at line 168 of file emulator.\+cpp.
+
 \mbox{\Hypertarget{emulator_8cpp_a5089d44a1d58b555b48dada10767e5b9}\label{emulator_8cpp_a5089d44a1d58b555b48dada10767e5b9}} 
 \index{emulator.cpp@{emulator.cpp}!analogRead\_em\_Y@{analogRead\_em\_Y}}
 \index{analogRead\_em\_Y@{analogRead\_em\_Y}!emulator.cpp@{emulator.cpp}}
@@ -82,6 +86,10 @@ return the value from emulated Y
 \begin{DoxyReturn}{Returns}
 emulated Y value (0-\/1023) 
 \end{DoxyReturn}
+
+
+Definition at line 172 of file emulator.\+cpp.
+
 \mbox{\Hypertarget{emulator_8cpp_a32442d77e3cc41bf9c257a7c3e12d4a8}\label{emulator_8cpp_a32442d77e3cc41bf9c257a7c3e12d4a8}} 
 \index{emulator.cpp@{emulator.cpp}!analogRead\_em\_Z@{analogRead\_em\_Z}}
 \index{analogRead\_em\_Z@{analogRead\_em\_Z}!emulator.cpp@{emulator.cpp}}
@@ -93,6 +101,10 @@ return the value from emulated Z
 \begin{DoxyReturn}{Returns}
 emulated Z value (0-\/1023) 
 \end{DoxyReturn}
+
+
+Definition at line 176 of file emulator.\+cpp.
+
 \mbox{\Hypertarget{emulator_8cpp_a2a9b9dc760ecfaf5c77a246b4083fad2}\label{emulator_8cpp_a2a9b9dc760ecfaf5c77a246b4083fad2}} 
 \index{emulator.cpp@{emulator.cpp}!click\_bt\_em@{click\_bt\_em}}
 \index{click\_bt\_em@{click\_bt\_em}!emulator.cpp@{emulator.cpp}}
@@ -106,13 +118,21 @@ emulate click of button
 {\em int} & button to click (from 0 tp 15) \\
 \hline
 \end{DoxyParams}
+
+
+Definition at line 98 of file emulator.\+cpp.
+
 \mbox{\Hypertarget{emulator_8cpp_af5dd5ca52895451b2177f681c20e0773}\label{emulator_8cpp_af5dd5ca52895451b2177f681c20e0773}} 
 \index{emulator.cpp@{emulator.cpp}!click\_enc\_em@{click\_enc\_em}}
 \index{click\_enc\_em@{click\_enc\_em}!emulator.cpp@{emulator.cpp}}
 \doxysubsubsection{\texorpdfstring{click\_enc\_em()}{click\_enc\_em()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily void click\+\_\+enc\+\_\+em (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-set encoders array right and after 360 steps to left \mbox{\Hypertarget{emulator_8cpp_aacf2fb8fefb7f14690e10925c5e79ddc}\label{emulator_8cpp_aacf2fb8fefb7f14690e10925c5e79ddc}} 
+set encoders array right and after 360 steps to left 
+
+Definition at line 125 of file emulator.\+cpp.
+
+\mbox{\Hypertarget{emulator_8cpp_aacf2fb8fefb7f14690e10925c5e79ddc}\label{emulator_8cpp_aacf2fb8fefb7f14690e10925c5e79ddc}} 
 \index{emulator.cpp@{emulator.cpp}!click\_enc\_em@{click\_enc\_em}}
 \index{click\_enc\_em@{click\_enc\_em}!emulator.cpp@{emulator.cpp}}
 \doxysubsubsection{\texorpdfstring{click\_enc\_em()}{click\_enc\_em()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
@@ -125,6 +145,10 @@ emulate a click of a button by changing state in the array
 {\em int} & encoder button number (between 3 and 5) \\
 \hline
 \end{DoxyParams}
+
+
+Definition at line 150 of file emulator.\+cpp.
+
 \mbox{\Hypertarget{emulator_8cpp_a13d0023e0965770b4221b0ac490c3c89}\label{emulator_8cpp_a13d0023e0965770b4221b0ac490c3c89}} 
 \index{emulator.cpp@{emulator.cpp}!digitalRead\_em@{digitalRead\_em}}
 \index{digitalRead\_em@{digitalRead\_em}!emulator.cpp@{emulator.cpp}}
@@ -136,13 +160,21 @@ read value from array previously set by mux emulator
 \begin{DoxyReturn}{Returns}
 1 or 0 
 \end{DoxyReturn}
+
+
+Definition at line 164 of file emulator.\+cpp.
+
 \mbox{\Hypertarget{emulator_8cpp_afea28a8b36027dda9b0ddca011a72970}\label{emulator_8cpp_afea28a8b36027dda9b0ddca011a72970}} 
 \index{emulator.cpp@{emulator.cpp}!loop\_joy\_em@{loop\_joy\_em}}
 \index{loop\_joy\_em@{loop\_joy\_em}!emulator.cpp@{emulator.cpp}}
 \doxysubsubsection{\texorpdfstring{loop\_joy\_em()}{loop\_joy\_em()}}
 {\footnotesize\ttfamily void loop\+\_\+joy\+\_\+em (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-move emulated axes up and down gradually \mbox{\Hypertarget{emulator_8cpp_ab3b03e55b5cef709a1efb1f955827fb3}\label{emulator_8cpp_ab3b03e55b5cef709a1efb1f955827fb3}} 
+move emulated axes up and down gradually 
+
+Definition at line 108 of file emulator.\+cpp.
+
+\mbox{\Hypertarget{emulator_8cpp_ab3b03e55b5cef709a1efb1f955827fb3}\label{emulator_8cpp_ab3b03e55b5cef709a1efb1f955827fb3}} 
 \index{emulator.cpp@{emulator.cpp}!move\_joy\_em@{move\_joy\_em}}
 \index{move\_joy\_em@{move\_joy\_em}!emulator.cpp@{emulator.cpp}}
 \doxysubsubsection{\texorpdfstring{move\_joy\_em()}{move\_joy\_em()}}
@@ -159,6 +191,10 @@ set joystick axes in the emulator array
 {\em int} & Z \\
 \hline
 \end{DoxyParams}
+
+
+Definition at line 102 of file emulator.\+cpp.
+
 \mbox{\Hypertarget{emulator_8cpp_a218aea3b253fc0d7a592f6a8196c7509}\label{emulator_8cpp_a218aea3b253fc0d7a592f6a8196c7509}} 
 \index{emulator.cpp@{emulator.cpp}!mux\_channel\_em@{mux\_channel\_em}}
 \index{mux\_channel\_em@{mux\_channel\_em}!emulator.cpp@{emulator.cpp}}
@@ -172,6 +208,10 @@ emulate the multiplexer by reading from an array of button states
 {\em int} & array position \\
 \hline
 \end{DoxyParams}
+
+
+Definition at line 160 of file emulator.\+cpp.
+
 \mbox{\Hypertarget{emulator_8cpp_a1a528ab1ed5a111cfd9a4b23158515c8}\label{emulator_8cpp_a1a528ab1ed5a111cfd9a4b23158515c8}} 
 \index{emulator.cpp@{emulator.cpp}!read\_enc@{read\_enc}}
 \index{read\_enc@{read\_enc}!emulator.cpp@{emulator.cpp}}
@@ -188,25 +228,41 @@ read the encoder emulated position from the array 0-\/2 = directions 3-\/5 = cli
 \begin{DoxyReturn}{Returns}
 encoder position or click state as int 
 \end{DoxyReturn}
+
+
+Definition at line 140 of file emulator.\+cpp.
+
 \mbox{\Hypertarget{emulator_8cpp_a3c792e34150d7d58855cc4d245a5bfa1}\label{emulator_8cpp_a3c792e34150d7d58855cc4d245a5bfa1}} 
 \index{emulator.cpp@{emulator.cpp}!reset\_bt\_em@{reset\_bt\_em}}
 \index{reset\_bt\_em@{reset\_bt\_em}!emulator.cpp@{emulator.cpp}}
 \doxysubsubsection{\texorpdfstring{reset\_bt\_em()}{reset\_bt\_em()}}
 {\footnotesize\ttfamily void reset\+\_\+bt\+\_\+em (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-reset state of the emulated buttons to 0; \mbox{\Hypertarget{emulator_8cpp_af8ec3988c3eaf3ce7e5cb1cb43457b1f}\label{emulator_8cpp_af8ec3988c3eaf3ce7e5cb1cb43457b1f}} 
+reset state of the emulated buttons to 0; 
+
+Definition at line 92 of file emulator.\+cpp.
+
+\mbox{\Hypertarget{emulator_8cpp_af8ec3988c3eaf3ce7e5cb1cb43457b1f}\label{emulator_8cpp_af8ec3988c3eaf3ce7e5cb1cb43457b1f}} 
 \index{emulator.cpp@{emulator.cpp}!reset\_enc\_click\_em@{reset\_enc\_click\_em}}
 \index{reset\_enc\_click\_em@{reset\_enc\_click\_em}!emulator.cpp@{emulator.cpp}}
 \doxysubsubsection{\texorpdfstring{reset\_enc\_click\_em()}{reset\_enc\_click\_em()}}
 {\footnotesize\ttfamily void reset\+\_\+enc\+\_\+click\+\_\+em (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-reset all the encoder buttons to state zero released in the array \mbox{\Hypertarget{emulator_8cpp_acb900d5f801949b0091609d85d37e25e}\label{emulator_8cpp_acb900d5f801949b0091609d85d37e25e}} 
+reset all the encoder buttons to state zero released in the array 
+
+Definition at line 144 of file emulator.\+cpp.
+
+\mbox{\Hypertarget{emulator_8cpp_acb900d5f801949b0091609d85d37e25e}\label{emulator_8cpp_acb900d5f801949b0091609d85d37e25e}} 
 \index{emulator.cpp@{emulator.cpp}!reset\_joy\_em@{reset\_joy\_em}}
 \index{reset\_joy\_em@{reset\_joy\_em}!emulator.cpp@{emulator.cpp}}
 \doxysubsubsection{\texorpdfstring{reset\_joy\_em()}{reset\_joy\_em()}}
 {\footnotesize\ttfamily void reset\+\_\+joy\+\_\+em (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-reset the state of the emulated axes to center and buttons to not pressed \mbox{\Hypertarget{emulator_8cpp_a38c47c0ebfb0a617625f431de7fb2de5}\label{emulator_8cpp_a38c47c0ebfb0a617625f431de7fb2de5}} 
+reset the state of the emulated axes to center and buttons to not pressed 
+
+Definition at line 86 of file emulator.\+cpp.
+
+\mbox{\Hypertarget{emulator_8cpp_a38c47c0ebfb0a617625f431de7fb2de5}\label{emulator_8cpp_a38c47c0ebfb0a617625f431de7fb2de5}} 
 \index{emulator.cpp@{emulator.cpp}!stop\_enc@{stop\_enc}}
 \index{stop\_enc@{stop\_enc}!emulator.cpp@{emulator.cpp}}
 \doxysubsubsection{\texorpdfstring{stop\_enc()}{stop\_enc()}}
@@ -214,12 +270,20 @@ reset the state of the emulated axes to center and buttons to not pressed \mbox{
 
 set encoders to center 
 
+Definition at line 154 of file emulator.\+cpp.
+
+
+
 \doxysubsection{Variable Documentation}
 \mbox{\Hypertarget{emulator_8cpp_a998a4d68f1c04ee0d184be64dce5f7fb}\label{emulator_8cpp_a998a4d68f1c04ee0d184be64dce5f7fb}} 
 \index{emulator.cpp@{emulator.cpp}!bt\_em@{bt\_em}}
 \index{bt\_em@{bt\_em}!emulator.cpp@{emulator.cpp}}
 \doxysubsubsection{\texorpdfstring{bt\_em}{bt\_em}}
 {\footnotesize\ttfamily int bt\+\_\+em = 0}
+
+
+
+Definition at line 79 of file emulator.\+cpp.
 
 \mbox{\Hypertarget{emulator_8cpp_a569d506de4974c4afb12268f3cb74779}\label{emulator_8cpp_a569d506de4974c4afb12268f3cb74779}} 
 \index{emulator.cpp@{emulator.cpp}!enc\_array@{enc\_array}}
@@ -239,11 +303,19 @@ set encoders to center
 \DoxyCodeLine{\}}
 
 \end{DoxyCode}
+
+
+Definition at line 44 of file emulator.\+cpp.
+
 \mbox{\Hypertarget{emulator_8cpp_a129546315e7dc7fb5b85a971fd0ec42c}\label{emulator_8cpp_a129546315e7dc7fb5b85a971fd0ec42c}} 
 \index{emulator.cpp@{emulator.cpp}!inv@{inv}}
 \index{inv@{inv}!emulator.cpp@{emulator.cpp}}
 \doxysubsubsection{\texorpdfstring{inv}{inv}}
 {\footnotesize\ttfamily bool inv = true}
+
+
+
+Definition at line 56 of file emulator.\+cpp.
 
 \mbox{\Hypertarget{emulator_8cpp_aee8b9f37d92e7be53d534b6be8ea7850}\label{emulator_8cpp_aee8b9f37d92e7be53d534b6be8ea7850}} 
 \index{emulator.cpp@{emulator.cpp}!st\_array@{st\_array}}
@@ -260,6 +332,10 @@ set encoders to center
 \DoxyCodeLine{\}}
 
 \end{DoxyCode}
+
+
+Definition at line 29 of file emulator.\+cpp.
+
 \mbox{\Hypertarget{emulator_8cpp_a8aad05f079052b1ec0e556ea8eb7e153}\label{emulator_8cpp_a8aad05f079052b1ec0e556ea8eb7e153}} 
 \index{emulator.cpp@{emulator.cpp}!st\_bt\_array@{st\_bt\_array}}
 \index{st\_bt\_array@{st\_bt\_array}!emulator.cpp@{emulator.cpp}}
@@ -288,11 +364,19 @@ set encoders to center
 \DoxyCodeLine{\}}
 
 \end{DoxyCode}
+
+
+Definition at line 59 of file emulator.\+cpp.
+
 \mbox{\Hypertarget{emulator_8cpp_ab4ae7205573977222eadd0795db193e2}\label{emulator_8cpp_ab4ae7205573977222eadd0795db193e2}} 
 \index{emulator.cpp@{emulator.cpp}!steps@{steps}}
 \index{steps@{steps}!emulator.cpp@{emulator.cpp}}
 \doxysubsubsection{\texorpdfstring{steps}{steps}}
 {\footnotesize\ttfamily int steps = 0}
+
+
+
+Definition at line 54 of file emulator.\+cpp.
 
 \mbox{\Hypertarget{emulator_8cpp_a6226ec1ace7f76fb45a2b9bda7acbfb6}\label{emulator_8cpp_a6226ec1ace7f76fb45a2b9bda7acbfb6}} 
 \index{emulator.cpp@{emulator.cpp}!sum\_X@{sum\_X}}
@@ -300,15 +384,27 @@ set encoders to center
 \doxysubsubsection{\texorpdfstring{sum\_X}{sum\_X}}
 {\footnotesize\ttfamily int sum\+\_\+X = 1}
 
+
+
+Definition at line 82 of file emulator.\+cpp.
+
 \mbox{\Hypertarget{emulator_8cpp_a9e7b5afdfacae537ca668907e215f855}\label{emulator_8cpp_a9e7b5afdfacae537ca668907e215f855}} 
 \index{emulator.cpp@{emulator.cpp}!sum\_Y@{sum\_Y}}
 \index{sum\_Y@{sum\_Y}!emulator.cpp@{emulator.cpp}}
 \doxysubsubsection{\texorpdfstring{sum\_Y}{sum\_Y}}
 {\footnotesize\ttfamily int sum\+\_\+Y = 1}
 
+
+
+Definition at line 83 of file emulator.\+cpp.
+
 \mbox{\Hypertarget{emulator_8cpp_ac957dee83e46a870203d63745f2c75a0}\label{emulator_8cpp_ac957dee83e46a870203d63745f2c75a0}} 
 \index{emulator.cpp@{emulator.cpp}!sum\_Z@{sum\_Z}}
 \index{sum\_Z@{sum\_Z}!emulator.cpp@{emulator.cpp}}
 \doxysubsubsection{\texorpdfstring{sum\_Z}{sum\_Z}}
 {\footnotesize\ttfamily int sum\+\_\+Z = 1}
+
+
+
+Definition at line 84 of file emulator.\+cpp.
 

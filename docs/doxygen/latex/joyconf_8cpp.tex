@@ -1,12 +1,14 @@
-\hypertarget{joyconf_8cpp}{}\doxysection{joyconf.\+cpp File Reference}
-\label{joyconf_8cpp}\index{joyconf.cpp@{joyconf.cpp}}
+\hypertarget{joyconf_8cpp}{}\doxysection{C\+:/\+Users/mancio/\+Documents/\+V\+S\+Code/\+Fly\+Box2/src/joyconf.cpp File Reference}
+\label{joyconf_8cpp}\index{C:/Users/mancio/Documents/VSCode/FlyBox2/src/joyconf.cpp@{C:/Users/mancio/Documents/VSCode/FlyBox2/src/joyconf.cpp}}
 {\ttfamily \#include $<$Arduino.\+h$>$}\newline
 {\ttfamily \#include $<$emulator.\+h$>$}\newline
 {\ttfamily \#include $<$joyconf.\+h$>$}\newline
 {\ttfamily \#include $<$Joystick.\+h$>$}\newline
+{\ttfamily \#include $<$Pushbutton.\+h$>$}\newline
 {\ttfamily \#include $<$C\+D74\+H\+C4067.\+h$>$}\newline
 {\ttfamily \#include $<$ports.\+h$>$}\newline
 {\ttfamily \#include $<$Timer.\+h$>$}\newline
+{\ttfamily \#include $<$Encoders.\+h$>$}\newline
 {\ttfamily \#include $<$Encoder.\+h$>$}\newline
 \doxysubsection*{Macros}
 \begin{DoxyCompactItemize}
@@ -61,17 +63,21 @@ void \mbox{\hyperlink{joyconf_8cpp_a2b3557d5e92d039ce5744f99efe4efa2}{set\+Encod
 \doxysubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_encoder__}{Encoder\+\_\+}} \mbox{\hyperlink{joyconf_8cpp_a8d16ea0ec4522624087d07bdb8c06f51}{Enc1}} (\mbox{\hyperlink{ports_8h_a2e4cc8cf6cec68902fb8a8829f338525}{C\+L\+K\+\_\+\+E\+N\+C\+\_\+1}}, \mbox{\hyperlink{ports_8h_a2907e00dc0a618e7b4789c8f6f81cf1a}{D\+T\+\_\+\+E\+N\+C\+\_\+1}}, \mbox{\hyperlink{ports_8h_acd9bd489eabbb4d0730686ca176fd024}{S\+W\+\_\+\+E\+N\+C\+\_\+1}})
+\mbox{\hyperlink{class_encoders__}{Encoders\+\_\+}} \mbox{\hyperlink{joyconf_8cpp_af5d47d96437b0b65e80414f4787530ae}{Enc1}} (\mbox{\hyperlink{ports_8h_a2e4cc8cf6cec68902fb8a8829f338525}{C\+L\+K\+\_\+\+E\+N\+C\+\_\+1}}, \mbox{\hyperlink{ports_8h_a2907e00dc0a618e7b4789c8f6f81cf1a}{D\+T\+\_\+\+E\+N\+C\+\_\+1}}, \mbox{\hyperlink{ports_8h_acd9bd489eabbb4d0730686ca176fd024}{S\+W\+\_\+\+E\+N\+C\+\_\+1}})
 \item 
-\mbox{\hyperlink{class_encoder__}{Encoder\+\_\+}} \mbox{\hyperlink{joyconf_8cpp_a527a860658cd9dd447a8f88590fe5838}{Enc2}} (\mbox{\hyperlink{ports_8h_a6f67ffda52609be2b3a3950ea4b90525}{C\+L\+K\+\_\+\+E\+N\+C\+\_\+2}}, \mbox{\hyperlink{ports_8h_a90afd87f60a80e474659116675a51e1b}{D\+T\+\_\+\+E\+N\+C\+\_\+2}}, \mbox{\hyperlink{ports_8h_a6314e51358773be5a548e8bf3cda2be5}{S\+W\+\_\+\+E\+N\+C\+\_\+2}})
+\mbox{\hyperlink{class_encoders__}{Encoders\+\_\+}} \mbox{\hyperlink{joyconf_8cpp_a286f751c79038360c2679d1c318a2a9a}{Enc2}} (\mbox{\hyperlink{ports_8h_a6f67ffda52609be2b3a3950ea4b90525}{C\+L\+K\+\_\+\+E\+N\+C\+\_\+2}}, \mbox{\hyperlink{ports_8h_a90afd87f60a80e474659116675a51e1b}{D\+T\+\_\+\+E\+N\+C\+\_\+2}}, \mbox{\hyperlink{ports_8h_a6314e51358773be5a548e8bf3cda2be5}{S\+W\+\_\+\+E\+N\+C\+\_\+2}})
 \item 
-\mbox{\hyperlink{class_encoder__}{Encoder\+\_\+}} \mbox{\hyperlink{joyconf_8cpp_afb03df151d1af358273b323fdc644ef0}{Enc3}} (\mbox{\hyperlink{ports_8h_abcddf50d66b91578ea092b61aa5b62ed}{C\+L\+K\+\_\+\+E\+N\+C\+\_\+3}}, \mbox{\hyperlink{ports_8h_a9a7d42fb916af7769b27e3cda7ec7863}{D\+T\+\_\+\+E\+N\+C\+\_\+3}}, \mbox{\hyperlink{ports_8h_aa9e570d5e2870b06b44d0b1859221e7f}{S\+W\+\_\+\+E\+N\+C\+\_\+3}})
+\mbox{\hyperlink{class_encoders__}{Encoders\+\_\+}} \mbox{\hyperlink{joyconf_8cpp_aeb707c96ab1bcc981fd379f564d9477f}{Enc3}} (\mbox{\hyperlink{ports_8h_abcddf50d66b91578ea092b61aa5b62ed}{C\+L\+K\+\_\+\+E\+N\+C\+\_\+3}}, \mbox{\hyperlink{ports_8h_a9a7d42fb916af7769b27e3cda7ec7863}{D\+T\+\_\+\+E\+N\+C\+\_\+3}}, \mbox{\hyperlink{ports_8h_aa9e570d5e2870b06b44d0b1859221e7f}{S\+W\+\_\+\+E\+N\+C\+\_\+3}})
 \item 
 int \mbox{\hyperlink{joyconf_8cpp_a9ce5bac15c5d149761370c579dded8ec}{joy\+\_\+bt\+\_\+array}} \mbox{[}\mbox{\hyperlink{joyconf_8cpp_ac4708902f993b1914c265ec454377cb4}{totbt}}\mbox{]}
 \item 
 \mbox{\hyperlink{class_timer__}{Timer\+\_\+}} \mbox{\hyperlink{joyconf_8cpp_ab386652564364fa6d88d7ab3a6c2289f}{Timer}}
 \item 
-long \mbox{\hyperlink{joyconf_8cpp_a2269c304870a359fe0ebcb1999580e9e}{t\+\_\+enc\+\_\+p}} = 100
+long \mbox{\hyperlink{joyconf_8cpp_a2269c304870a359fe0ebcb1999580e9e}{t\+\_\+enc\+\_\+p}} = 10
+\item 
+long \mbox{\hyperlink{joyconf_8cpp_a4663849f4916930f3480059e92b86c7b}{t\+\_\+enc\+\_\+j}} = 10
+\item 
+\mbox{\hyperlink{class_button__}{Button\+\_\+}} \mbox{\hyperlink{joyconf_8cpp_a72323ac3c2ff74417b720a86f36f016d}{bt}} \mbox{[}\mbox{\hyperlink{joyconf_8cpp_ac4708902f993b1914c265ec454377cb4}{totbt}}\mbox{]}
 \item 
 int \mbox{\hyperlink{joyconf_8cpp_a5002611f83f5a861df12917dd5651db8}{button\+State}} = L\+OW
 \item 
@@ -79,7 +85,7 @@ int \mbox{\hyperlink{joyconf_8cpp_a66f761d0471e843051f3c49af5a1cb82}{last\+Butto
 \item 
 int \mbox{\hyperlink{joyconf_8cpp_a5fa8d7fdcda2ed9555ad800a40a1a810}{reading}}
 \item 
-unsigned long \mbox{\hyperlink{joyconf_8cpp_a77d7d18f51343feebbe6d0eea7b4ac57}{debounce\+Delay}} = 50
+unsigned long \mbox{\hyperlink{joyconf_8cpp_a77d7d18f51343feebbe6d0eea7b4ac57}{debounce\+Delay}} = 100
 \item 
 bool \mbox{\hyperlink{joyconf_8cpp_a69f942d7289d5ed2ffe3a00b12235d04}{test}} = false
 \end{DoxyCompactItemize}
@@ -92,11 +98,19 @@ bool \mbox{\hyperlink{joyconf_8cpp_a69f942d7289d5ed2ffe3a00b12235d04}{test}} = f
 \doxysubsubsection{\texorpdfstring{left\_enc1\_bt}{left\_enc1\_bt}}
 {\footnotesize\ttfamily \#define left\+\_\+enc1\+\_\+bt~16}
 
+
+
+Definition at line 31 of file joyconf.\+cpp.
+
 \mbox{\Hypertarget{joyconf_8cpp_a3a322d3d152d2f8696c1b150c5e59f5a}\label{joyconf_8cpp_a3a322d3d152d2f8696c1b150c5e59f5a}} 
 \index{joyconf.cpp@{joyconf.cpp}!left\_enc2\_bt@{left\_enc2\_bt}}
 \index{left\_enc2\_bt@{left\_enc2\_bt}!joyconf.cpp@{joyconf.cpp}}
 \doxysubsubsection{\texorpdfstring{left\_enc2\_bt}{left\_enc2\_bt}}
 {\footnotesize\ttfamily \#define left\+\_\+enc2\+\_\+bt~18}
+
+
+
+Definition at line 33 of file joyconf.\+cpp.
 
 \mbox{\Hypertarget{joyconf_8cpp_acee799f5f4bff7b803994c13287381e7}\label{joyconf_8cpp_acee799f5f4bff7b803994c13287381e7}} 
 \index{joyconf.cpp@{joyconf.cpp}!left\_enc3\_bt@{left\_enc3\_bt}}
@@ -104,11 +118,19 @@ bool \mbox{\hyperlink{joyconf_8cpp_a69f942d7289d5ed2ffe3a00b12235d04}{test}} = f
 \doxysubsubsection{\texorpdfstring{left\_enc3\_bt}{left\_enc3\_bt}}
 {\footnotesize\ttfamily \#define left\+\_\+enc3\+\_\+bt~20}
 
+
+
+Definition at line 35 of file joyconf.\+cpp.
+
 \mbox{\Hypertarget{joyconf_8cpp_ac357ad6d9c98ad04b83db7db2d165908}\label{joyconf_8cpp_ac357ad6d9c98ad04b83db7db2d165908}} 
 \index{joyconf.cpp@{joyconf.cpp}!right\_enc1\_bt@{right\_enc1\_bt}}
 \index{right\_enc1\_bt@{right\_enc1\_bt}!joyconf.cpp@{joyconf.cpp}}
 \doxysubsubsection{\texorpdfstring{right\_enc1\_bt}{right\_enc1\_bt}}
 {\footnotesize\ttfamily \#define right\+\_\+enc1\+\_\+bt~17}
+
+
+
+Definition at line 32 of file joyconf.\+cpp.
 
 \mbox{\Hypertarget{joyconf_8cpp_a2bca6f9884f76cb907648b87c01f860e}\label{joyconf_8cpp_a2bca6f9884f76cb907648b87c01f860e}} 
 \index{joyconf.cpp@{joyconf.cpp}!right\_enc2\_bt@{right\_enc2\_bt}}
@@ -116,11 +138,19 @@ bool \mbox{\hyperlink{joyconf_8cpp_a69f942d7289d5ed2ffe3a00b12235d04}{test}} = f
 \doxysubsubsection{\texorpdfstring{right\_enc2\_bt}{right\_enc2\_bt}}
 {\footnotesize\ttfamily \#define right\+\_\+enc2\+\_\+bt~19}
 
+
+
+Definition at line 34 of file joyconf.\+cpp.
+
 \mbox{\Hypertarget{joyconf_8cpp_aeff3e2daf3a25b146fe0653a9e2d2c17}\label{joyconf_8cpp_aeff3e2daf3a25b146fe0653a9e2d2c17}} 
 \index{joyconf.cpp@{joyconf.cpp}!right\_enc3\_bt@{right\_enc3\_bt}}
 \index{right\_enc3\_bt@{right\_enc3\_bt}!joyconf.cpp@{joyconf.cpp}}
 \doxysubsubsection{\texorpdfstring{right\_enc3\_bt}{right\_enc3\_bt}}
 {\footnotesize\ttfamily \#define right\+\_\+enc3\+\_\+bt~21}
+
+
+
+Definition at line 36 of file joyconf.\+cpp.
 
 \mbox{\Hypertarget{joyconf_8cpp_a37f8aaac363f801a21d34c4b81c1df07}\label{joyconf_8cpp_a37f8aaac363f801a21d34c4b81c1df07}} 
 \index{joyconf.cpp@{joyconf.cpp}!sw1\_bt@{sw1\_bt}}
@@ -128,11 +158,19 @@ bool \mbox{\hyperlink{joyconf_8cpp_a69f942d7289d5ed2ffe3a00b12235d04}{test}} = f
 \doxysubsubsection{\texorpdfstring{sw1\_bt}{sw1\_bt}}
 {\footnotesize\ttfamily \#define sw1\+\_\+bt~22}
 
+
+
+Definition at line 38 of file joyconf.\+cpp.
+
 \mbox{\Hypertarget{joyconf_8cpp_ab50730ae357751c4341007c9a05a50cb}\label{joyconf_8cpp_ab50730ae357751c4341007c9a05a50cb}} 
 \index{joyconf.cpp@{joyconf.cpp}!sw2\_bt@{sw2\_bt}}
 \index{sw2\_bt@{sw2\_bt}!joyconf.cpp@{joyconf.cpp}}
 \doxysubsubsection{\texorpdfstring{sw2\_bt}{sw2\_bt}}
 {\footnotesize\ttfamily \#define sw2\+\_\+bt~23}
+
+
+
+Definition at line 39 of file joyconf.\+cpp.
 
 \mbox{\Hypertarget{joyconf_8cpp_af2622f4e5f9d42e74d014d27c6967332}\label{joyconf_8cpp_af2622f4e5f9d42e74d014d27c6967332}} 
 \index{joyconf.cpp@{joyconf.cpp}!sw3\_bt@{sw3\_bt}}
@@ -140,11 +178,19 @@ bool \mbox{\hyperlink{joyconf_8cpp_a69f942d7289d5ed2ffe3a00b12235d04}{test}} = f
 \doxysubsubsection{\texorpdfstring{sw3\_bt}{sw3\_bt}}
 {\footnotesize\ttfamily \#define sw3\+\_\+bt~24}
 
+
+
+Definition at line 40 of file joyconf.\+cpp.
+
 \mbox{\Hypertarget{joyconf_8cpp_ac4708902f993b1914c265ec454377cb4}\label{joyconf_8cpp_ac4708902f993b1914c265ec454377cb4}} 
 \index{joyconf.cpp@{joyconf.cpp}!totbt@{totbt}}
 \index{totbt@{totbt}!joyconf.cpp@{joyconf.cpp}}
 \doxysubsubsection{\texorpdfstring{totbt}{totbt}}
 {\footnotesize\ttfamily \#define totbt~16}
+
+
+
+Definition at line 29 of file joyconf.\+cpp.
 
 
 
@@ -155,7 +201,11 @@ bool \mbox{\hyperlink{joyconf_8cpp_a69f942d7289d5ed2ffe3a00b12235d04}{test}} = f
 \doxysubsubsection{\texorpdfstring{btArrayFiller()}{btArrayFiller()}}
 {\footnotesize\ttfamily void bt\+Array\+Filler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-build an array of buttons in normal order from 1 to 16 \mbox{\Hypertarget{joyconf_8cpp_af953debc945efa2555f04021970412cc}\label{joyconf_8cpp_af953debc945efa2555f04021970412cc}} 
+build an array of buttons in normal order from 1 to 16 
+
+Definition at line 217 of file joyconf.\+cpp.
+
+\mbox{\Hypertarget{joyconf_8cpp_af953debc945efa2555f04021970412cc}\label{joyconf_8cpp_af953debc945efa2555f04021970412cc}} 
 \index{joyconf.cpp@{joyconf.cpp}!debouncer@{debouncer}}
 \index{debouncer@{debouncer}!joyconf.cpp@{joyconf.cpp}}
 \doxysubsubsection{\texorpdfstring{debouncer()}{debouncer()}}
@@ -171,13 +221,21 @@ debounce the click button (used in addiction with hardware debounce)
 \begin{DoxyReturn}{Returns}
 button state debounced 
 \end{DoxyReturn}
+
+
+Definition at line 138 of file joyconf.\+cpp.
+
 \mbox{\Hypertarget{joyconf_8cpp_aba818122d70d2c4ac723a578e75f7a3e}\label{joyconf_8cpp_aba818122d70d2c4ac723a578e75f7a3e}} 
 \index{joyconf.cpp@{joyconf.cpp}!joy\_conf@{joy\_conf}}
 \index{joy\_conf@{joy\_conf}!joyconf.cpp@{joyconf.cpp}}
 \doxysubsubsection{\texorpdfstring{joy\_conf()}{joy\_conf()}}
 {\footnotesize\ttfamily void joy\+\_\+conf (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Initialize joystick library \mbox{\Hypertarget{joyconf_8cpp_a601497ba54038878634ed8327be11b3d}\label{joyconf_8cpp_a601497ba54038878634ed8327be11b3d}} 
+Initialize joystick library 
+
+Definition at line 122 of file joyconf.\+cpp.
+
+\mbox{\Hypertarget{joyconf_8cpp_a601497ba54038878634ed8327be11b3d}\label{joyconf_8cpp_a601497ba54038878634ed8327be11b3d}} 
 \index{joyconf.cpp@{joyconf.cpp}!Joystick@{Joystick}}
 \index{Joystick@{Joystick}!joyconf.cpp@{joyconf.cpp}}
 \doxysubsubsection{\texorpdfstring{Joystick()}{Joystick()}}
@@ -201,13 +259,21 @@ map the potentiometer scale to the Arduino analog input scale
 \begin{DoxyReturn}{Returns}
 mapped value as long 
 \end{DoxyReturn}
+
+
+Definition at line 179 of file joyconf.\+cpp.
+
 \mbox{\Hypertarget{joyconf_8cpp_a7fd8c17ec4e20e74986b3c51041f4026}\label{joyconf_8cpp_a7fd8c17ec4e20e74986b3c51041f4026}} 
 \index{joyconf.cpp@{joyconf.cpp}!muxLooper@{muxLooper}}
 \index{muxLooper@{muxLooper}!joyconf.cpp@{joyconf.cpp}}
 \doxysubsubsection{\texorpdfstring{muxLooper()}{muxLooper()}}
 {\footnotesize\ttfamily void mux\+Looper (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-loop the the multiplexer 16 pin connecting each of them to the S\+IG pin and write the input on the right joystick button. \mbox{\Hypertarget{joyconf_8cpp_aff8cd1d42ca99f12b35e1cc2a1a2baae}\label{joyconf_8cpp_aff8cd1d42ca99f12b35e1cc2a1a2baae}} 
+loop the the multiplexer 16 pin connecting each of them to the S\+IG pin and write the input on the right joystick button. 
+
+Definition at line 226 of file joyconf.\+cpp.
+
+\mbox{\Hypertarget{joyconf_8cpp_aff8cd1d42ca99f12b35e1cc2a1a2baae}\label{joyconf_8cpp_aff8cd1d42ca99f12b35e1cc2a1a2baae}} 
 \index{joyconf.cpp@{joyconf.cpp}!my\_mux@{my\_mux}}
 \index{my\_mux@{my\_mux}!joyconf.cpp@{joyconf.cpp}}
 \doxysubsubsection{\texorpdfstring{my\_mux()}{my\_mux()}}
@@ -219,7 +285,11 @@ loop the the multiplexer 16 pin connecting each of them to the S\+IG pin and wri
 \doxysubsubsection{\texorpdfstring{setEncoders\_dir()}{setEncoders\_dir()}}
 {\footnotesize\ttfamily void set\+Encoders\+\_\+dir (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-push buttons depending by encoders direction and click buttons \mbox{\Hypertarget{joyconf_8cpp_afab08082007163b964f41ba8334b865a}\label{joyconf_8cpp_afab08082007163b964f41ba8334b865a}} 
+push buttons depending by encoders direction and click buttons 
+
+Definition at line 242 of file joyconf.\+cpp.
+
+\mbox{\Hypertarget{joyconf_8cpp_afab08082007163b964f41ba8334b865a}\label{joyconf_8cpp_afab08082007163b964f41ba8334b865a}} 
 \index{joyconf.cpp@{joyconf.cpp}!setTest@{setTest}}
 \index{setTest@{setTest}!joyconf.cpp@{joyconf.cpp}}
 \doxysubsubsection{\texorpdfstring{setTest()}{setTest()}}
@@ -232,6 +302,10 @@ set the execution in test mode
 {\em bool} & if true test mode, if false normal mode \\
 \hline
 \end{DoxyParams}
+
+
+Definition at line 118 of file joyconf.\+cpp.
+
 \mbox{\Hypertarget{joyconf_8cpp_aca616a67e14e1af19f4c36eedb9ae19d}\label{joyconf_8cpp_aca616a67e14e1af19f4c36eedb9ae19d}} 
 \index{joyconf.cpp@{joyconf.cpp}!setX@{setX}}
 \index{setX@{setX}!joyconf.cpp@{joyconf.cpp}}
@@ -250,6 +324,10 @@ check and set X-\/axis input value
 \begin{DoxyReturn}{Returns}
 long axis value 
 \end{DoxyReturn}
+
+
+Definition at line 187 of file joyconf.\+cpp.
+
 \mbox{\Hypertarget{joyconf_8cpp_a68d0ce74156f4fb9ca09c7e738bcbf5b}\label{joyconf_8cpp_a68d0ce74156f4fb9ca09c7e738bcbf5b}} 
 \index{joyconf.cpp@{joyconf.cpp}!setY@{setY}}
 \index{setY@{setY}!joyconf.cpp@{joyconf.cpp}}
@@ -268,6 +346,10 @@ check and set Y-\/axis input value
 \begin{DoxyReturn}{Returns}
 long axis value 
 \end{DoxyReturn}
+
+
+Definition at line 197 of file joyconf.\+cpp.
+
 \mbox{\Hypertarget{joyconf_8cpp_a4251eb0b20a921657f56758a51659964}\label{joyconf_8cpp_a4251eb0b20a921657f56758a51659964}} 
 \index{joyconf.cpp@{joyconf.cpp}!setZ@{setZ}}
 \index{setZ@{setZ}!joyconf.cpp@{joyconf.cpp}}
@@ -288,36 +370,58 @@ long axis value
 \end{DoxyReturn}
 
 
+Definition at line 207 of file joyconf.\+cpp.
+
+
+
 \doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{joyconf_8cpp_a72323ac3c2ff74417b720a86f36f016d}\label{joyconf_8cpp_a72323ac3c2ff74417b720a86f36f016d}} 
+\index{joyconf.cpp@{joyconf.cpp}!bt@{bt}}
+\index{bt@{bt}!joyconf.cpp@{joyconf.cpp}}
+\doxysubsubsection{\texorpdfstring{bt}{bt}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_button__}{Button\+\_\+}} bt\mbox{[}\mbox{\hyperlink{joyconf_8cpp_ac4708902f993b1914c265ec454377cb4}{totbt}}\mbox{]}}
+
+
+
+Definition at line 98 of file joyconf.\+cpp.
+
 \mbox{\Hypertarget{joyconf_8cpp_a5002611f83f5a861df12917dd5651db8}\label{joyconf_8cpp_a5002611f83f5a861df12917dd5651db8}} 
 \index{joyconf.cpp@{joyconf.cpp}!buttonState@{buttonState}}
 \index{buttonState@{buttonState}!joyconf.cpp@{joyconf.cpp}}
 \doxysubsubsection{\texorpdfstring{buttonState}{buttonState}}
 {\footnotesize\ttfamily int button\+State = L\+OW}
 
+
+
+Definition at line 101 of file joyconf.\+cpp.
+
 \mbox{\Hypertarget{joyconf_8cpp_a77d7d18f51343feebbe6d0eea7b4ac57}\label{joyconf_8cpp_a77d7d18f51343feebbe6d0eea7b4ac57}} 
 \index{joyconf.cpp@{joyconf.cpp}!debounceDelay@{debounceDelay}}
 \index{debounceDelay@{debounceDelay}!joyconf.cpp@{joyconf.cpp}}
 \doxysubsubsection{\texorpdfstring{debounceDelay}{debounceDelay}}
-{\footnotesize\ttfamily unsigned long debounce\+Delay = 50}
+{\footnotesize\ttfamily unsigned long debounce\+Delay = 100}
 
-\mbox{\Hypertarget{joyconf_8cpp_a8d16ea0ec4522624087d07bdb8c06f51}\label{joyconf_8cpp_a8d16ea0ec4522624087d07bdb8c06f51}} 
+
+
+Definition at line 113 of file joyconf.\+cpp.
+
+\mbox{\Hypertarget{joyconf_8cpp_af5d47d96437b0b65e80414f4787530ae}\label{joyconf_8cpp_af5d47d96437b0b65e80414f4787530ae}} 
 \index{joyconf.cpp@{joyconf.cpp}!Enc1@{Enc1}}
 \index{Enc1@{Enc1}!joyconf.cpp@{joyconf.cpp}}
 \doxysubsubsection{\texorpdfstring{Enc1}{Enc1}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_encoder__}{Encoder\+\_\+}} Enc1(\mbox{\hyperlink{ports_8h_a2e4cc8cf6cec68902fb8a8829f338525}{C\+L\+K\+\_\+\+E\+N\+C\+\_\+1}}, \mbox{\hyperlink{ports_8h_a2907e00dc0a618e7b4789c8f6f81cf1a}{D\+T\+\_\+\+E\+N\+C\+\_\+1}}, \mbox{\hyperlink{ports_8h_acd9bd489eabbb4d0730686ca176fd024}{S\+W\+\_\+\+E\+N\+C\+\_\+1}})}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_encoders__}{Encoders\+\_\+}} Enc1(\mbox{\hyperlink{ports_8h_a2e4cc8cf6cec68902fb8a8829f338525}{C\+L\+K\+\_\+\+E\+N\+C\+\_\+1}}, \mbox{\hyperlink{ports_8h_a2907e00dc0a618e7b4789c8f6f81cf1a}{D\+T\+\_\+\+E\+N\+C\+\_\+1}}, \mbox{\hyperlink{ports_8h_acd9bd489eabbb4d0730686ca176fd024}{S\+W\+\_\+\+E\+N\+C\+\_\+1}})}
 
-\mbox{\Hypertarget{joyconf_8cpp_a527a860658cd9dd447a8f88590fe5838}\label{joyconf_8cpp_a527a860658cd9dd447a8f88590fe5838}} 
+\mbox{\Hypertarget{joyconf_8cpp_a286f751c79038360c2679d1c318a2a9a}\label{joyconf_8cpp_a286f751c79038360c2679d1c318a2a9a}} 
 \index{joyconf.cpp@{joyconf.cpp}!Enc2@{Enc2}}
 \index{Enc2@{Enc2}!joyconf.cpp@{joyconf.cpp}}
 \doxysubsubsection{\texorpdfstring{Enc2}{Enc2}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_encoder__}{Encoder\+\_\+}} Enc2(\mbox{\hyperlink{ports_8h_a6f67ffda52609be2b3a3950ea4b90525}{C\+L\+K\+\_\+\+E\+N\+C\+\_\+2}}, \mbox{\hyperlink{ports_8h_a90afd87f60a80e474659116675a51e1b}{D\+T\+\_\+\+E\+N\+C\+\_\+2}}, \mbox{\hyperlink{ports_8h_a6314e51358773be5a548e8bf3cda2be5}{S\+W\+\_\+\+E\+N\+C\+\_\+2}})}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_encoders__}{Encoders\+\_\+}} Enc2(\mbox{\hyperlink{ports_8h_a6f67ffda52609be2b3a3950ea4b90525}{C\+L\+K\+\_\+\+E\+N\+C\+\_\+2}}, \mbox{\hyperlink{ports_8h_a90afd87f60a80e474659116675a51e1b}{D\+T\+\_\+\+E\+N\+C\+\_\+2}}, \mbox{\hyperlink{ports_8h_a6314e51358773be5a548e8bf3cda2be5}{S\+W\+\_\+\+E\+N\+C\+\_\+2}})}
 
-\mbox{\Hypertarget{joyconf_8cpp_afb03df151d1af358273b323fdc644ef0}\label{joyconf_8cpp_afb03df151d1af358273b323fdc644ef0}} 
+\mbox{\Hypertarget{joyconf_8cpp_aeb707c96ab1bcc981fd379f564d9477f}\label{joyconf_8cpp_aeb707c96ab1bcc981fd379f564d9477f}} 
 \index{joyconf.cpp@{joyconf.cpp}!Enc3@{Enc3}}
 \index{Enc3@{Enc3}!joyconf.cpp@{joyconf.cpp}}
 \doxysubsubsection{\texorpdfstring{Enc3}{Enc3}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_encoder__}{Encoder\+\_\+}} Enc3(\mbox{\hyperlink{ports_8h_abcddf50d66b91578ea092b61aa5b62ed}{C\+L\+K\+\_\+\+E\+N\+C\+\_\+3}}, \mbox{\hyperlink{ports_8h_a9a7d42fb916af7769b27e3cda7ec7863}{D\+T\+\_\+\+E\+N\+C\+\_\+3}}, \mbox{\hyperlink{ports_8h_aa9e570d5e2870b06b44d0b1859221e7f}{S\+W\+\_\+\+E\+N\+C\+\_\+3}})}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_encoders__}{Encoders\+\_\+}} Enc3(\mbox{\hyperlink{ports_8h_abcddf50d66b91578ea092b61aa5b62ed}{C\+L\+K\+\_\+\+E\+N\+C\+\_\+3}}, \mbox{\hyperlink{ports_8h_a9a7d42fb916af7769b27e3cda7ec7863}{D\+T\+\_\+\+E\+N\+C\+\_\+3}}, \mbox{\hyperlink{ports_8h_aa9e570d5e2870b06b44d0b1859221e7f}{S\+W\+\_\+\+E\+N\+C\+\_\+3}})}
 
 \mbox{\Hypertarget{joyconf_8cpp_a9ce5bac15c5d149761370c579dded8ec}\label{joyconf_8cpp_a9ce5bac15c5d149761370c579dded8ec}} 
 \index{joyconf.cpp@{joyconf.cpp}!joy\_bt\_array@{joy\_bt\_array}}
@@ -325,11 +429,19 @@ long axis value
 \doxysubsubsection{\texorpdfstring{joy\_bt\_array}{joy\_bt\_array}}
 {\footnotesize\ttfamily int joy\+\_\+bt\+\_\+array\mbox{[}\mbox{\hyperlink{joyconf_8cpp_ac4708902f993b1914c265ec454377cb4}{totbt}}\mbox{]}}
 
+
+
+Definition at line 65 of file joyconf.\+cpp.
+
 \mbox{\Hypertarget{joyconf_8cpp_a66f761d0471e843051f3c49af5a1cb82}\label{joyconf_8cpp_a66f761d0471e843051f3c49af5a1cb82}} 
 \index{joyconf.cpp@{joyconf.cpp}!lastButtonState@{lastButtonState}}
 \index{lastButtonState@{lastButtonState}!joyconf.cpp@{joyconf.cpp}}
 \doxysubsubsection{\texorpdfstring{lastButtonState}{lastButtonState}}
 {\footnotesize\ttfamily int last\+Button\+State = L\+OW}
+
+
+
+Definition at line 103 of file joyconf.\+cpp.
 
 \mbox{\Hypertarget{joyconf_8cpp_a5fa8d7fdcda2ed9555ad800a40a1a810}\label{joyconf_8cpp_a5fa8d7fdcda2ed9555ad800a40a1a810}} 
 \index{joyconf.cpp@{joyconf.cpp}!reading@{reading}}
@@ -337,11 +449,29 @@ long axis value
 \doxysubsubsection{\texorpdfstring{reading}{reading}}
 {\footnotesize\ttfamily int reading}
 
+
+
+Definition at line 106 of file joyconf.\+cpp.
+
+\mbox{\Hypertarget{joyconf_8cpp_a4663849f4916930f3480059e92b86c7b}\label{joyconf_8cpp_a4663849f4916930f3480059e92b86c7b}} 
+\index{joyconf.cpp@{joyconf.cpp}!t\_enc\_j@{t\_enc\_j}}
+\index{t\_enc\_j@{t\_enc\_j}!joyconf.cpp@{joyconf.cpp}}
+\doxysubsubsection{\texorpdfstring{t\_enc\_j}{t\_enc\_j}}
+{\footnotesize\ttfamily long t\+\_\+enc\+\_\+j = 10}
+
+
+
+Definition at line 74 of file joyconf.\+cpp.
+
 \mbox{\Hypertarget{joyconf_8cpp_a2269c304870a359fe0ebcb1999580e9e}\label{joyconf_8cpp_a2269c304870a359fe0ebcb1999580e9e}} 
 \index{joyconf.cpp@{joyconf.cpp}!t\_enc\_p@{t\_enc\_p}}
 \index{t\_enc\_p@{t\_enc\_p}!joyconf.cpp@{joyconf.cpp}}
 \doxysubsubsection{\texorpdfstring{t\_enc\_p}{t\_enc\_p}}
-{\footnotesize\ttfamily long t\+\_\+enc\+\_\+p = 100}
+{\footnotesize\ttfamily long t\+\_\+enc\+\_\+p = 10}
+
+
+
+Definition at line 71 of file joyconf.\+cpp.
 
 \mbox{\Hypertarget{joyconf_8cpp_a69f942d7289d5ed2ffe3a00b12235d04}\label{joyconf_8cpp_a69f942d7289d5ed2ffe3a00b12235d04}} 
 \index{joyconf.cpp@{joyconf.cpp}!test@{test}}
@@ -349,9 +479,17 @@ long axis value
 \doxysubsubsection{\texorpdfstring{test}{test}}
 {\footnotesize\ttfamily bool test = false}
 
+
+
+Definition at line 116 of file joyconf.\+cpp.
+
 \mbox{\Hypertarget{joyconf_8cpp_ab386652564364fa6d88d7ab3a6c2289f}\label{joyconf_8cpp_ab386652564364fa6d88d7ab3a6c2289f}} 
 \index{joyconf.cpp@{joyconf.cpp}!Timer@{Timer}}
 \index{Timer@{Timer}!joyconf.cpp@{joyconf.cpp}}
 \doxysubsubsection{\texorpdfstring{Timer}{Timer}}
 {\footnotesize\ttfamily \mbox{\hyperlink{class_timer__}{Timer\+\_\+}} Timer}
+
+
+
+Definition at line 68 of file joyconf.\+cpp.
 
