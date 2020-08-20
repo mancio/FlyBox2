@@ -51,7 +51,7 @@ class Button_ {
          *  
          * @param long delay time in milliseconds
          * 
-         * @return int 1 pressed and 0 released (using pullup configuration)
+         * @return int 0 pressed and 1 released (using pullup configuration)
          */
         int debounce(long delay);
 
