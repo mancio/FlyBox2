@@ -38,7 +38,7 @@ You can find the board ready to print on [OSHPark](https://oshpark.com/shared_pr
 
 ## Documentation
 
-[Here](https://htmlpreview.github.io/?https://github.com/mancio/FlyBox2/blob/master/docs/doxygen/html/index.htmln) you can find the documentations written in Doxygen 
+[Here](https://htmlpreview.github.io/?https://github.com/mancio/FlyBox2/blob/master/docs/doxygen/html/index.html) you can find the documentations written in Doxygen 
 
 ## TODO
 
