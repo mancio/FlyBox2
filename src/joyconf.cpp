@@ -64,8 +64,10 @@ CD74HC4067 my_mux(S0_MUX, S1_MUX, S2_MUX, S3_MUX);
 // position of every joystick button from 1 to 16
 int joy_bt_array[totbt];
 
-// initialize Timer class to count the time
-Timer_ Timer;
+// initialize Timer class to count the time encoder movements
+Timer_ Timer_enc1;
+Timer_ Timer_enc2;
+Timer_ Timer_enc3;
 
 //time delay to avoid double side direction encoding
 long t_enc_p = 10;
@@ -289,15 +291,15 @@ void setEncoders_dir(){
   
   } else {
 
-    int dir = Enc3.direction(t_enc_p);
+    int dir1 = Enc1.direction(t_enc_p);
  
-    if(Timer.expired(t_enc_j)){
+    if(Timer_enc1.expired(t_enc_j)){
       // click buttons according to the encoder directions
-      if (dir == -1){
+      if (dir1 == -1){
         //Serial.println("Enc1: left");
         Joystick.setButton(left_enc1_bt,HIGH);
         Joystick.setButton(right_enc1_bt,LOW);
-      } else if (dir == 1){
+      } else if (dir1 == 1){
         //Serial.println("Enc1: right");
         Joystick.setButton(right_enc1_bt,HIGH);
         Joystick.setButton(left_enc1_bt,LOW);
@@ -305,22 +307,48 @@ void setEncoders_dir(){
         Joystick.setButton(right_enc1_bt,LOW);
         Joystick.setButton(left_enc1_bt,LOW);
       } 
-      Timer.update();
+      Timer_enc1.update();
     }
 
-    /*if (Enc2.direction(t_enc_p) == -1) Joystick.setButton(left_enc2_bt,HIGH);
-    else if (Enc2.direction(t_enc_p) == 1) Joystick.setButton(right_enc2_bt,HIGH);
-    else {
-      Joystick.setButton(right_enc2_bt,LOW);
-      Joystick.setButton(left_enc2_bt,LOW);
-    }     
+    int dir2 = Enc2.direction(t_enc_p);
+ 
+    if(Timer_enc2.expired(t_enc_j)){
+      // click buttons according to the encoder directions
+      if (dir2 == -1){
+        //Serial.println("Enc1: left");
+        Joystick.setButton(left_enc2_bt,HIGH);
+        Joystick.setButton(right_enc2_bt,LOW);
+      } else if (dir2 == 1){
+        //Serial.println("Enc1: right");
+        Joystick.setButton(right_enc2_bt,HIGH);
+        Joystick.setButton(left_enc2_bt,LOW);
+      } else {
+        Joystick.setButton(right_enc2_bt,LOW);
+        Joystick.setButton(left_enc2_bt,LOW);
+      } 
+      Timer_enc2.update();
+    }
 
-    if (Enc3.direction(t_enc_p) == -1) Joystick.setButton(left_enc3_bt,HIGH);
-    else if (Enc3.direction(t_enc_p) == 1) Joystick.setButton(right_enc3_bt,HIGH);
-    else {
-      Joystick.setButton(right_enc3_bt,LOW);
-      Joystick.setButton(left_enc3_bt,LOW);
-    }*/         
+    int dir3 = Enc3.direction(t_enc_p);
+ 
+    if(Timer_enc3.expired(t_enc_j)){
+      // click buttons according to the encoder directions
+      if (dir3 == -1){
+        //Serial.println("Enc1: left");
+        Joystick.setButton(left_enc3_bt,HIGH);
+        Joystick.setButton(right_enc3_bt,LOW);
+      } else if (dir3 == 1){
+        //Serial.println("Enc1: right");
+        Joystick.setButton(right_enc3_bt,HIGH);
+        Joystick.setButton(left_enc3_bt,LOW);
+      } else {
+        Joystick.setButton(right_enc3_bt,LOW);
+        Joystick.setButton(left_enc3_bt,LOW);
+      } 
+      Timer_enc1.update();
+    }
+
+    
 
     // check sw button states
     if(Enc1.click(debounceDelay) == LOW){
