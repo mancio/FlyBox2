@@ -22,9 +22,17 @@ VS Studio Visual Studio Code
 ## MC14490P Signal Debounce Module
 
 I build a small module to fit the [MC14490P](https://www.onsemi.com/pub/Collateral/MC14490-D.PDF) a debouncer signal chip. The delay can be changed by changing the cap impedance. Bigger value = bigger delay.
-The hardware approach give the possibility to save some code avoiding a complex function for the pin status. Pin status are read by the same pin using the multiplexer. This would make the pin status storage more difficult.
+The hardware approach help the software debounce, anyway is just an optional.
 
 You can find the board ready to print on [OSHPark](https://oshpark.com/shared_projects/8fIAeRlI)
+
+## The encoder tragedy 
+
+Unfortunately the Pro Micro has only 5 interrupt (pins: 0,1,2,3,7). If we wire the encoder output pins to not-external interrupt pins of Arduino, the encoder will become very imprecise showing movement in the both directions during one side turn of the knob.
+This happen because classic pins can be read every loop, instead an external interrupt is catch immediately, so we can say like is "over the loop".
+Every encoder need 2 interrupts so we do not have enough pins available for 3 or more knobs.
+
+To solve this issue I decide to build an additional module to attach to this board: [The FlyBox2_encoder_module](https://github.com/mancio/FlyBox2_encoder_module)
 
 ## Component list
 
