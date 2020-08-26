@@ -50,10 +50,8 @@ To solve this issue I decide to build an additional module to attach to this boa
 
 ## TODO
 
-* rewire board to match interrupts with encoder pins
 * connect button pad
-* check if is possible button debounce making an array of button objects
-* test multiplexer
+* try #define ENCODER_OPTIMIZE_INTERRUPTS to override attachInterrupt() function and using faster assembler routines
 * test not working due to python problem with vs IDE
 
 ## Still under construction 
