@@ -34,6 +34,14 @@ Every encoder need 2 interrupts so we do not have enough pins available for 3 or
 
 To solve this issue I decide to build an additional module to attach to this board: [The FlyBox2_encoder_module](https://github.com/mancio/FlyBox2_encoder_module)
 
+## The CD74HC4067 Multiplexer
+
+The multiplexer give the possibility, as the name say, to have many output from few inputs. This can be done by using a
+reading input pin and a function that connect all the multiplexed pin to this input one by one. The switch is done by using a [truth table](https://www.instructables.com/id/Tutorial-74HC4067-16-Channel-Analog-Multiplexer-De/).
+
+One easier solution should be using a button matrix having less pins but in this case I cannot press multiple button at the same 
+time.
+
 ## Component list
 
 * 1x Arduino pro micro atmega32u4 (native USB port not like Arduino nano)
