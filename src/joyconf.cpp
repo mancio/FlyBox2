@@ -69,11 +69,15 @@ Timer_ Timer_enc1;
 Timer_ Timer_enc2;
 Timer_ Timer_enc3;
 
-//time delay to avoid double side direction encoding
-long t_enc_p = 10;
+/* time delay to avoid double side direction 
+ * encoding (inside encoder function)
+ */
+long t_enc_p = 0;
 
-// delay before reset joystick dir encoder buttons
-long t_enc_j = 10;
+/* delay before reset joystick dir 
+ * encoder button (inside change joy button state function)
+ */
+long t_enc_j = 0;
 
 //unsigned long exp_t = 3000;
 
