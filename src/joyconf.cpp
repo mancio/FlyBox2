@@ -74,6 +74,12 @@ Timer_ Timer_enc3;
  */
 long t_enc_p = 0;
 
+/* time delay to avoid double side direction 
+ * encoding (inside encoder function)
+ * FOR EXTERNAL INPUT
+ */
+long t_enc_p_ext = 200;
+
 /* delay before reset joystick dir 
  * encoder button (inside change joy button state function)
  */
@@ -314,8 +320,8 @@ void setEncoders_dir(){
       Timer_enc1.update();
     }
 
-    int dir2 = Enc2.direction(t_enc_p);
- 
+    int dir2 = Enc2.ext_direction(t_enc_p_ext);
+    //Serial.println(dir2);
     if(Timer_enc2.expired(t_enc_j)){
       // click buttons according to the encoder directions
       if (dir2 == -1){

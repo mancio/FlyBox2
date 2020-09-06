@@ -73,6 +73,22 @@ int Encoders_::direction(long out_t){
   return _dir;
 }
 
+int Encoders_::ext_direction(long out_t){
+  
+  if(_Timer3.expired(out_t)){
+    int left = digitalRead(_clk);
+    //Serial.println(left);
+    int right = digitalRead(_dt);
+    //Serial.println(right);
+    if(left) _dir = -1;
+    if(right) _dir = 1;
+    else _dir = 0;
+    _Timer3.update();
+  }
+
+  return _dir;
+}
+
 int Encoders_::click(long deb_time){
 
     

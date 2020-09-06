@@ -76,6 +76,8 @@ class Encoders_ {
         Timer_ _Timer1;
         // timer class to debounce directions
         Timer_ _Timer2;
+        // timer class to debounce directions for external inputs
+        Timer_ _Timer3;
 
         //Encoder _MyEnc(uint8_t pina, uint8_t pinb);
         Encoder* _MyEnc;
@@ -100,6 +102,17 @@ class Encoders_ {
          * @return 1 if clockwise (right) or 0 if no changes or -1 if anticlock-wise (left)
          */
         int direction(long out_t);
+
+        /**
+         * give the direction using an external input (not encoder square wave type)
+         * clk HIGH = roll left
+         * dt HIGH = roll right
+         * 
+         * @param how long time give the same output before reset to 0 output 
+         * 
+         * @return 1 if clockwise (right) or 0 if no changes or -1 if anticlock-wise (left)
+         */
+        int ext_direction(long out_t);
 
         /**
          * return the SW push button state. It is debounced to avoid false clicks.
