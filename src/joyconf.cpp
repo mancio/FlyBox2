@@ -78,7 +78,7 @@ long t_enc_p = 0;
  * encoding (inside encoder function)
  * FOR EXTERNAL INPUT
  */
-long t_enc_p_ext = 200;
+long t_enc_p_ext = 0;
 
 /* delay before reset joystick dir 
  * encoder button (inside change joy button state function)
