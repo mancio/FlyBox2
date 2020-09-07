@@ -78,17 +78,11 @@ int Encoders_::ext_direction(long out_t){
   int left = digitalRead(_clk);
   //Serial.println(left);
   int right = digitalRead(_dt);
-  Serial.println(right);
+  //Serial.println(right);
     
   if(left) _dir = -1;
-  if(right) _dir = 1;
+  else if(right) _dir = 1;
   else _dir = 0;
-
-  if(_Timer3.expired(out_t)){
-    
-    _Timer3.update();
-  }
-
   return _dir;
 }
 
