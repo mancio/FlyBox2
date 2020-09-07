@@ -24,10 +24,10 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 #include <setports.h>
 #include <ports.h>
 
-
-void activeSerial(){
+// keep off for better performance
+/*void activeSerial(){
     Serial.begin(9600);
-}
+}*/
 
 
 void setEncoders(){
