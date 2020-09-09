@@ -56,11 +56,19 @@ time.
 
 [Here](http://mancioboxblog.altervista.org/flybox2Doc/files.html) you can find the documentations written in Doxygen 
 
+## Installation
+
+* upload the code of Flybox2 to the main arduino
+* unplug the usb from this arduino and plug to the second one
+* upload the code of the [Flybox2_encoder_module](https://github.com/mancio/FlyBox2_encoder_module) to the second arduino
+* unplug usb and plug again to the first one to play
+
+NOTE: DO NOT PLUG TWO USB AT THE SAME TIME. 5V+ AND GND ARE IN COMMON ON BOTH ARDUINO
+ALTHOUGH NOTHING BAD SHOULD HAPPEN IS NOT RECOMMENDED TO HAVE TWO POWER SOURCES.
+
+
 ## TODO
 
-* connect button pad
-* try #define ENCODER_OPTIMIZE_INTERRUPTS to override attachInterrupt() function and using faster assembler routines
-* test not working due to python problem with vs IDE
+* increase the encoder turning speed. (Probably is a problem related to X-Plane)
 
-## Still under construction 
-## STAY TUNED!
+
