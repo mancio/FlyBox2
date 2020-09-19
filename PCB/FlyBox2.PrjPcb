@@ -144,6 +144,23 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=QUPLFYZN
 
+[Document7]
+DocumentPath=Flybox2_main_board.PcbDoc
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=1
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=UINQMJWC
+
 [GeneratedDocument1]
 DocumentPath=..\..\..\Altium Projects\FlyBox2\Project Outputs for MC14490P module\Gerber\PCB1.1
 DItemRevisionGUID=
