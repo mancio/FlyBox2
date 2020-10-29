@@ -1,0 +1,6 @@
+[ProjectGroup]
+Version=1.0
+[Project1]
+ProjectPath=Flybox2_main_board\Flybox2_main_board.PrjPcb
+[Project2]
+ProjectPath=MC14490P_module\MC14490P_module.PrjPcb
