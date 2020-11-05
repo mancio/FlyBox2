@@ -1,0 +1,16 @@
+Project Outputs Generation Report
+---------------------------------
+Start Output Generation At 4:42:02 PM On 11/5/2020
+
+Output: Gerber Files
+Type  : Gerber
+From  : Variant [[No Variations]] of PCB Document [Flybox2_main_board.PcbDoc]
+   Generated File[Flybox2_main_board.RUL]
+   Generated File[Flybox2_main_board.EXTREP]
+   Generated File[Flybox2_main_board.REP]
+
+
+Files Generated   : 3
+Documents Printed : 0
+
+Finished Output Generation At 4:42:02 PM On 11/5/2020
