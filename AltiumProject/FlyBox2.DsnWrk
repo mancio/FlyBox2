@@ -6,3 +6,5 @@ ProjectPath=Flybox2_main_board\Flybox2_main_board.PrjPcb
 ProjectPath=MC14490P_module\MC14490P_module.PrjPcb
 [Project3]
 ProjectPath=ButtonPad\ButtonPad.PrjPcb
+[Project4]
+ProjectPath=Encoder_Breakout_Module\Encoder_Breakout_Module.PrjPcb
