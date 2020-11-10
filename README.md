@@ -1,7 +1,7 @@
 # FlyBox2
 
 <p align="center">
-<img src="https://github.com/mancio/FlyBox2/blob/master/pictures/747cockpit.JPG" width="850" height="800" />
+<img src="https://github.com/mancio/FlyBox2/blob/master/pictures/747cockpit.JPG" width="850" height="600" />
 </p>
 
 An advanced flight control pad made with an atmega32u4 pro micro (leonardo architecture)
