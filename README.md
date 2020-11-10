@@ -1,7 +1,7 @@
 # FlyBox2
 
 <p align="center">
-<img src="hhttps://travelupdate.com/wp-content/uploads/2019/12/13.-HARS-Qantas-Boeing-747-400-VH-OJA-Flight-Deck-1066x640.jpg" width="850" height="800" />
+<img src="https://github.com/mancio/FlyBox2/blob/master/pictures/747cockpit.JPG" width="850" height="800" />
 </p>
 
 An advanced flight control pad made with an atmega32u4 pro micro (leonardo architecture)
