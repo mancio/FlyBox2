@@ -16,7 +16,7 @@ VS Studio Visual Studio Code
 ## Schematics
 
 <p align="center">
-<img src="https://github.com/mancio/FlyBox2/blob/master/fritzing/project/main_wiring.jpg" width="850" height="800" />
+<img src="https://github.com/mancio/FlyBox2/blob/master/fritzing/project/main_with_module_bb.jpg" width="850" height="800" />
 </p>
 
 ## MC14490P Signal Debounce Module
