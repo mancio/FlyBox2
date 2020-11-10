@@ -1,7 +1,8 @@
 # FlyBox2
 An advanced flight control pad made with an atmega32u4 pro micro (leonardo architecture)
 
-This idea is the evolution of the First [FlyBox](https://github.com/mancio/FlyBox) that unfortunately never took flight but is still very good to take an inspiration.
+This idea is the evolution of the First [FlyBox](https://github.com/mancio/FlyBox). FlyBox2 bring the basic idea to a new level. To keep low prices is possible to use two Arduino and a multiplexer to have multiple interrupt pins for encoders and many push button.
+The main Arduino will collect signal from the other and will send to the PC using the HID driver. 
 
 ## The Arduino Pro Micro
 [Full Pinout](https://cdn.sparkfun.com/datasheets/Dev/Arduino/Boards/ProMicro16MHzv1.pdf)
@@ -91,7 +92,13 @@ Always write directly to the customer service to check if the design is fine bef
 files in different ways.
 
 ## TODO
+* box enclosure design
+* video on youtube (to show how much I'm cool 😎)
+
+## What next?
 
 * improve encoder functionality (when it turn fast is recognize as single click)
+* refurbish the design using a Teensy (it has multiple interrupt pins and bigger frequency)
+* try using a fpga board (push buttons operation and encoding can be hardwired to save CPU)
 
 
