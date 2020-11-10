@@ -1,4 +1,9 @@
 # FlyBox2
+
+<p align="center">
+<img src="hhttps://travelupdate.com/wp-content/uploads/2019/12/13.-HARS-Qantas-Boeing-747-400-VH-OJA-Flight-Deck-1066x640.jpg" width="850" height="800" />
+</p>
+
 An advanced flight control pad made with an atmega32u4 pro micro (leonardo architecture)
 
 This idea is the evolution of the First [FlyBox](https://github.com/mancio/FlyBox). FlyBox2 bring the basic idea to a new level. To keep low prices is possible to use two Arduino and a multiplexer to have multiple interrupt pins for encoders and many push button.
