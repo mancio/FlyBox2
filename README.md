@@ -6,7 +6,8 @@
 
 An advanced flight control pad made with an atmega32u4 pro micro (leonardo architecture)
 
-This idea is the evolution of the First [FlyBox](https://github.com/mancio/FlyBox). FlyBox2 bring the basic idea to a new level. To keep low prices is possible to use two Arduino and a multiplexer to have multiple interrupt pins for encoders and many push button.
+This idea is the evolution of the first [FlyBox](https://github.com/mancio/FlyBox) a pad to be used with a joystick to control all the operation with the hand free from the axis flight controls. FlyBox2 bring the basic idea to a new level.
+To keep low prices is possible to use two Arduino and a multiplexer to have multiple interrupt pins for encoders and many push button.
 The main Arduino will collect signal from the other and will send to the PC using the HID driver. 
 
 ## The Arduino Pro Micro
