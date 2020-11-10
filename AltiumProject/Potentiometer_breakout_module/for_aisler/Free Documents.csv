@@ -1,0 +1,15 @@
+Altium Designer Pick and Place Locations
+C:\Users\mancio\Documents\VSCode\FlyBox2\AltiumProject\Potentiometer_breakout_module\for_aisler\Free Documents.csv
+
+========================================================================================================================
+File Design Information:
+
+Date:       10/11/20
+Time:       15:01
+Revision:   Not in VersionControl
+Variant:    No variations
+Units used: mm
+
+"Designator","Comment","Layer","Footprint","Center-X(mm)","Center-Y(mm)","Rotation","Description"
+"P2","Header3_Potentiometer","TopLayer","HDR1X3_Potentiometer","27.3050mm","30.5400mm","90",""
+"P1","Header3_Potentiometer","TopLayer","HDR1X3_Potentiometer","31.1150mm","30.5400mm","90",""

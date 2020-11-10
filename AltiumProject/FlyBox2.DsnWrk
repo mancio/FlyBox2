@@ -8,3 +8,5 @@ ProjectPath=MC14490P_module\MC14490P_module.PrjPcb
 ProjectPath=ButtonPad\ButtonPad.PrjPcb
 [Project4]
 ProjectPath=Encoder_Breakout_Module\Encoder_Breakout_Module.PrjPcb
+[Project5]
+ProjectPath=Potentiometer_breakout_module\Potentiometer_breakout_module.PrjPcb

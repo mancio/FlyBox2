@@ -1,0 +1,10 @@
+Output: Generates pick and place files
+Type  : Pick Place
+From  : Variant [[No Variations]] of PCB Document [Potentiometer_breakout_module.PcbDoc]
+   Generated File[Free Documents.csv]
+
+
+Files Generated   : 1
+Documents Printed : 0
+
+Finished Output Generation At 3:01:19 PM On 11/10/2020

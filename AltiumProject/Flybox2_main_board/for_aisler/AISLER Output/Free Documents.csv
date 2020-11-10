@@ -1,0 +1,27 @@
+Altium Designer Pick and Place Locations
+C:\Users\mancio\Documents\VSCode\FlyBox2\AltiumProject\Flybox2_main_board\for_aisler\AISLER Output\Free Documents.csv
+
+========================================================================================================================
+File Design Information:
+
+Date:       10/11/20
+Time:       14:06
+Revision:   bb5e870e3c39b1dc689ab8e420da75784dc7829e
+Variant:    No variations
+Units used: mm
+
+"Designator","Comment","Layer","Footprint","Center-X(mm)","Center-Y(mm)","Rotation","Description"
+"U3","Multiplexer_16CH","TopLayer","MULTIPLEXER_16CH","30.9400mm","20.2000mm","360",""
+"U2","Encoder_Controller","TopLayer","ARDUINO_PRO_MICRO_BOARD","19.5000mm","47.4300mm","270","Arduino pro micro board"
+"U1","Main_Module","TopLayer","ARDUINO_PRO_MICRO_BOARD","39.5000mm","47.3500mm","270","Arduino pro micro board"
+"P7","Header_5_Encoder","TopLayer","HDR1X5_Encoder","7.6200mm","49.7500mm","90","Header 5 pins to connect one encoder"
+"P6","Header_5_Encoder","TopLayer","HDR1X5_Encoder","7.6200mm","34.2900mm","90","Header 5 pins to connect one encoder"
+"P5","Header_5_Encoder","TopLayer","HDR1X5_Encoder","7.6200mm","17.2300mm","90","Header 5 pins to connect one encoder"
+"P4","Header3_Potentiometer","TopLayer","HDR1X3_Potentiometer","52.8320mm","35.5000mm","270",""
+"P3","Header3_Potentiometer","TopLayer","HDR1X3_Potentiometer","52.8320mm","46.2280mm","270",""
+"P2","Header3_Potentiometer","TopLayer","HDR1X3_Potentiometer","52.8320mm","56.8960mm","270",""
+"P1","Header_16_Keyboard","TopLayer","HDR1X16_Buttons","30.9500mm","7.2500mm","180",""
+"MH4","Mounting Hole 3.2mm Drill","TopLayer","MH_3.2MMD","55.8800mm","5.0800mm","0","Mounting Hole 3.2mm Drill"
+"MH3","Mounting Hole 3.2mm Drill","TopLayer","MH_3.2MMD","55.8800mm","25.4000mm","0","Mounting Hole 3.2mm Drill"
+"MH2","Mounting Hole 3.2mm Drill","TopLayer","MH_3.2MMD","5.0800mm","5.0800mm","0","Mounting Hole 3.2mm Drill"
+"MH1","Mounting Hole 3.2mm Drill","TopLayer","MH_3.2MMD","5.0800mm","60.9600mm","0","Mounting Hole 3.2mm Drill"

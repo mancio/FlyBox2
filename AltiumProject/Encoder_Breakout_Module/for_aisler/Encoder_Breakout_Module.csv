@@ -1,0 +1,15 @@
+Altium Designer Pick and Place Locations
+C:\Users\mancio\Documents\VSCode\FlyBox2\AltiumProject\Encoder_Breakout_Module\for_aisler\Encoder_Breakout_Module.csv
+
+========================================================================================================================
+File Design Information:
+
+Date:       10/11/20
+Time:       14:55
+Revision:   Not in VersionControl
+Variant:    No variations
+Units used: mm
+
+"Designator","Comment","Layer","Footprint","Center-X(mm)","Center-Y(mm)","Rotation","Description"
+"P2","Header_5_Encoder","TopLayer","HDR1X5_Encoder","40.6400mm","33.0200mm","270","Header 5 pins to connect one encoder"
+"P1","Header_5_Encoder","TopLayer","HDR1X5_Encoder","33.0200mm","33.0200mm","270","Header 5 pins to connect one encoder"

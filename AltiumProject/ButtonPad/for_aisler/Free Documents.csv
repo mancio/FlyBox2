@@ -1,0 +1,34 @@
+Altium Designer Pick and Place Locations
+C:\Users\mancio\Documents\VSCode\FlyBox2\AltiumProject\ButtonPad\for_aisler\Free Documents.csv
+
+========================================================================================================================
+File Design Information:
+
+Date:       10/11/20
+Time:       14:42
+Revision:   f89d48a9159712895f80e149b85d24736d7719c0
+Variant:    No variations
+Units used: mm
+
+"Designator","Comment","Layer","Footprint","Center-X(mm)","Center-Y(mm)","Rotation","Description"
+"SW16","430456073736","TopLayer","430456073736","69.8500mm","15.2400mm","90","WS-TATV THT Tact Switch 12X12 mm"
+"SW15","430456073736","TopLayer","430456073736","69.8500mm","35.5600mm","90","WS-TATV THT Tact Switch 12X12 mm"
+"SW14","430456073736","TopLayer","430456073736","69.8500mm","55.8800mm","90","WS-TATV THT Tact Switch 12X12 mm"
+"SW13","430456073736","TopLayer","430456073736","69.8500mm","76.2000mm","90","WS-TATV THT Tact Switch 12X12 mm"
+"SW12","430456073736","TopLayer","430456073736","49.5300mm","15.2400mm","90","WS-TATV THT Tact Switch 12X12 mm"
+"SW11","430456073736","TopLayer","430456073736","49.5300mm","35.5600mm","90","WS-TATV THT Tact Switch 12X12 mm"
+"SW10","430456073736","TopLayer","430456073736","49.5300mm","55.8800mm","90","WS-TATV THT Tact Switch 12X12 mm"
+"SW9","430456073736","TopLayer","430456073736","49.5300mm","76.2000mm","90","WS-TATV THT Tact Switch 12X12 mm"
+"SW8","430456073736","TopLayer","430456073736","29.2100mm","15.2400mm","90","WS-TATV THT Tact Switch 12X12 mm"
+"SW7","430456073736","TopLayer","430456073736","29.2100mm","35.5600mm","90","WS-TATV THT Tact Switch 12X12 mm"
+"SW6","430456073736","TopLayer","430456073736","29.2100mm","55.8800mm","90","WS-TATV THT Tact Switch 12X12 mm"
+"SW5","430456073736","TopLayer","430456073736","29.2100mm","76.2000mm","90","WS-TATV THT Tact Switch 12X12 mm"
+"SW4","430456073736","TopLayer","430456073736","8.8900mm","15.2400mm","90","WS-TATV THT Tact Switch 12X12 mm"
+"SW3","430456073736","TopLayer","430456073736","8.8900mm","35.5600mm","90","WS-TATV THT Tact Switch 12X12 mm"
+"SW2","430456073736","TopLayer","430456073736","8.8900mm","55.8800mm","90","WS-TATV THT Tact Switch 12X12 mm"
+"SW1","430456073736","TopLayer","430456073736","8.8900mm","76.2000mm","90","WS-TATV THT Tact Switch 12X12 mm"
+"P1","Header_16_Keyboard_plusGND","TopLayer","HDR1X16_Buttons_plusGND","39.3500mm","90.1700mm","360",""
+"MH4","Mounting Hole 3.2mm Drill","TopLayer","MH_3.2MMD","3.8100mm","3.8100mm","0","Mounting Hole 3.2mm Drill"
+"MH3","Mounting Hole 3.2mm Drill","TopLayer","MH_3.2MMD","74.9300mm","3.8100mm","0","Mounting Hole 3.2mm Drill"
+"MH2","Mounting Hole 3.2mm Drill","TopLayer","MH_3.2MMD","74.9300mm","92.7100mm","0","Mounting Hole 3.2mm Drill"
+"MH1","Mounting Hole 3.2mm Drill","TopLayer","MH_3.2MMD","3.8100mm","92.7100mm","0","Mounting Hole 3.2mm Drill"

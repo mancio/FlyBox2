@@ -1,0 +1,3 @@
+Layer Pairs Export File for PCB: C:\Users\mancio\Documents\VSCode\FlyBox2\AltiumProject\Flybox2_main_board\Flybox2_main_board.PcbDoc
+LayersSetName=Top_Bot_Plated_Thru_Holes|DrillFile=flybox2_main_board-plated.txt|DrillLayers=gtl,gbl
+LayersSetName=Top_Bot_NonPlated_Thru_Holes|DrillFile=flybox2_main_board-nonplated.txt|DrillLayers=gtl,gbl

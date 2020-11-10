@@ -38,6 +38,23 @@ PrefsVaultGUID=
 PrefsRevisionGUID=
 
 [Document1]
+DocumentPath=aisler.OutJob
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=1
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=
+
+[Document2]
 DocumentPath=Rotary_breakout_module.SchDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -54,7 +71,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=TWYWBQZO
 
-[Document2]
+[Document3]
 DocumentPath=rotary_breakout_module.PcbDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -71,7 +88,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=LDYBPFTT
 
-[Document3]
+[Document4]
 DocumentPath=Schlib1.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -88,7 +105,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=ZHEHJKTS
 
-[Document4]
+[Document5]
 DocumentPath=PcbLib1.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -104,6 +121,70 @@ ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=FYICOHJV
+
+[GeneratedDocument1]
+DocumentPath=for_aisler\Free Documents-Plated.TXT
+DItemRevisionGUID=
+
+[GeneratedDocument2]
+DocumentPath=for_aisler\Free Documents.csv
+DItemRevisionGUID=
+
+[GeneratedDocument3]
+DocumentPath=for_aisler\Free Documents.DRR
+DItemRevisionGUID=
+
+[GeneratedDocument4]
+DocumentPath=for_aisler\Free Documents.EXTREP
+DItemRevisionGUID=
+
+[GeneratedDocument5]
+DocumentPath=for_aisler\Free Documents.LDP
+DItemRevisionGUID=
+
+[GeneratedDocument6]
+DocumentPath=for_aisler\Free Documents.REP
+DItemRevisionGUID=
+
+[GeneratedDocument7]
+DocumentPath=for_aisler\Free Documents.RUL
+DItemRevisionGUID=
+
+[GeneratedDocument8]
+DocumentPath=for_aisler\rotary_breakout_module_Copper_Signal_Bot.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument9]
+DocumentPath=for_aisler\rotary_breakout_module_Copper_Signal_Top.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument10]
+DocumentPath=for_aisler\rotary_breakout_module_Legend_Bot.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument11]
+DocumentPath=for_aisler\rotary_breakout_module_Legend_Top.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument12]
+DocumentPath=for_aisler\rotary_breakout_module_Paste_Bot.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument13]
+DocumentPath=for_aisler\rotary_breakout_module_Paste_Top.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument14]
+DocumentPath=for_aisler\rotary_breakout_module_Profile.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument15]
+DocumentPath=for_aisler\rotary_breakout_module_Soldermask_Bot.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument16]
+DocumentPath=for_aisler\rotary_breakout_module_Soldermask_Top.gbr
+DItemRevisionGUID=
 
 [Configuration1]
 Name=Sources

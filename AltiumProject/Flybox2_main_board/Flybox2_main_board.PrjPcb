@@ -55,7 +55,7 @@ GenerateClassCluster=0
 DocumentUniqueId=ATUXSGBO
 
 [Document2]
-DocumentPath=..\Libraries\FlyBox2.SchLib
+DocumentPath=FlyBox2.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
@@ -72,7 +72,7 @@ GenerateClassCluster=0
 DocumentUniqueId=RSMZXAGE
 
 [Document3]
-DocumentPath=..\Libraries\FlyBox2.PcbLib
+DocumentPath=FlyBox2.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
@@ -139,16 +139,130 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
+[Document7]
+DocumentPath=aisler.OutJob
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=1
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=
+
+[Document8]
+DocumentPath=oshpark.OutJob
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=1
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=
+
 [GeneratedDocument1]
-DocumentPath=for_oshpark\Flybox2_main_board.EXTREP
+DocumentPath=for_oshpark\Flybox2_main_board.DRR
 DItemRevisionGUID=
 
 [GeneratedDocument2]
-DocumentPath=for_oshpark\Flybox2_main_board.REP
+DocumentPath=for_oshpark\Flybox2_main_board.EXTREP
 DItemRevisionGUID=
 
 [GeneratedDocument3]
+DocumentPath=for_oshpark\Flybox2_main_board.LDP
+DItemRevisionGUID=
+
+[GeneratedDocument4]
+DocumentPath=for_oshpark\Flybox2_main_board.REP
+DItemRevisionGUID=
+
+[GeneratedDocument5]
 DocumentPath=for_oshpark\Flybox2_main_board.RUL
+DItemRevisionGUID=
+
+[GeneratedDocument6]
+DocumentPath=for_oshpark\Flybox2_main_board.TXT
+DItemRevisionGUID=
+
+[GeneratedDocument7]
+DocumentPath=for_aisler\AISLER Output\Flybox2_main_board_Copper_Signal_Bot.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument8]
+DocumentPath=for_aisler\AISLER Output\Flybox2_main_board_Copper_Signal_Top.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument9]
+DocumentPath=for_aisler\AISLER Output\Flybox2_main_board_Legend_Bot.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument10]
+DocumentPath=for_aisler\AISLER Output\Flybox2_main_board_Legend_Top.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument11]
+DocumentPath=for_aisler\AISLER Output\Flybox2_main_board_Paste_Bot.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument12]
+DocumentPath=for_aisler\AISLER Output\Flybox2_main_board_Paste_Top.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument13]
+DocumentPath=for_aisler\AISLER Output\Flybox2_main_board_Profile.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument14]
+DocumentPath=for_aisler\AISLER Output\Flybox2_main_board_Soldermask_Bot.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument15]
+DocumentPath=for_aisler\AISLER Output\Flybox2_main_board_Soldermask_Top.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument16]
+DocumentPath=for_aisler\AISLER Output\Free Documents-NonPlated.TXT
+DItemRevisionGUID=
+
+[GeneratedDocument17]
+DocumentPath=for_aisler\AISLER Output\Free Documents-Plated.TXT
+DItemRevisionGUID=
+
+[GeneratedDocument18]
+DocumentPath=for_aisler\AISLER Output\Free Documents.csv
+DItemRevisionGUID=
+
+[GeneratedDocument19]
+DocumentPath=for_aisler\AISLER Output\Free Documents.DRR
+DItemRevisionGUID=
+
+[GeneratedDocument20]
+DocumentPath=for_aisler\AISLER Output\Free Documents.EXTREP
+DItemRevisionGUID=
+
+[GeneratedDocument21]
+DocumentPath=for_aisler\AISLER Output\Free Documents.LDP
+DItemRevisionGUID=
+
+[GeneratedDocument22]
+DocumentPath=for_aisler\AISLER Output\Free Documents.REP
+DItemRevisionGUID=
+
+[GeneratedDocument23]
+DocumentPath=for_aisler\AISLER Output\Free Documents.RUL
 DItemRevisionGUID=
 
 [Configuration1]
