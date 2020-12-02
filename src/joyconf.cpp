@@ -320,8 +320,8 @@ void setEncoders_dir(){
       Timer_enc1.update();
     }
 
-    int dir2 = Enc2.ext_direction(t_enc_p_ext);
-    //Serial.println(dir2);
+    int dir2 = Enc2.direction(t_enc_p);
+ 
     if(Timer_enc2.expired(t_enc_j)){
       // click buttons according to the encoder directions
       if (dir2 == -1){
@@ -339,8 +339,9 @@ void setEncoders_dir(){
       Timer_enc2.update();
     }
 
-    int dir3 = Enc3.direction(t_enc_p);
- 
+    
+    int dir3 = Enc3.ext_direction(t_enc_p_ext);
+    //Serial.println(dir2);
     if(Timer_enc3.expired(t_enc_j)){
       // click buttons according to the encoder directions
       if (dir3 == -1){
@@ -355,11 +356,10 @@ void setEncoders_dir(){
         Joystick.setButton(right_enc3_bt,LOW);
         Joystick.setButton(left_enc3_bt,LOW);
       } 
-      Timer_enc1.update();
+      Timer_enc3.update();
     }
 
     
-
     // check sw button states
     if(Enc1.click(debounceDelay) == LOW){
       //Serial.println("click enc1");
