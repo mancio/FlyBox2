@@ -97,8 +97,18 @@ The others are fine.
 Always write directly to the customer service to check if the design is fine before ordering. Every service interpret gerber
 files in different ways.
 
+## Box Design
+
+I tried to design the box using cardboard and unfortunately the result wasn't so good. 
+I made the template using Adobe Illustrator because is able to manage svg files. [Here](https://github.com/mancio/FlyBox2/tree/master/artdesign) you can find the project.
+
+Looking for a better solution, I made a box using Fusion 360 [here](https://github.com/mancio/FlyBox2/tree/master/artdesign/fusion360). 
+
+Now is the time for printing and if you live in Poland you can look at [this site](https://send3d.eu/). I still have to try them but price are amazing!
+
+
 ## TODO
-* box enclosure design
+
 * video on youtube (to show how much I'm cool 😎)
 
 ## What next?
