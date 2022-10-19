@@ -36,7 +36,7 @@ bool t = false;
  * remember to stop log when using joytick
  * continuos print can disturb joystick functionality
  */
-bool l = false;
+bool l = true;
 
 Timer_ Timer_main;
 Timer_ Enc_speed;

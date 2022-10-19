@@ -87,6 +87,10 @@ long t_enc_j = 0;
 
 //unsigned long exp_t = 3000;
 
+// mapping range
+int max_range = 100;
+int min_range = -100;
+
 // set joystick buttons and axis
 Joystick_ Joystick(
   JOYSTICK_DEFAULT_REPORT_ID, // joystick ID 
@@ -136,9 +140,9 @@ void joy_conf(){
   // Initialize Joystick Library
   Joystick.begin();
 
-  Joystick.setXAxisRange(-1023, 1023);
-  Joystick.setYAxisRange(-1023, 1023);
-  Joystick.setZAxisRange(-1023, 1023);
+  Joystick.setXAxisRange(min_range, max_range);
+  Joystick.setYAxisRange(min_range, max_range);
+  Joystick.setZAxisRange(min_range, max_range);
   
   for(int i=0; i<totbt;i++){
     bt[i].setPin(SIG_MUX);
@@ -190,8 +194,8 @@ int debouncer(int button){
 
 long mapper(long m, bool rev){
 
-  if(rev) return map(m, 0, 1023, -1023, 1023);
-  else return map(m, 0, 1023, 1023, -1023);
+  if(rev) return map(m, 0, 1023, min_range, max_range);
+  else return map(m, 0, 1023, max_range, min_range);
       
 }
 
