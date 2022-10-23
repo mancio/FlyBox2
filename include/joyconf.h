@@ -38,14 +38,6 @@ void setTest(bool testin);
 void joy_conf();
 
 /**
- * debounce the click button (used in addiction with hardware debounce)
- * 
- * @param int button to debounce
- * @return button state debounced
- */
-int debouncer(int button);
-
-/**
  * set joystick button state according to pin input
  * 
  * @param int input pin

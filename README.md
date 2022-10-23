@@ -89,6 +89,24 @@ some links:
 * [tutorial](https://docs.platformio.org/en/latest/integration/ide/clion.html)
 * [python trick](https://community.platformio.org/t/could-not-find-the-package-with-requirements-for-your-system-windows-amd64/18416)
 
+## Sliding potentiometer UPDATE
+
+Some sim like DCS are more sensible to potentiometer flickering. As you may notice classic hobbyist use 
+pot slide and not, due to their cheap building are not keeping constant resistance in some position.
+You will see the throttle of your plane vibrate and changing speed.
+This problem can be solved by adding a capacitor (same concept as button debouncing) or via software.
+Speaking about the software way, I found a [solution online](https://www.norwegiancreations.com/2015/10/tutorial-potentiometers-with-arduino-and-filtering/) that
+involve a moving average algorithm. Even though look like very professional, I thought something much 
+more simple. my code has a
+
+* pot map function (from Arduino library)
+* joystick function top set the axis scale (from Joystick.h)
+
+With the first I can map the slider following the arduino library suggestions and with the second I can choose
+how many axis positions the joystick can take (read by the operating system).
+If I map a bigger range of int numbers in one smaller I will have multiple numbers in input assigned to the same
+number in output. This magically will remove the vibration!.... so much math saved :)
+
 ## Altium Design
 
 In Altium design folder you can find the design for

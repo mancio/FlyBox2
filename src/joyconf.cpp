@@ -151,47 +151,6 @@ void joy_conf(){
   
 }
 
-int debouncer(int button){
-
-  if(test){
-    reading = digitalRead_em();
-    //Serial.print("state: ");
-    //Serial.println(reading);
-  }else{
-    // read the state of the switch into a local variable:
-    reading = digitalRead(button);
-  }  
-
-  /* debouncing function for multiple buttons is hard to implement.
-   * It requires an array where to store the last states to compare to the last
-   * input. By using a multiplexer the input of several buttons is provided
-   * on the same port. This hardware configuration make the software even more difficult.
-   * I should have a timer for every input. The esiest way is a hardware debouncing using 
-   * resistors and capacitor or the most advance MC14490P.
-   * 
-   * An alternative should be the usage of delay, but this function stop the execution
-   * and introduce lag in the joystick movements.
-   * 
-   * For this reason this function is not implemented yet and it return the input read
-   * directly from the port.
-   */
-  
-  return reading;
-  
-}
-
-
-/*void btset(int pin, int button){
-    if(debouncer(pin) == HIGH){
-        Joystick.setButton(button, HIGH);
-    }else{
-        Joystick.setButton(button,LOW);    
-    }
-    
-}*/
-
-
-
 long mapper(long m, bool rev){
 
   if(rev) return map(m, 0, 1023, min_range, max_range);
